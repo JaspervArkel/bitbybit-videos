@@ -12,12 +12,17 @@ Every new video applies these. The weekly review adds, changes or removes rules,
 4. A visual change every 1.5–3 s; never more than 3 s of a static screen. *(playbook)*
 5. Aim for 25–32 s of narration. Cut words rather than speed up the voice. *(hypothesis)*
 6. No generic CTAs ("follow for more"). Endings follow the current experiment below.
+7. Frame 1 must be readable in under 1 second: one big number, one short phrase or one striking visual. Never open on a timestamp, a code block or more than 8 words of on-screen text. *(provisional, from evidence 3; the review confirms or removes it)*
+8. Prefer present-tense, everyday stakes in the hook ("your…", "the internet…"). Avoid hedge words like "some" or "might" in the first sentence when an accurate unhedged version exists. Never trade accuracy for this. *(provisional, from evidence 3)*
 
 ## Evidence
 1. Instagram snapshot, 10–11 Nov 2026, 5 Reels: "255 + 1 = 0" got 1,254 views (11.8x the median of the other four), 10.2 s average watch vs about 6 s, and a 41.6% 3-second skip rate vs about 48%. One clear winner; the cause is unproven (topic, hook and timing all differed).
 2. Cross-platform, one early video: TikTok 600 views vs Instagram 48 and YouTube 18. Platforms can differ hugely for the same file. n=1.
 
+3. **Signal (user-reported, 11 Nov, one pair, early):** "The internet ran out of addresses" (posted 11:39) became the account's best retention so far; "The 2038 clock bug" (posted 18:00) had near-zero retention in its first hour. Differences: present, relatable stakes vs a far-future date; one big number in frame 1 vs a full timestamp to read; a certain claim vs a hedged one ("some computers"). Exact numbers to be added from the user's screenshots.
+
 ## Working hypotheses (to test)
+- H7: Hooks about the viewer's present world, stated with certainty, beat future or hedged stakes. Frame 1 must be readable in under 1 s (one number or one short phrase, not a timestamp or a paragraph). *(from evidence 3)*
 - H1: Hooks that show an impossible result on screen beat question hooks on 3 s skip rate.
 - H2: Gaming and AI topics get more shares than number-system topics.
 - H3: Ending with a specific, answerable question raises comments without hurting likes.
