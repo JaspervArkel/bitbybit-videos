@@ -1,0 +1,52 @@
+[
+ {
+  "s": 0.15,
+  "e": 3.494,
+  "text": "In twenty thirty-eight, some computers will think it's nineteen-oh-one."
+ },
+ {
+  "s": 3.814,
+  "e": 7.331,
+  "text": "They count time in seconds since January first, nineteen seventy."
+ },
+ {
+  "s": 7.651,
+  "e": 10.553,
+  "text": "And many store that count in a signed thirty-two-bit number."
+ },
+ {
+  "s": 10.873,
+  "e": 13.307,
+  "text": "Its limit: about two point one billion seconds."
+ },
+ {
+  "s": 13.627,
+  "e": 16.387,
+  "text": "That runs out on January nineteenth, twenty thirty-eight."
+ },
+ {
+  "s": 16.707,
+  "e": 18.6,
+  "text": "One second later, the top bit flips."
+ },
+ {
+  "s": 18.92,
+  "e": 20.73,
+  "text": "The number becomes hugely negative."
+ },
+ {
+  "s": 21.05,
+  "e": 23.076,
+  "text": "And the clock jumps back to nineteen-oh-one."
+ },
+ {
+  "s": 23.396,
+  "e": 28.996,
+  "text": "Most modern systems moved to sixty-four-bit time, good for two hundred ninety-two billion years."
+ },
+ {
+  "s": 29.316,
+  "e": 33.708,
+  "text": "But old devices and forgotten code are still counting toward twenty thirty-eight."
+ }
+]

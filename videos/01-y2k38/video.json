@@ -1,0 +1,200 @@
+{
+ "title": "The 2038 clock bug",
+ "captions": [
+  {
+   "text": "In 2038, some computers will think it's !1901.!",
+   "say": "In twenty thirty-eight, some computers will think it's nineteen-oh-one.",
+   "hide": true
+  },
+  {
+   "text": "They count time in seconds since January 1st, 1970.",
+   "say": "They count time in seconds since January first, nineteen seventy."
+  },
+  {
+   "text": "And many store that count in a signed *32-bit* number.",
+   "say": "And many store that count in a signed thirty-two-bit number."
+  },
+  {
+   "text": "Its limit: about *2.1 billion* seconds.",
+   "say": "Its limit: about two point one billion seconds."
+  },
+  {
+   "text": "That runs out on January 19th, 2038.",
+   "say": "That runs out on January nineteenth, twenty thirty-eight."
+  },
+  {
+   "text": "One second later, the top bit !flips.!"
+  },
+  {
+   "text": "The number becomes hugely !negative.!"
+  },
+  {
+   "text": "And the clock jumps back to !1901.!",
+   "say": "And the clock jumps back to nineteen-oh-one."
+  },
+  {
+   "text": "Most modern systems moved to *64-bit* time, good for 292 billion years.",
+   "say": "Most modern systems moved to sixty-four-bit time, good for two hundred ninety-two billion years."
+  },
+  {
+   "text": "But old devices and forgotten code are still counting toward !2038.!",
+   "say": "But old devices and forgotten code are still counting toward twenty thirty-eight."
+  }
+ ],
+ "scenes": [
+  {
+   "type": "clock",
+   "cap": [
+    0,
+    0
+   ],
+   "from": 2147483646,
+   "rate": 1.5,
+   "title": "In 2038, some computers will think it's !1901!",
+   "y": 720,
+   "instant": true
+  },
+  {
+   "type": "counter",
+   "cap": [
+    1,
+    1
+   ],
+   "from": 0,
+   "to": 1794355200,
+   "dur": 2.2,
+   "label": "seconds since jan 1, 1970",
+   "title": "Your computer's clock",
+   "size": 104
+  },
+  {
+   "type": "bitrow",
+   "cap": [
+    2,
+    2
+   ],
+   "from": 1794355200,
+   "label": "signed 32-bit integer",
+   "y": 560
+  },
+  {
+   "type": "bitrow",
+   "cap": [
+    3,
+    4
+   ],
+   "from": 2147483607,
+   "rate": 16,
+   "stop": 2147483647,
+   "label": "the biggest value it can hold",
+   "y": 560
+  },
+  {
+   "type": "bitrow",
+   "cap": [
+    5,
+    6
+   ],
+   "from": 2147483647,
+   "rate": 1.6,
+   "stop": 2147483648,
+   "label": "+1 second",
+   "y": 560
+  },
+  {
+   "type": "clock",
+   "cap": [
+    7,
+    7
+   ],
+   "from": 2147483647,
+   "rate": 1.6,
+   "y": 720,
+   "title": "2038 → !1901!",
+   "titleSize": 110
+  },
+  {
+   "type": "list",
+   "cap": [
+    8,
+    8
+   ],
+   "title": "The fix",
+   "y": 620,
+   "items": [
+    {
+     "label": "32-bit time",
+     "value": "!2038!",
+     "c": "o"
+    },
+    {
+     "label": "64-bit time",
+     "value": "*292 billion yrs*",
+     "c": "g"
+    }
+   ]
+  },
+  {
+   "type": "endcard",
+   "cap": [
+    9,
+    9
+   ],
+   "text": "Some clocks are still counting to !2038.!",
+   "y": 560
+  }
+ ],
+ "sfx": [
+  {
+   "cap": 0,
+   "at": 0.05,
+   "type": "ticks",
+   "count": 2,
+   "every": 0.667
+  },
+  {
+   "cap": 0,
+   "at": 1.34,
+   "type": "hit"
+  },
+  {
+   "cap": 0,
+   "at": 1.34,
+   "type": "glitch"
+  },
+  {
+   "cap": 3,
+   "at": 0.2,
+   "type": "ticks",
+   "count": 3,
+   "every": 0.5
+  },
+  {
+   "cap": 5,
+   "at": 0.5,
+   "type": "hit"
+  },
+  {
+   "cap": 5,
+   "at": 0.5,
+   "type": "glitch"
+  },
+  {
+   "cap": 7,
+   "at": 0.5,
+   "type": "hit"
+  },
+  {
+   "cap": 8,
+   "at": 0.6,
+   "type": "pop"
+  },
+  {
+   "cap": 8,
+   "at": 1.05,
+   "type": "pop"
+  }
+ ],
+ "cover": 1.6,
+ "tail": 1.2
+}

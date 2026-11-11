@@ -1,0 +1,39 @@
+1
+00:00:00,150 --> 00:00:03,814
+In 2038, some computers will think it's 1901.
+
+2
+00:00:03,814 --> 00:00:07,651
+They count time in seconds since January 1st, 1970.
+
+3
+00:00:07,651 --> 00:00:10,873
+And many store that count in a signed 32-bit number.
+
+4
+00:00:10,873 --> 00:00:13,627
+Its limit: about 2.1 billion seconds.
+
+5
+00:00:13,627 --> 00:00:16,707
+That runs out on January 19th, 2038.
+
+6
+00:00:16,707 --> 00:00:18,920
+One second later, the top bit flips.
+
+7
+00:00:18,920 --> 00:00:21,050
+The number becomes hugely negative.
+
+8
+00:00:21,050 --> 00:00:23,396
+And the clock jumps back to 1901.
+
+9
+00:00:23,396 --> 00:00:29,316
+Most modern systems moved to 64-bit time, good for 292 billion years.
+
+10
+00:00:29,316 --> 00:00:33,708
+But old devices and forgotten code are still counting toward 2038.
