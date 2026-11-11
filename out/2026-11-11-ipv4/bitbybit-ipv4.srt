@@ -1,0 +1,39 @@
+1
+00:00:00,150 --> 00:00:02,901
+The internet ran out of addresses in 2011.
+
+2
+00:00:02,901 --> 00:00:05,571
+Every device online needs an IP address.
+
+3
+00:00:05,571 --> 00:00:09,713
+The original system, IPv4, uses 32 bits.
+
+4
+00:00:09,713 --> 00:00:12,194
+That's about 4.3 billion addresses.
+
+5
+00:00:12,194 --> 00:00:15,302
+Sounds like a lot, until there are more phones than people.
+
+6
+00:00:15,302 --> 00:00:18,938
+In 2011, the central pool handed out its last blocks.
+
+7
+00:00:18,938 --> 00:00:21,537
+So your whole home shares one public address.
+
+8
+00:00:21,537 --> 00:00:23,889
+Your router keeps track of who asked for what.
+
+9
+00:00:23,889 --> 00:00:28,074
+The real fix is IPv6, with 128 bits.
+
+10
+00:00:28,074 --> 00:00:30,994
+Enough for every grain of sand on Earth, many times over.

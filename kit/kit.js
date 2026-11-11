@@ -83,7 +83,7 @@ C.bitrow = (root, p) => {
 
 /* counter: {from, to, dur, y=760, label, prefix, suffix, decimals=0, color, title} */
 C.counter = (root, p) => {
-  const tt = p.title ? C.title(root, { text: p.title, y: p.titleY ?? 380, size: p.titleSize ?? 76 }) : null;
+  const tt = p.title ? C.title(root, { text: p.title, y: p.titleY ?? 380, size: p.titleSize ?? 76, instant: p.instant }) : null;
   const card = mk('div', 'card'); card.style.top = (p.y ?? 760) + 'px';
   card.innerHTML = `<div class="label">${mark(p.label ?? '')}</div><div class="mono" style="font-size:${p.size ?? 112}px;margin-top:20px" data-v></div>`;
   root.appendChild(card); const V = card.querySelector('[data-v]');
@@ -93,7 +93,7 @@ C.counter = (root, p) => {
     const v = p.from + (p.to - p.from) * k;
     V.textContent = (p.prefix ?? '') + (p.decimals ? v.toFixed(p.decimals) : fmtInt(v)) + (p.suffix ?? '');
     V.style.color = p.color === 'o' ? 'var(--orange)' : 'var(--green)';
-    const kk = pop(lt, 0); card.style.opacity = clamp(kk * 1.5); card.style.transform = `scale(${.92 + .08 * kk})`;
+    const kk = p.instant ? 1 : pop(lt, 0); card.style.opacity = clamp(kk * 1.5); card.style.transform = `scale(${.92 + .08 * kk})`;
   };
 };
 

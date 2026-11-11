@@ -1,0 +1,248 @@
+{
+ "title": "The internet ran out of addresses",
+ "captions": [
+  {
+   "text": "The internet ran out of addresses in 2011.",
+   "say": "The internet ran out of addresses in twenty eleven.",
+   "hide": true
+  },
+  {
+   "text": "Every device online needs an IP address.",
+   "say": "Every device online needs an I P address."
+  },
+  {
+   "text": "The original system, IPv4, uses *32 bits.*",
+   "say": "The original system, I P version four, uses thirty-two bits."
+  },
+  {
+   "text": "That's about *4.3 billion* addresses.",
+   "say": "That's about four point three billion addresses."
+  },
+  {
+   "text": "Sounds like a lot, until there are more phones than people."
+  },
+  {
+   "text": "In 2011, the central pool handed out its !last blocks.!",
+   "say": "In twenty eleven, the central pool handed out its last blocks."
+  },
+  {
+   "text": "So your whole home shares one public address."
+  },
+  {
+   "text": "Your router keeps track of who asked for what."
+  },
+  {
+   "text": "The real fix is IPv6, with *128 bits.*",
+   "say": "The real fix is I P version six, with a hundred and twenty-eight bits."
+  },
+  {
+   "text": "Enough for every grain of sand on Earth, many times over."
+  }
+ ],
+ "scenes": [
+  {
+   "type": "counter",
+   "cap": [
+    0,
+    0
+   ],
+   "instant": true,
+   "from": 16777216,
+   "to": 0,
+   "dur": 1.6,
+   "delay": 0.1,
+   "color": "o",
+   "label": "free ipv4 addresses",
+   "title": "The internet ran out of !addresses!",
+   "titleY": 330,
+   "y": 720
+  },
+  {
+   "type": "list",
+   "cap": [
+    1,
+    1
+   ],
+   "title": "Every device gets one",
+   "y": 600,
+   "items": [
+    {
+     "label": "Phone",
+     "value": "*203.0.113.7*"
+    },
+    {
+     "label": "Laptop",
+     "value": "*198.51.100.24*"
+    },
+    {
+     "label": "Console",
+     "value": "*192.0.2.88*"
+    }
+   ]
+  },
+  {
+   "type": "bitrow",
+   "cap": [
+    2,
+    2
+   ],
+   "from": 3405803783,
+   "signed": false,
+   "showDec": false,
+   "label": "203.0.113.7 = *32 bits*",
+   "y": 600
+  },
+  {
+   "type": "counter",
+   "cap": [
+    3,
+    3
+   ],
+   "from": 0,
+   "to": 4294967296,
+   "dur": 1.8,
+   "label": "possible ipv4 addresses",
+   "title": "2³² =",
+   "titleSize": 110,
+   "y": 700,
+   "size": 92
+  },
+  {
+   "type": "list",
+   "cap": [
+    4,
+    4
+   ],
+   "title": "Not enough",
+   "y": 620,
+   "items": [
+    {
+     "label": "IPv4 addresses",
+     "value": "!4.3 billion!",
+     "c": "o"
+    },
+    {
+     "label": "People",
+     "value": "~8 billion"
+    },
+    {
+     "label": "Devices online",
+     "value": "even more"
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "cap": [
+    5,
+    5
+   ],
+   "from": 5,
+   "to": 0,
+   "dur": 1.4,
+   "color": "o",
+   "label": "unallocated address blocks · feb 2011",
+   "title": "The last blocks",
+   "y": 700
+  },
+  {
+   "type": "code",
+   "cap": [
+    6,
+    7
+   ],
+   "y": 520,
+   "cps": 40,
+   "lines": [
+    "public IP   203.0.113.7",
+    "",
+    "phone   192.168.1.12  :50211",
+    "laptop  192.168.1.20  :50212",
+    "tv      192.168.1.31  :50213"
+   ],
+   "output": "1 public IP, many devices",
+   "outputColor": "g"
+  },
+  {
+   "type": "list",
+   "cap": [
+    8,
+    8
+   ],
+   "title": "The fix",
+   "y": 620,
+   "items": [
+    {
+     "label": "IPv4",
+     "value": "!32 bits!",
+     "c": "o"
+    },
+    {
+     "label": "IPv6",
+     "value": "*128 bits*",
+     "c": "g"
+    }
+   ]
+  },
+  {
+   "type": "endcard",
+   "cap": [
+    9,
+    9
+   ],
+   "text": "IPv6: *340 undecillion* addresses.",
+   "y": 560
+  }
+ ],
+ "sfx": [
+  {
+   "cap": 0,
+   "at": 0.1,
+   "type": "ticks",
+   "count": 4,
+   "every": 0.4
+  },
+  {
+   "cap": 0,
+   "at": 1.75,
+   "type": "hit"
+  },
+  {
+   "cap": 1,
+   "at": 0.15,
+   "type": "pop"
+  },
+  {
+   "cap": 1,
+   "at": 0.6,
+   "type": "pop"
+  },
+  {
+   "cap": 1,
+   "at": 1.05,
+   "type": "pop"
+  },
+  {
+   "cap": 5,
+   "at": 1.5,
+   "type": "hit"
+  },
+  {
+   "cap": 5,
+   "at": 1.5,
+   "type": "glitch"
+  },
+  {
+   "cap": 8,
+   "at": 0.55,
+   "type": "pop"
+  },
+  {
+   "cap": 8,
+   "at": 1.0,
+   "type": "pop"
+  }
+ ],
+ "cover": 1.9,
+ "tail": 1.2
+}

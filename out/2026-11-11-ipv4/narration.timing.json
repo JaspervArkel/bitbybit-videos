@@ -1,0 +1,52 @@
+[
+ {
+  "s": 0.15,
+  "e": 2.581,
+  "text": "The internet ran out of addresses in twenty eleven."
+ },
+ {
+  "s": 2.901,
+  "e": 5.251,
+  "text": "Every device online needs an I P address."
+ },
+ {
+  "s": 5.571,
+  "e": 9.393,
+  "text": "The original system, I P version four, uses thirty-two bits."
+ },
+ {
+  "s": 9.713,
+  "e": 11.874,
+  "text": "That's about four point three billion addresses."
+ },
+ {
+  "s": 12.194,
+  "e": 14.982,
+  "text": "Sounds like a lot, until there are more phones than people."
+ },
+ {
+  "s": 15.302,
+  "e": 18.618,
+  "text": "In twenty eleven, the central pool handed out its last blocks."
+ },
+ {
+  "s": 18.938,
+  "e": 21.217,
+  "text": "So your whole home shares one public address."
+ },
+ {
+  "s": 21.537,
+  "e": 23.569,
+  "text": "Your router keeps track of who asked for what."
+ },
+ {
+  "s": 23.889,
+  "e": 27.754,
+  "text": "The real fix is I P version six, with a hundred and twenty-eight bits."
+ },
+ {
+  "s": 28.074,
+  "e": 30.994,
+  "text": "Enough for every grain of sand on Earth, many times over."
+ }
+]
