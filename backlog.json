@@ -12,7 +12,8 @@
   "hook_type": "impossible_result",
   "ending": "implication",
   "visual": "clock+bitrow+list",
-  "length_s": 35.2
+  "length_s": 35.2,
+  "post_time": "18:00"
  },
  {
   "n": 0,
@@ -28,7 +29,8 @@
   "hook_type": "counterintuitive_claim",
   "ending": "implication",
   "visual": "counter+list+bitrow+code",
-  "length_s": 32.5
+  "length_s": 32.5,
+  "post_time": "now"
  },
  {
   "n": 2,
@@ -41,7 +43,8 @@
   "script": "This bullet just went through a wall. The wall was fine. Games don't move objects smoothly. They jump them forward once per frame, then check for collisions. A slow object always lands touching the wall. But a fast bullet can be in front of the wall on one frame and already behind it on the next. The check never sees it touching. It's called tunnelling. The fix: sweep the bullet's whole path between frames and find where it would hit. Engines call it continuous collision detection.",
   "source": "https://docs.unity.com/en-us/engine/6000.5/manual/physics-section/physics-overview/physics-optimization/cpu/rigidbody-collision-modes",
   "hook_type": "impossible_result",
-  "ending": "comment_prompt"
+  "ending": "follow_cta",
+  "post_time": "18:00"
  },
  {
   "n": 3,
@@ -54,7 +57,8 @@
   "script": "AI doesn't read words. It reads this. Before a language model sees your message, it chops the text into tokens: common chunks of letters, each turned into a number. \"Strawberry\" might become three pieces, like \"str\", \"aw\" and \"berry\". The model never sees the individual letters. So when you ask how many R's it has, it's reasoning about chunks, not spelling. Newer models often work around this, but the letters were never what it saw.",
   "check": "Confirm the exact split of 'strawberry' with a current tokenizer (e.g. pip install tiktoken, cl100k_base or o200k_base) and use the real pieces and IDs on screen.",
   "hook_type": "counterintuitive_claim",
-  "ending": "implication"
+  "ending": "implication",
+  "post_time": "18:00"
  },
  {
   "n": 4,
@@ -67,7 +71,8 @@
   "script": "This website doesn't know your password. And that's a good thing. When you sign up, a well-built site runs your password through a hash: a one-way function that turns it into fixed-length gibberish. Change one letter, and the result changes completely. It stores only the hash, plus a random salt, so identical passwords look different. When you log in, it hashes what you typed and compares. Steal the database, and you get hashes, not passwords. Weak ones can still be guessed, one hash at a time.",
   "source": "https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html",
   "hook_type": "counterintuitive_claim",
-  "ending": "comment_prompt"
+  "ending": "follow_cta",
+  "post_time": "18:00"
  },
  {
   "n": 5,
@@ -79,7 +84,8 @@
   "status": "approved",
   "script": "You bought a one-terabyte drive. Windows says 931 gigabytes. Nothing's missing. Drive makers count in powers of ten: a terabyte is one trillion bytes. Windows counts in powers of two: its \"gigabyte\" is 1,073,741,824 bytes. Divide a trillion by that, and you get 931. Same bytes, different ruler. The binary unit even has its own name, the gibibyte, but almost nobody uses it. So a two-terabyte drive shows 1,862.",
   "hook_type": "everyday_mystery",
-  "ending": "implication"
+  "ending": "implication",
+  "post_time": "18:00"
  },
  {
   "n": 6,
@@ -92,7 +98,8 @@
   "script": "Your CPU spends most of its life waiting. Slow it down so a single clock tick takes one second. Grabbing data from its closest cache: about three seconds. The next cache: around ten. Main memory, the RAM: six minutes. Reading from an SSD: days. A spinning hard drive: months. That's why chips are covered in caches, and why fast code is mostly about keeping data close.",
   "source": "https://gist.github.com/seboudry/8415846",
   "hook_type": "scale_analogy",
-  "ending": "comment_prompt"
+  "ending": "follow_cta",
+  "post_time": "18:00"
  },
  {
   "n": 7,
@@ -104,7 +111,8 @@
   "status": "approved",
   "script": "Why is it always stuck at 99%? Most progress bars don't measure time. They count steps: files copied, chunks downloaded, tasks finished. But steps aren't equal. A thousand tiny files fly by, then one huge file or a final check takes forever, and the bar sits still. The program can't know in advance how long each step will take, so the bar is really a guess. Some apps even ease the bar forward to look smooth.",
   "hook_type": "everyday_mystery",
-  "ending": "implication"
+  "ending": "implication",
+  "post_time": "18:00"
  },
  {
   "n": 8,
@@ -117,7 +125,8 @@
   "script": "In 1996, a brand-new rocket broke apart about forty seconds after launch, because of one number. Ariane 5's guidance software was reused from the smaller Ariane 4. One value, tied to horizontal velocity, was a 64-bit float converted into a 16-bit integer. The biggest number that fits is 32,767. Ariane 5 flew faster, the value got too big, and the conversion failed. Its backup computer ran the same code, and had failed the same way moments earlier.",
   "source": "https://www.dcs.gla.ac.uk/~johnson/teaching/safety/reports/ariane5.html",
   "hook_type": "story",
-  "ending": "comment_prompt"
+  "ending": "follow_cta",
+  "post_time": "18:00"
  },
  {
   "n": 9,
@@ -129,7 +138,8 @@
   "status": "approved",
   "script": "Your game says 60 FPS, but it feels choppy. FPS is an average. Sixty frames in a second could arrive evenly, one every 16.7 milliseconds. Or most could arrive fast and a few late: 8 milliseconds, then 40. The counter still says 60, but your eyes notice the gaps. That's frame pacing. It's why reviewers now show frame-time graphs and 1% lows, and why capping your frame rate can make a game feel smoother.",
   "hook_type": "everyday_mystery",
-  "ending": "implication"
+  "ending": "implication",
+  "post_time": "01:00+1"
  },
  {
   "n": 10,
@@ -141,7 +151,8 @@
   "status": "approved",
   "script": "AI doesn't see a picture. It sees a grid of numbers. Every pixel is three values: red, green and blue. Many modern vision models cut the image into small square patches, turn each patch into a list of numbers, and compare every patch with every other. From millions of labelled examples, they learn which number patterns mean \"cat ears\" or \"wheel\". No eyes, no light. Just patterns in numbers.",
   "hook_type": "counterintuitive_claim",
-  "ending": "comment_prompt"
+  "ending": "comment_prompt",
+  "post_time": "01:00+1"
  },
  {
   "n": 11,
@@ -154,7 +165,8 @@
   "script": "When you delete a file, your computer usually doesn't erase it. It just marks the space as free. On a spinning hard drive, the data stays until something new overwrites it. That's why recovery tools work. SSDs are different. The computer sends a TRIM command, and the drive clears those blocks in the background, usually soon after. So on a modern laptop, deleted often really means gone. On an old hard drive, it means \"not yet\".",
   "source": "https://dmitrybrant.com/2020/06",
   "hook_type": "counterintuitive_claim",
-  "ending": "implication"
+  "ending": "implication",
+  "post_time": "01:00+1"
  },
  {
   "n": 12,
@@ -166,7 +178,8 @@
   "status": "approved",
   "script": "Pressing a key doesn't send a letter. Under your keys is a grid of wires: rows and columns. A small chip scans it hundreds of times a second, powering one row at a time and checking which columns respond. Press A, and its row and column connect. The chip sends a scan code, a number for that physical key. Your operating system turns that number into a letter using your layout. That's why switching to AZERTY moves letters without touching the keyboard.",
   "hook_type": "counterintuitive_claim",
-  "ending": "comment_prompt"
+  "ending": "comment_prompt",
+  "post_time": "01:00+1"
  },
  {
   "n": 13,
@@ -179,7 +192,8 @@
   "script": "Turn off GPS, and your phone can still find you. Every Wi-Fi router broadcasts a unique ID, even if you never connect. Google and Apple have built huge maps of where those IDs are. Your phone scans nearby networks, looks them up, and estimates your position, often within tens of metres in a city. Cell towers fill in the rest, more roughly. That's also why location works indoors, where satellite signals struggle.",
   "source": "https://www.sammobile.com/news/how-does-my-phone-know-my-location-without-gps-turned-on/",
   "hook_type": "counterintuitive_claim",
-  "ending": "implication"
+  "ending": "implication",
+  "post_time": "01:00+1"
  },
  {
   "n": 14,
@@ -192,6 +206,7 @@
   "experiment": "E1: hook-format test vs the earlier floating-point video",
   "script": "Ask a computer for 0.1 plus 0.2. It says 0.30000000000000004. Computers store decimals in binary. And in binary, 0.1 is like one-third in decimal: it never ends. Zero point zero zero zero one one zero zero one one, forever. The computer has to round it off after 52 bits, so it stores a number very slightly off. Add two slightly-off numbers and the error shows. That's why programmers don't compare decimals with equals, and why money is usually stored as whole cents.",
   "hook_type": "impossible_result",
-  "ending": "comment_prompt"
+  "ending": "comment_prompt",
+  "post_time": "01:00+1"
  }
 ]

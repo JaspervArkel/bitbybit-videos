@@ -22,16 +22,26 @@ Every new video applies these. The weekly review adds, changes or removes rules,
 - H2: Gaming and AI topics get more shares than number-system topics.
 - H3: Ending with a specific, answerable question raises comments without hurting likes.
 - H4: Shorter videos (25–28 s) complete more often than 32–35 s versions of similar topics.
+- H5: A specific follow CTA that previews tomorrow's video raises follows per 1,000 views without lowering likes.
+- H6: Posting at US evening time (01:00 Amsterdam) gets more views than 18:00 Amsterdam (US midday).
 
 ## Current experiment
-**E5, 12–18 Nov: ending type (tests H3).** Only the ending changes; scripts stay as approved.
-- Even backlog numbers (`n` = 2, 4, 6, …): `ending: comment_prompt`. The endcard text becomes a short, specific question the viewer can answer from their own life ("What does your drive say?"). The Instagram `firstComment` asks the same question. The TikTok and YouTube captions end with it.
-- Odd backlog numbers: `ending: implication`. The endcard states the takeaway (as in the 2038 video). No question.
-- Measured on likes, comments and shares per 1,000 views, at 72 hours or older.
+**E5, 12–18 Nov: specific follow CTA (tests H5).** Only the ending changes; the approved script stays as is, plus one added spoken line.
+- `ending: follow_cta` (backlog n = 2, 4, 6, 8): after the last script line, add one spoken caption, "Follow: tomorrow, <next video's topic in 3–6 words>." The next video is the next approved backlog entry; use its plain title, e.g. "Follow: tomorrow, why AI can't spell." The endcard shows the takeaway plus "Follow · tomorrow: <topic>". Captions end with the same line. If there is no next approved entry, use `implication` instead.
+- `ending: implication` (n = 3, 5, 7): the endcard states the takeaway. No CTA.
+- Measured on follows (if Buffer or screenshots provide them) and likes, comments and shares per 1,000 views, at 72 hours or older.
+
+## Upcoming experiments (already scheduled in backlog tags)
+- **E6, 19–25 Nov: question ending (tests H3).** `ending: comment_prompt` (n = 10, 12, 14): the endcard becomes a short, specific question the viewer can answer from their own life ("What does your drive say?"). The Instagram `firstComment` asks it too, and the captions end with it. Odd n: `implication`.
+- **E7, from 19 Nov: posting time (tests H6).** Videos dated 12–18 Nov post at 18:00 Europe/Amsterdam (12:00 New York). Videos dated 19–25 Nov post at **01:00 Europe/Amsterdam the following night** (19:00 New York, 16:00 Los Angeles). Compare week against week on views at 72 h, per platform. Inconclusive after 2 weeks? Extend.
+
+## Posting schedule
+Each backlog entry's `post_time` decides when it goes out: "18:00" = 18:00 Europe/Amsterdam on its date; "01:00+1" = 01:00 Europe/Amsterdam on the day after its date. The weekly review may change future entries' `post_time` only as part of an experiment.
 
 ## Tag vocabulary (set on every backlog entry when built)
 - `hook_type`: impossible_result | counterintuitive_claim | everyday_mystery | scale_analogy | story
-- `ending`: implication | comment_prompt
+- `ending`: implication | comment_prompt | follow_cta
+- `post_time`: "18:00" | "01:00+1"
 - `visual`: the main kit components used, e.g. "clock+bitrow"
 - `length_s`: final duration in seconds
 
