@@ -19,6 +19,7 @@ curl -sSLO https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-f
 Narration voice: **am_puck**, full-precision model, speed 1.0. Never switch voices.
 
 ## 2. Write the spec: `videos/NN-slug/video.json`
+- **First read `learnings.md`.** Apply every rule under "Rules in force", and the current experiment's instructions for this entry (e.g. its `ending`). The learnings file wins over older guidance below if they conflict, but never over the approved script's facts.
 - Split the approved script into captions of one spoken phrase each (4 to 12 words). Keep the wording exactly; don't add claims.
 - Add `say` wherever numbers, years, units or symbols need a spoken form ("twenty thirty-eight", "thirty-two-bit", "one point eight six two terabytes").
 - Hide caption 0 (`"hide": true`) when scene 0's title already shows the hook. Scene 0 uses `"instant": true` so frame 1 is complete.
@@ -49,13 +50,13 @@ Channels: YouTube `6aee4c0ce29c69a17188c931`, TikTok `6aee4bede29c69a17188c865`,
 For each: `create_post` with `mode: customScheduled`, `dueAt: <DATE>T18:00:00+01:00` (use +02:00 in summer time; confirm with get_account),
 `schedulingType: automatic`, and the video asset with the raw URL.
 - YouTube: `metadata.youtube` = {title (max ~70 chars, curiosity-driven, no clickbait), categoryId "27" (Education), privacy "public", madeForKids false}. Text = short description + 2–3 hashtags incl. #Shorts.
-- Instagram: `metadata.instagram` = {type "reel", shouldShareToFeed true}. Text = hook line + one-sentence payoff + 3–5 hashtags.
+- Instagram: `metadata.instagram` = {type "reel", shouldShareToFeed true, firstComment: the experiment's question if `ending` is comment_prompt}. Text = hook line + one-sentence payoff + 3–5 hashtags.
 - TikTok: `metadata.tiktok` = {title}. Text = hook + 3–4 hashtags.
 No generic "follow for more". Avoid hashtag walls. Buffer holds at most 10 scheduled posts, so schedule only today's three.
 
 ## 6. Log
-Set the entry's status to `scheduled`, add the Buffer post IDs to `posted.json`, commit and push.
-Report: title, duration, video link, the three post IDs and times, plus anything that failed.
+Set the entry's status to `scheduled`, fill its tags (`hook_type`, `ending`, `visual`, `length_s`; see learnings.md), add the Buffer post IDs to `posted.json`, commit and push.
+Report: title, duration, video link, the three post IDs and times, plus anything that failed. Also report the runway (days of approved entries left); warn if it's under 4.
 
 ## Never
 - Publish immediately (`shareNow`), or schedule anything but today's entry.
