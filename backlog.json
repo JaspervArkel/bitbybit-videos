@@ -6,7 +6,7 @@
   "title": "The 2038 clock bug",
   "pillar": "A/F",
   "hook": "Some computers will think it's 1901",
-  "status": "rendered",
+  "status": "scheduled",
   "spec": "videos/01-y2k38/video.json",
   "video": "out/2026-11-11-y2k38/bitbybit-2038.mp4"
  },
