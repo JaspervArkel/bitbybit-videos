@@ -1,0 +1,12 @@
+This bullet just went through a wall.
+The wall was fine.
+Games don't move objects smoothly.
+They jump them forward once per frame, then check for collisions.
+A slow object always lands touching the wall.
+But a fast bullet can be in front of the wall
+on one frame and already behind it on the next.
+The check never sees it touching. It's called tunneling.
+The fix: sweep the bullet's whole path between frames
+and find where it would hit.
+Engines call it continuous collision detection.
+Follow. Tomorrow: A.I. doesn't see letters.

@@ -1,0 +1,338 @@
+{
+ "title": "Why fast bullets go through walls",
+ "captions": [
+  {
+   "text": "This bullet just went !through! a wall.",
+   "hide": true
+  },
+  {
+   "text": "The wall was *fine.*"
+  },
+  {
+   "text": "Games don't move objects !smoothly.!"
+  },
+  {
+   "text": "They jump them forward *once per frame,* then check for collisions."
+  },
+  {
+   "text": "A slow object always lands *touching* the wall."
+  },
+  {
+   "text": "But a !fast! bullet can be in front of the wall"
+  },
+  {
+   "text": "on one frame and already !behind it! on the next."
+  },
+  {
+   "text": "The check never sees it touching. It's called !tunnelling.!",
+   "say": "The check never sees it touching. It's called tunneling."
+  },
+  {
+   "text": "The fix: *sweep* the bullet's whole path between frames"
+  },
+  {
+   "text": "and find where it would *hit.*"
+  },
+  {
+   "text": "Engines call it *continuous collision detection.*"
+  },
+  {
+   "text": "Follow: tomorrow, AI doesn't see letters.",
+   "say": "Follow. Tomorrow: A.I. doesn't see letters."
+  }
+ ],
+ "scenes": [
+  {
+   "type": "tunnel",
+   "cap": [
+    0,
+    0
+   ],
+   "instant": true,
+   "title": "This bullet just went !through! a wall",
+   "titleY": 300,
+   "titleSize": 92,
+   "pos": [
+    130,
+    320,
+    500,
+    720,
+    910
+   ],
+   "step": 0.14,
+   "t0": 0.14,
+   "loop": 1.4,
+   "ghosts": false,
+   "frames": false,
+   "stopOnHit": false,
+   "y": 880
+  },
+  {
+   "type": "tunnel",
+   "cap": [
+    1,
+    1
+   ],
+   "title": "The wall was *fine*",
+   "pos": [
+    910
+   ],
+   "ghosts": false,
+   "frames": false,
+   "y": 880,
+   "badge": "collisions found: !0!",
+   "badgeC": "o",
+   "badgeAt": 0.4
+  },
+  {
+   "type": "tunnel",
+   "cap": [
+    2,
+    2
+   ],
+   "wall": false,
+   "label": "one jump per frame",
+   "pos": [
+    180,
+    360,
+    540,
+    720,
+    900
+   ],
+   "step": 0.42,
+   "t0": 0.25,
+   "y": 820
+  },
+  {
+   "type": "tunnel",
+   "cap": [
+    3,
+    3
+   ],
+   "label": "jump, then *check*",
+   "pos": [
+    140,
+    400,
+    660
+   ],
+   "step": 0.9,
+   "t0": 0.35,
+   "checks": true,
+   "missC": "dim",
+   "y": 820,
+   "wallX": 860
+  },
+  {
+   "type": "tunnel",
+   "cap": [
+    4,
+    4
+   ],
+   "label": "*slow* object",
+   "bullet": "g",
+   "pos": [
+    200,
+    280,
+    360,
+    440,
+    520,
+    600
+   ],
+   "step": 0.4,
+   "t0": 0.2,
+   "checks": true,
+   "missC": "dim",
+   "y": 820,
+   "onlyCur": true
+  },
+  {
+   "type": "tunnel",
+   "cap": [
+    5,
+    5
+   ],
+   "label": "!fast! bullet",
+   "pos": [
+    430,
+    790
+   ],
+   "step": 99,
+   "t0": 99,
+   "checks": true,
+   "y": 820,
+   "cutOut": true
+  },
+  {
+   "type": "tunnel",
+   "cap": [
+    6,
+    6
+   ],
+   "label": "!fast! bullet",
+   "pos": [
+    430,
+    790
+   ],
+   "step": 99,
+   "t0": 1.0,
+   "checks": true,
+   "y": 820,
+   "cutIn": true
+  },
+  {
+   "type": "tunnel",
+   "cap": [
+    7,
+    7
+   ],
+   "title": "!Tunnelling!",
+   "titleSize": 120,
+   "pos": [
+    430,
+    790
+   ],
+   "step": 99,
+   "t0": 0.5,
+   "loop": 1.8,
+   "checks": true,
+   "y": 860,
+   "badge": "collisions found: !0!",
+   "badgeC": "o",
+   "badgeAt": 0.9
+  },
+  {
+   "type": "tunnel",
+   "cap": [
+    8,
+    8
+   ],
+   "label": "*sweep* the whole path",
+   "pos": [
+    430,
+    790
+   ],
+   "step": 99,
+   "t0": -1,
+   "checks": true,
+   "sweep": true,
+   "sweepAt": 0.5,
+   "sweepDur": 1.6,
+   "y": 820,
+   "cutOut": true
+  },
+  {
+   "type": "tunnel",
+   "cap": [
+    9,
+    9
+   ],
+   "label": "*sweep* the whole path",
+   "pos": [
+    430,
+    790
+   ],
+   "step": 99,
+   "t0": -1,
+   "sweep": true,
+   "sweepAt": -1,
+   "snap": true,
+   "frames": false,
+   "y": 820,
+   "cutIn": true,
+   "badge": "collision *found*",
+   "badgeAt": 0.5
+  },
+  {
+   "type": "list",
+   "cap": [
+    10,
+    10
+   ],
+   "title": "Two ways to check",
+   "y": 620,
+   "items": [
+    {
+     "label": "Discrete",
+     "value": "!can tunnel!",
+     "c": "o"
+    },
+    {
+     "label": "Continuous (CCD)",
+     "value": "*sweeps path*",
+     "c": "g"
+    }
+   ]
+  },
+  {
+   "type": "endcard",
+   "cap": [
+    11,
+    11
+   ],
+   "text": "Fast objects need their *whole path* checked",
+   "sub": "Follow \u00b7 tomorrow: AI doesn't see letters",
+   "y": 560,
+   "subSize": 34
+  }
+ ],
+ "sfx": [
+  {
+   "cap": 0,
+   "at": 0.14,
+   "type": "ticks",
+   "count": 4,
+   "every": 0.14
+  },
+  {
+   "cap": 0,
+   "at": 0.62,
+   "type": "whoosh"
+  },
+  {
+   "cap": 2,
+   "at": 0.25,
+   "type": "ticks",
+   "count": 4,
+   "every": 0.42
+  },
+  {
+   "cap": 3,
+   "at": 0.35,
+   "type": "ticks",
+   "count": 3,
+   "every": 0.75
+  },
+  {
+   "cap": 4,
+   "at": 2.08,
+   "type": "hit"
+  },
+  {
+   "cap": 6,
+   "at": 0.88,
+   "type": "glitch"
+  },
+  {
+   "cap": 7,
+   "at": 0.9,
+   "type": "pop"
+  },
+  {
+   "cap": 9,
+   "at": 0.2,
+   "type": "hit"
+  },
+  {
+   "cap": 10,
+   "at": 0.6,
+   "type": "pop"
+  },
+  {
+   "cap": 10,
+   "at": 1.05,
+   "type": "pop"
+  }
+ ],
+ "cover": 0.5,
+ "tail": 1.2
+}

@@ -39,12 +39,14 @@
   "title": "Why fast bullets go through walls",
   "pillar": "C",
   "hook": "The wall was fine",
-  "status": "approved",
+  "status": "rendered",
   "script": "This bullet just went through a wall. The wall was fine. Games don't move objects smoothly. They jump them forward once per frame, then check for collisions. A slow object always lands touching the wall. But a fast bullet can be in front of the wall on one frame and already behind it on the next. The check never sees it touching. It's called tunnelling. The fix: sweep the bullet's whole path between frames and find where it would hit. Engines call it continuous collision detection.",
   "source": "https://docs.unity.com/en-us/engine/6000.5/manual/physics-section/physics-overview/physics-optimization/cpu/rigidbody-collision-modes",
   "hook_type": "impossible_result",
   "ending": "follow_cta",
-  "post_time": "18:00"
+  "post_time": "18:00",
+  "spec": "videos/02-bullet-tunneling/video.json",
+  "video": "out/2026-11-12-bullet-tunneling/bitbybit-bullet-tunneling.mp4"
  },
  {
   "n": 3,

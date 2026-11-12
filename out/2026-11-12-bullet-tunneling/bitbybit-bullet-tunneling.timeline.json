@@ -1,0 +1,399 @@
+{
+ "title": "Why fast bullets go through walls",
+ "captions": [
+  {
+   "text": "This bullet just went !through! a wall.",
+   "hide": true,
+   "s": 0.15,
+   "e": 1.907,
+   "se": 1.587
+  },
+  {
+   "text": "The wall was *fine.*",
+   "s": 1.907,
+   "e": 3.179,
+   "se": 2.859
+  },
+  {
+   "text": "Games don't move objects !smoothly.!",
+   "s": 3.179,
+   "e": 5.116,
+   "se": 4.796
+  },
+  {
+   "text": "They jump them forward *once per frame,* then check for collisions.",
+   "s": 5.116,
+   "e": 8.659,
+   "se": 8.34
+  },
+  {
+   "text": "A slow object always lands *touching* the wall.",
+   "s": 8.659,
+   "e": 11.428,
+   "se": 11.108
+  },
+  {
+   "text": "But a !fast! bullet can be in front of the wall",
+   "s": 11.428,
+   "e": 13.443,
+   "se": 13.123
+  },
+  {
+   "text": "on one frame and already !behind it! on the next.",
+   "s": 13.443,
+   "e": 16.202,
+   "se": 15.882
+  },
+  {
+   "text": "The check never sees it touching. It's called !tunnelling.!",
+   "say": "The check never sees it touching. It's called tunneling.",
+   "s": 16.202,
+   "e": 19.139,
+   "se": 18.819
+  },
+  {
+   "text": "The fix: *sweep* the bullet's whole path between frames",
+   "s": 19.139,
+   "e": 22.017,
+   "se": 21.697
+  },
+  {
+   "text": "and find where it would *hit.*",
+   "s": 22.017,
+   "e": 23.447,
+   "se": 23.127
+  },
+  {
+   "text": "Engines call it *continuous collision detection.*",
+   "s": 23.447,
+   "e": 26.062,
+   "se": 25.742
+  },
+  {
+   "text": "Follow: tomorrow, AI doesn't see letters.",
+   "say": "Follow. Tomorrow: A.I. doesn't see letters.",
+   "s": 26.062,
+   "e": 28.198,
+   "se": 28.198
+  }
+ ],
+ "scenes": [
+  {
+   "type": "tunnel",
+   "cap": [
+    0,
+    0
+   ],
+   "instant": true,
+   "title": "This bullet just went !through! a wall",
+   "titleY": 300,
+   "titleSize": 92,
+   "pos": [
+    130,
+    320,
+    500,
+    720,
+    910
+   ],
+   "step": 0.14,
+   "t0": 0.14,
+   "loop": 1.4,
+   "ghosts": false,
+   "frames": false,
+   "stopOnHit": false,
+   "y": 880,
+   "start": 0,
+   "end": 1.787
+  },
+  {
+   "type": "tunnel",
+   "cap": [
+    1,
+    1
+   ],
+   "title": "The wall was *fine*",
+   "pos": [
+    910
+   ],
+   "ghosts": false,
+   "frames": false,
+   "y": 880,
+   "badge": "collisions found: !0!",
+   "badgeC": "o",
+   "badgeAt": 0.4,
+   "start": 1.787,
+   "end": 3.059
+  },
+  {
+   "type": "tunnel",
+   "cap": [
+    2,
+    2
+   ],
+   "wall": false,
+   "label": "one jump per frame",
+   "pos": [
+    180,
+    360,
+    540,
+    720,
+    900
+   ],
+   "step": 0.42,
+   "t0": 0.25,
+   "y": 820,
+   "start": 3.059,
+   "end": 4.996
+  },
+  {
+   "type": "tunnel",
+   "cap": [
+    3,
+    3
+   ],
+   "label": "jump, then *check*",
+   "pos": [
+    140,
+    400,
+    660
+   ],
+   "step": 0.9,
+   "t0": 0.35,
+   "checks": true,
+   "missC": "dim",
+   "y": 820,
+   "wallX": 860,
+   "start": 4.996,
+   "end": 8.539
+  },
+  {
+   "type": "tunnel",
+   "cap": [
+    4,
+    4
+   ],
+   "label": "*slow* object",
+   "bullet": "g",
+   "pos": [
+    200,
+    280,
+    360,
+    440,
+    520,
+    600
+   ],
+   "step": 0.4,
+   "t0": 0.2,
+   "checks": true,
+   "missC": "dim",
+   "y": 820,
+   "onlyCur": true,
+   "start": 8.539,
+   "end": 11.308
+  },
+  {
+   "type": "tunnel",
+   "cap": [
+    5,
+    5
+   ],
+   "label": "!fast! bullet",
+   "pos": [
+    430,
+    790
+   ],
+   "step": 99,
+   "t0": 99,
+   "checks": true,
+   "y": 820,
+   "cutOut": true,
+   "start": 11.308,
+   "end": 13.323
+  },
+  {
+   "type": "tunnel",
+   "cap": [
+    6,
+    6
+   ],
+   "label": "!fast! bullet",
+   "pos": [
+    430,
+    790
+   ],
+   "step": 99,
+   "t0": 1.0,
+   "checks": true,
+   "y": 820,
+   "cutIn": true,
+   "start": 13.323,
+   "end": 16.082
+  },
+  {
+   "type": "tunnel",
+   "cap": [
+    7,
+    7
+   ],
+   "title": "!Tunnelling!",
+   "titleSize": 120,
+   "pos": [
+    430,
+    790
+   ],
+   "step": 99,
+   "t0": 0.5,
+   "loop": 1.8,
+   "checks": true,
+   "y": 860,
+   "badge": "collisions found: !0!",
+   "badgeC": "o",
+   "badgeAt": 0.9,
+   "start": 16.082,
+   "end": 19.019
+  },
+  {
+   "type": "tunnel",
+   "cap": [
+    8,
+    8
+   ],
+   "label": "*sweep* the whole path",
+   "pos": [
+    430,
+    790
+   ],
+   "step": 99,
+   "t0": -1,
+   "checks": true,
+   "sweep": true,
+   "sweepAt": 0.5,
+   "sweepDur": 1.6,
+   "y": 820,
+   "cutOut": true,
+   "start": 19.019,
+   "end": 21.897
+  },
+  {
+   "type": "tunnel",
+   "cap": [
+    9,
+    9
+   ],
+   "label": "*sweep* the whole path",
+   "pos": [
+    430,
+    790
+   ],
+   "step": 99,
+   "t0": -1,
+   "sweep": true,
+   "sweepAt": -1,
+   "snap": true,
+   "frames": false,
+   "y": 820,
+   "cutIn": true,
+   "badge": "collision *found*",
+   "badgeAt": 0.5,
+   "start": 21.897,
+   "end": 23.327
+  },
+  {
+   "type": "list",
+   "cap": [
+    10,
+    10
+   ],
+   "title": "Two ways to check",
+   "y": 620,
+   "items": [
+    {
+     "label": "Discrete",
+     "value": "!can tunnel!",
+     "c": "o"
+    },
+    {
+     "label": "Continuous (CCD)",
+     "value": "*sweeps path*",
+     "c": "g"
+    }
+   ],
+   "start": 23.327,
+   "end": 25.942
+  },
+  {
+   "type": "endcard",
+   "cap": [
+    11,
+    11
+   ],
+   "text": "Fast objects need their *whole path* checked",
+   "sub": "Follow \u00b7 tomorrow: AI doesn't see letters",
+   "y": 560,
+   "subSize": 34,
+   "start": 25.942,
+   "end": 29.72
+  }
+ ],
+ "sfx": [
+  {
+   "cap": 0,
+   "at": 0.14,
+   "type": "ticks",
+   "count": 4,
+   "every": 0.14
+  },
+  {
+   "cap": 0,
+   "at": 0.62,
+   "type": "whoosh"
+  },
+  {
+   "cap": 2,
+   "at": 0.25,
+   "type": "ticks",
+   "count": 4,
+   "every": 0.42
+  },
+  {
+   "cap": 3,
+   "at": 0.35,
+   "type": "ticks",
+   "count": 3,
+   "every": 0.75
+  },
+  {
+   "cap": 4,
+   "at": 2.08,
+   "type": "hit"
+  },
+  {
+   "cap": 6,
+   "at": 0.88,
+   "type": "glitch"
+  },
+  {
+   "cap": 7,
+   "at": 0.9,
+   "type": "pop"
+  },
+  {
+   "cap": 9,
+   "at": 0.2,
+   "type": "hit"
+  },
+  {
+   "cap": 10,
+   "at": 0.6,
+   "type": "pop"
+  },
+  {
+   "cap": 10,
+   "at": 1.05,
+   "type": "pop"
+  }
+ ],
+ "cover": 0.5,
+ "tail": 1.2,
+ "duration": 29.72
+}

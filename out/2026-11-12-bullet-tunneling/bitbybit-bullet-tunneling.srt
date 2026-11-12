@@ -1,0 +1,47 @@
+1
+00:00:00,150 --> 00:00:01,907
+This bullet just went through a wall.
+
+2
+00:00:01,907 --> 00:00:03,179
+The wall was fine.
+
+3
+00:00:03,179 --> 00:00:05,116
+Games don't move objects smoothly.
+
+4
+00:00:05,116 --> 00:00:08,659
+They jump them forward once per frame, then check for collisions.
+
+5
+00:00:08,659 --> 00:00:11,428
+A slow object always lands touching the wall.
+
+6
+00:00:11,428 --> 00:00:13,443
+But a fast bullet can be in front of the wall
+
+7
+00:00:13,443 --> 00:00:16,202
+on one frame and already behind it on the next.
+
+8
+00:00:16,202 --> 00:00:19,139
+The check never sees it touching. It's called tunnelling.
+
+9
+00:00:19,139 --> 00:00:22,017
+The fix: sweep the bullet's whole path between frames
+
+10
+00:00:22,017 --> 00:00:23,447
+and find where it would hit.
+
+11
+00:00:23,447 --> 00:00:26,062
+Engines call it continuous collision detection.
+
+12
+00:00:26,062 --> 00:00:28,198
+Follow: tomorrow, AI doesn't see letters.

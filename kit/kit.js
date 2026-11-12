@@ -146,10 +146,10 @@ C.list = (root, p) => {
   return lt => { if (tt) tt(lt); its.forEach((e, i) => { const k = pop(lt, (p.delay ?? .1) + i * (p.stagger ?? .45), .4); e.style.opacity = clamp(k * 1.5); e.style.transform = `translateX(${(1 - k) * -120}px)`; }); };
 };
 
-/* endcard: {text, sub} */
+/* endcard: {text, sub, subSize=40} */
 C.endcard = (root, p) => {
   const tt = C.title(root, { text: p.text, y: p.y ?? 600, size: p.size ?? 92 });
-  const s = mk('div', 'title mono'); s.style.cssText += `;top:${(p.y ?? 600) + 360}px;font-size:40px;color:var(--green);font-weight:700`; s.textContent = p.sub ?? 'bit by bit'; root.appendChild(s);
+  const s = mk('div', 'title mono'); s.style.cssText += `;top:${(p.y ?? 600) + 360}px;font-size:${p.subSize ?? 40}px;color:var(--green);font-weight:700`; s.textContent = p.sub ?? 'bit by bit'; root.appendChild(s);
   return lt => { tt(lt); s.style.opacity = clamp(pop(lt, .8)); };
 };
 
@@ -262,4 +262,62 @@ C.linechart = (root, p) => {
   path.style.strokeDasharray = L;
   return lt => { if (tt) tt(lt); const k = E.inout((lt - .3) / (p.dur ?? 2.5)); path.style.strokeDashoffset = L * (1 - k);
     const kk = pop(lt, .3 + (p.dur ?? 2.5), .4); dot.style.opacity = clamp(kk * 1.5); if (endT) endT.style.opacity = clamp(kk * 1.5); };
+};
+
+/* tunnel: a bullet that moves in discrete per-frame jumps toward a wall (collision / tunnelling demos).
+   {pos:[x centres], step=.5, t0=.2, loop, y=820, wall=true, wallX=600, wallW=70, wallH=340, bullet:'o'|'g',
+    ghosts=true, frames=true, checks=false, stopOnHit=true, sweep=false, sweepAt=.2, sweepDur=.9, snap=false,
+    label, badge, badgeAt=.6, badgeC='g'|'o', title, titleY, titleSize, instant} */
+C.tunnel = (root, p) => {
+  const tt = p.title ? C.title(root, { text: p.title, y: p.titleY ?? 330, size: p.titleSize ?? 84, instant: p.instant }) : null;
+  const Y = p.y ?? 820, WX = p.wallX ?? 600, WW = p.wallW ?? 70, WH = p.wallH ?? 340, BW = 110, BH = 44;
+  const box = mk('div', 'tun'); root.appendChild(box);
+  if (p.label) { const l = mk('div', 'label', mark(p.label)); l.style.cssText = `position:absolute;left:0;right:0;text-align:center;top:${Y - WH / 2 - 150}px`; box.appendChild(l); }
+  const track = mk('div', 'track'); track.style.top = Y + 'px'; box.appendChild(track);
+  const wall = p.wall === false ? null : mk('div', 'wall');
+  if (wall) { wall.style.cssText = `left:${WX - WW / 2}px;top:${Y - WH / 2}px;width:${WW}px;height:${WH}px`; box.appendChild(wall); }
+  const face = WX - WW / 2, hits = x => wall && Math.abs(x - WX) < WW / 2 + BW / 2;
+  const pos = p.pos.slice(); let last = pos.length - 1;
+  if (p.stopOnHit !== false) { const h = pos.findIndex(hits); if (h >= 0) last = h; }
+  const band = p.sweep ? mk('div', 'sweep') : null;
+  if (band) { band.style.cssText = `left:${pos[0] - BW / 2}px;top:${Y - BH / 2 - 10}px;height:${BH + 20}px;width:0`; box.appendChild(band); }
+  const ghosts = pos.map((x, i) => { const g = mk('div', 'blt ghost ' + (p.bullet ?? 'o')); g.style.cssText = `left:${x - BW / 2}px;top:${Y - BH / 2}px`; box.appendChild(g);
+    const f = mk('div', 'flab mono', `frame ${i + 1}`); f.style.cssText = `left:${x - 100}px;top:${Y + 50}px`; box.appendChild(f);
+    const c = mk('div', 'chk mono'); c.style.cssText = `left:${x - 130}px;top:${Y - BH / 2 - 70}px`; box.appendChild(c); return { g, f, c }; });
+  const b = mk('div', 'blt ' + (p.bullet ?? 'o')); b.style.top = (Y - BH / 2) + 'px'; box.appendChild(b);
+  const mark2 = p.sweep ? mk('div', 'hitmk') : null; if (mark2) { mark2.style.cssText = `left:${face - 40}px;top:${Y - 40}px`; box.appendChild(mark2); }
+  const hitLab = p.sweep ? mk('div', 'chk mono g', 'HIT') : null; if (hitLab) { hitLab.style.cssText = `left:${face - 130}px;top:${Y - WH / 2 - 62}px;color:var(--green)`; box.appendChild(hitLab); }
+  const badge = p.badge ? mk('div', 'badge ' + (p.badgeC ?? 'g'), mark(p.badge)) : null; if (badge) { badge.style.top = (Y + WH / 2 + 90) + 'px'; box.appendChild(badge); }
+  const step = p.step ?? .5, t0 = p.t0 ?? .2;
+  return lt => {
+    if (tt) tt(lt);
+    const k0 = p.instant ? 1 : pop(lt, 0); box.style.opacity = clamp(k0 * 1.5);
+    const t = p.loop ? lt % p.loop : lt;
+    const i = Math.max(0, Math.min(last, lt < 0 ? 0 : Math.floor((t - t0) / step) + 1));
+    const since = t - (t0 + (i - 1) * step); // time since landing on i
+    let x = pos[i], col = p.bullet ?? 'o';
+    ghosts.forEach(({ g, f, c }, j) => {
+      const seen = j < i && p.ghosts !== false; g.style.opacity = seen ? .28 : 0;
+      f.style.opacity = (j <= i && p.frames !== false && (!p.onlyCur || j === i)) ? 1 : 0; f.classList.toggle('cur', j === i);
+      const h = hits(pos[j]); c.textContent = h ? 'HIT' : 'no overlap'; c.style.color = h ? 'var(--green)' : (p.missC === 'dim' ? 'var(--dim)' : 'var(--orange)');
+      c.style.opacity = (p.checks && j <= i && (!p.onlyCur || j === i) && (j < i || since > .08 || i === 0)) ? 1 : 0;
+    });
+    const hitNow = hits(pos[i]) && i === last;
+    let wallHit = hitNow && since > 0;
+    if (band) {
+      const sk = p.sweepAt < 0 ? 1 : E.inout((lt - (p.sweepAt ?? .2)) / (p.sweepDur ?? .9));
+      const full = pos[last] - pos[0]; const reach = pos[0] - BW / 2 + sk * (full + BW);
+      const front = Math.min(reach, face); band.style.width = Math.max(0, front - (pos[0] - BW / 2)) + 'px';
+      const got = reach >= face; wallHit = wallHit || got;
+      const tg = p.sweepAt < 0 ? lt : lt - (p.sweepAt ?? .2) - (p.sweepDur ?? .9) * .5;
+      mark2.style.opacity = got ? 1 : 0; mark2.style.transform = `scale(${got ? .9 + .25 * Math.abs(Math.sin(lt * 5)) : .5})`;
+      hitLab.style.opacity = got ? 1 : 0; band.classList.toggle('done', got);
+      if (got) ghosts.forEach(({ c }) => c.style.opacity = 0);
+      if (got && p.snap) { const s = E.inout((tg - .1) / .5); x = pos[last] + ((face - BW / 2) - pos[last]) * clamp(s); col = 'g'; }
+    }
+    b.style.left = (x - BW / 2) + 'px'; b.className = 'blt ' + col;
+    const fl = since >= 0 && since < .12 && i > 0 ? 1 - since / .12 : 0; b.style.boxShadow = `0 0 ${30 + 60 * fl}px ${col === 'g' ? 'rgba(74,222,128,.7)' : 'rgba(251,146,60,.7)'}`;
+    if (wall) wall.classList.toggle('hit', wallHit);
+    if (badge) { const kb = pop(lt, p.badgeAt ?? .6, .4); badge.style.opacity = clamp(kb * 1.5); badge.style.transform = `translateX(-50%) scale(${.85 + .15 * kb})`; }
+  };
 };
