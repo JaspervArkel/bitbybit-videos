@@ -61,3 +61,41 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:var(--navy);colo
 #caption .w{display:inline-block;margin:0 .12em;transition:none}
 #caption .w.now{color:var(--green);transform:scale(1.08)}
 #caption .w.o{color:var(--orange)} #caption .w.g{color:var(--green)}
+
+/* ---------- landscape (1920x1080, long-form) ---------- */
+html.landscape, html.landscape body { width: 1920px; height: 1080px; }
+.landscape #bug { top: 44px; left: 64px; right: auto; text-align: left; font-size: 26px; }
+.landscape #caption { top: 900px; left: 300px; right: 300px; font-size: 50px; }
+.landscape .title { left: 200px; right: 200px; }
+.landscape .card { left: 520px; right: 520px; }
+.landscape .list { left: 480px; right: 480px; }
+.landscape .code { left: 420px; right: 420px; }
+.landscape .barwrap { left: 420px; right: 420px; }
+.landscape .chips { left: 300px; right: 300px; }
+
+.chapter { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+.chapter .num { font-family: var(--mono); font-size: 40px; color: var(--green); letter-spacing: 8px; }
+.chapter .name { font-size: 104px; font-weight: 800; margin-top: 18px; letter-spacing: -2px; }
+.chapter .rule { height: 6px; background: var(--green); border-radius: 3px; margin-top: 34px; }
+
+.dia { position: absolute; inset: 0; }
+.dia svg { position: absolute; inset: 0; overflow: visible; }
+.node { position: absolute; transform: translate(-50%, -50%); padding: 22px 30px; border-radius: 24px; background: #16244A; border: 3px solid rgba(245,241,232,.18); font-size: 36px; font-weight: 700; text-align: center; white-space: nowrap; }
+.node small { display: block; font-family: var(--mono); font-size: 26px; font-weight: 600; margin-top: 6px; color: var(--dim); }
+.node.g { border-color: var(--green); } .node.g small { color: var(--green); }
+.node.o { border-color: var(--orange); } .node.o small { color: var(--orange); }
+.packet { position: absolute; transform: translate(-50%, -50%); padding: 10px 18px; border-radius: 14px; font-family: var(--mono); font-size: 26px; font-weight: 700; background: var(--green); color: var(--navy); white-space: nowrap; box-shadow: 0 0 30px rgba(74,222,128,.45); }
+.packet.o { background: var(--orange); box-shadow: 0 0 30px rgba(251,146,60,.45); }
+
+.tl { position: absolute; left: 160px; right: 160px; }
+.tl .line { position: absolute; left: 0; right: 0; height: 6px; border-radius: 3px; background: rgba(245,241,232,.15); }
+.tl .fill { position: absolute; left: 0; height: 6px; border-radius: 3px; background: var(--green); }
+.tl .pt { position: absolute; transform: translateX(-50%); width: 340px; display: flex; flex-direction: column; align-items: center; text-align: center; }
+.tl .dot { width: 34px; height: 34px; border-radius: 50%; margin: -14px auto 22px; background: var(--navy); border: 6px solid var(--green); }
+.tl .pt.o .dot { border-color: var(--orange); }
+.tl .lab { font-size: 38px; font-weight: 800; }
+.tl .sub { font-size: 28px; color: var(--dim); margin-top: 8px; }
+
+.chart { position: absolute; }
+.chart .ax { font-family: var(--mono); font-size: 24px; fill: rgba(245,241,232,.55); }
+.chart .note { font-size: 22px; fill: rgba(245,241,232,.45); }

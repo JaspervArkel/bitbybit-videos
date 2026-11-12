@@ -91,7 +91,7 @@ C.counter = (root, p) => {
     if (tt) tt(lt);
     const k = E.inout((lt - (p.delay ?? .2)) / (p.dur ?? 1.5));
     const v = p.from + (p.to - p.from) * k;
-    V.textContent = (p.prefix ?? '') + (p.decimals ? v.toFixed(p.decimals) : fmtInt(v)) + (p.suffix ?? '');
+    V.textContent = (p.prefix ?? '') + (p.decimals ? v.toFixed(p.decimals) : p.raw ? String(Math.round(v)) : fmtInt(v)) + (p.suffix ?? '');
     V.style.color = p.color === 'o' ? 'var(--orange)' : 'var(--green)';
     const kk = p.instant ? 1 : pop(lt, 0); card.style.opacity = clamp(kk * 1.5); card.style.transform = `scale(${.92 + .08 * kk})`;
   };
@@ -156,7 +156,8 @@ C.endcard = (root, p) => {
 /* runtime */
 let SPEC = null, SC = [], CAP = [];
 window.loadVideo = spec => {
-  SPEC = spec; const host = document.getElementById('scenes'); host.innerHTML = '';
+  SPEC = spec;
+  if (spec.format === 'landscape') document.documentElement.classList.add('landscape'); const host = document.getElementById('scenes'); host.innerHTML = '';
   SC = spec.scenes.map(s => {
     const root = mk('div', 'scene'); host.appendChild(root);
     const fn = C[s.type](root, s); return { s, root, fn };
@@ -180,4 +181,80 @@ window.render = t => {
   if (!c || c.hide || SPEC.captionsOff) { cap.innerHTML = ''; return; }
   const n = c.words.length, i = Math.min(n - 1, Math.floor((t - c.s) / (c.e - c.s) * n));
   cap.innerHTML = c.words.map(({ w, c: k }, j) => `<span class="w ${j === i ? 'now' : k}">${w}</span>`).join(' ');
+};
+
+/* ---------- long-form components (designed for 1920x1080) ---------- */
+
+/* chapter: {num, name} */
+C.chapter = (root, p) => {
+  const c = mk('div', 'chapter', `<div class="num">CHAPTER ${p.num}</div><div class="name">${mark(p.name)}</div><div class="rule"></div>`);
+  root.appendChild(c); const [n, t, r] = c.children;
+  return lt => { const a = E.out(lt / .5), b = E.out((lt - .25) / .5), k = E.inout((lt - .4) / .8);
+    n.style.opacity = a; t.style.opacity = b; t.style.transform = `translateY(${(1 - b) * 40}px)`; r.style.width = k * 420 + 'px'; };
+};
+
+/* diagram: {nodes:[{id,label,sub,x,y,c,at}], edges:[{from,to,at,dash}], packets:[{route:[ids], start, dur, labels:[..], c}], title}
+   x,y are pixel centres. Nodes pop in at `at` (default staggered), edges draw at `at`, packets travel along the route. */
+C.diagram = (root, p) => {
+  const tt = p.title ? C.title(root, { text: p.title, y: p.titleY ?? 110, size: p.titleSize ?? 64 }) : null;
+  const d = mk('div', 'dia'); root.appendChild(d);
+  const NS = 'http://www.w3.org/2000/svg', svg = document.createElementNS(NS, 'svg'); svg.setAttribute('width', '100%'); svg.setAttribute('height', '100%'); d.appendChild(svg);
+  const pos = {}; (p.nodes || []).forEach(n => pos[n.id] = n);
+  const edges = (p.edges || []).map((e, i) => {
+    const a = pos[e.from], b = pos[e.to], l = document.createElementNS(NS, 'line');
+    l.setAttribute('x1', a.x); l.setAttribute('y1', a.y); l.setAttribute('x2', b.x); l.setAttribute('y2', b.y);
+    l.setAttribute('stroke', e.c === 'o' ? '#FB923C' : e.c === 'g' ? '#4ADE80' : 'rgba(245,241,232,.35)'); l.setAttribute('stroke-width', 5); l.setAttribute('stroke-linecap', 'round');
+    const len = Math.hypot(b.x - a.x, b.y - a.y); l.setAttribute('stroke-dasharray', len); svg.appendChild(l);
+    return { l, len, at: e.at ?? .3 + i * .2 };
+  });
+  const nodes = (p.nodes || []).map((n, i) => { const e = mk('div', 'node ' + (n.c || ''), `${mark(n.label)}${n.sub ? `<small>${mark(n.sub)}</small>` : ''}`); e.style.left = n.x + 'px'; e.style.top = n.y + 'px'; d.appendChild(e); return { e, at: n.at ?? i * .18 }; });
+  const pk = (p.packets || []).map(k => { const e = mk('div', 'packet ' + (k.c || '')); d.appendChild(e); return { e, k }; });
+  return lt => {
+    if (tt) tt(lt);
+    edges.forEach(({ l, len, at }) => l.setAttribute('stroke-dashoffset', len * (1 - E.inout((lt - at) / .6))));
+    nodes.forEach(({ e, at }) => { const k = pop(lt, at, .4); e.style.opacity = clamp(k * 1.5); e.style.transform = `translate(-50%,-50%) scale(${.7 + .3 * k})`; });
+    pk.forEach(({ e, k }) => {
+      const segs = k.route.length - 1, f = (lt - k.start) / k.dur;
+      if (f < 0 || f > 1.15) { e.style.opacity = 0; return; }
+      const s = Math.min(segs - 1, Math.floor(clamp(f) * segs)), g = E.inout(clamp(f) * segs - s);
+      const a = pos[k.route[s]], b = pos[k.route[s + 1]];
+      e.style.left = a.x + (b.x - a.x) * g + 'px'; e.style.top = a.y + (b.y - a.y) * g + 'px';
+      e.style.opacity = f > 1 ? 1 - (f - 1) / .15 : 1;
+      e.innerHTML = (k.labels && (k.labels[s] ?? k.labels[k.labels.length - 1])) || '';
+    });
+  };
+};
+
+/* timeline: {items:[{label, sub, c}], y=520, stagger=.6, title} */
+C.timeline = (root, p) => {
+  const tt = p.title ? C.title(root, { text: p.title, y: p.titleY ?? 180, size: p.titleSize ?? 64 }) : null;
+  const w = mk('div', 'tl'); w.style.top = (p.y ?? 520) + 'px'; w.innerHTML = '<div class="line"></div><div class="fill"></div>'; root.appendChild(w);
+  const fill = w.querySelector('.fill'), n = p.items.length, st = p.stagger ?? .6;
+  const pts = p.items.map((it, i) => { const e = mk('div', 'pt ' + (it.c || ''), `<div class="dot"></div><div class="lab">${mark(it.label)}</div><div class="sub">${mark(it.sub || '')}</div>`); e.style.left = (n === 1 ? 50 : 4 + i * 92 / (n - 1)) + '%'; w.appendChild(e); return e; });
+  return lt => { if (tt) tt(lt);
+    const t = (lt - .2) / (st * (n - 1) + .001); fill.style.width = clamp(t) * 100 + '%';
+    pts.forEach((e, i) => { const k = pop(lt, .2 + i * st, .4); e.style.opacity = clamp(k * 1.5); e.style.transform = `translateX(-50%) translateY(${(1 - k) * 30}px)`; }); };
+};
+
+/* linechart: {points:[[x,y]...], xLabels:[..], yMax, unit, x=260,y=220,w=1400,h=560, dur=2.5, end:{label}, note, title} */
+C.linechart = (root, p) => {
+  const tt = p.title ? C.title(root, { text: p.title, y: p.titleY ?? 90, size: p.titleSize ?? 60 }) : null;
+  const X = p.x ?? 260, Y = p.y ?? 230, W = p.w ?? 1400, H = p.h ?? 560, NS = 'http://www.w3.org/2000/svg';
+  const svg = document.createElementNS(NS, 'svg'); svg.setAttribute('class', 'chart'); svg.style.left = X + 'px'; svg.style.top = Y + 'px'; svg.setAttribute('width', W); svg.setAttribute('height', H + 60); svg.style.overflow = 'visible'; root.appendChild(svg);
+  const xs = p.points.map(q => q[0]), x0 = Math.min(...xs), x1 = Math.max(...xs), ym = p.yMax ?? Math.max(...p.points.map(q => q[1]));
+  const sx = v => (v - x0) / (x1 - x0) * W, sy = v => H - v / ym * H;
+  let html = '';
+  [0, .25, .5, .75, 1].forEach(f => { const yy = sy(ym * f); html += `<line x1="0" x2="${W}" y1="${yy}" y2="${yy}" stroke="rgba(245,241,232,.08)" stroke-width="2"/><text class="ax" x="-18" y="${yy + 8}" text-anchor="end">${Math.round(ym * f)}${p.unit ?? ''}</text>`; });
+  (p.xLabels || []).forEach(v => html += `<text class="ax" x="${sx(v)}" y="${H + 44}" text-anchor="middle">${v}</text>`);
+  const d = p.points.map((q, i) => `${i ? 'L' : 'M'}${sx(q[0])},${sy(q[1])}`).join(' ');
+  html += `<path d="${d}" fill="none" stroke="#4ADE80" stroke-width="7" stroke-linejoin="round" stroke-linecap="round" data-p/>`;
+  const last = p.points[p.points.length - 1];
+  html += `<circle cx="${sx(last[0])}" cy="${sy(last[1])}" r="14" fill="#4ADE80" data-dot/>`;
+  if (p.end) html += `<text x="${sx(last[0]) - 24}" y="${sy(last[1]) - 34}" text-anchor="end" font-size="40" font-weight="800" fill="#F5F1E8" data-end>${p.end.label}</text>`;
+  if (p.note) html += `<text class="note" x="${W}" y="${H + 90}" text-anchor="end">${p.note}</text>`;
+  svg.innerHTML = html;
+  const path = svg.querySelector('[data-p]'), dot = svg.querySelector('[data-dot]'), endT = svg.querySelector('[data-end]'), L = path.getTotalLength();
+  path.style.strokeDasharray = L;
+  return lt => { if (tt) tt(lt); const k = E.inout((lt - .3) / (p.dur ?? 2.5)); path.style.strokeDashoffset = L * (1 - k);
+    const kk = pop(lt, .3 + (p.dur ?? 2.5), .4); dot.style.opacity = clamp(kk * 1.5); if (endT) endT.style.opacity = clamp(kk * 1.5); };
 };

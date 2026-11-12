@@ -1,0 +1,306 @@
+{
+ "title": "Long-form pilot test: cold open + chapter 1",
+ "format": "landscape",
+ "captions": [
+  {
+   "text": "The internet ran out of addresses.",
+   "hide": true
+  },
+  {
+   "text": "Not in theory."
+  },
+  {
+   "text": "On the third of February 2011, the last free blocks were handed out, at a ceremony in Miami.",
+   "say": "On the third of February, twenty eleven, the last free blocks were handed out, at a ceremony in Miami."
+  },
+  {
+   "text": "And yet you're watching this."
+  },
+  {
+   "text": "Your phone is online. So is your TV, your laptop, maybe even your fridge."
+  },
+  {
+   "text": "So how does an internet with !no addresses left! keep growing?"
+  },
+  {
+   "text": "The answer involves a guess from 1977, a trick hiding in your router,",
+   "say": "The answer involves a guess from nineteen seventy-seven, a trick hiding in your router,"
+  },
+  {
+   "text": "a market where addresses sell for twenty dollars each, and a fix that took thirty years."
+  },
+  {
+   "text": "Every device on the internet needs an address, like a phone number, so data knows where to go."
+  },
+  {
+   "text": "In 1977, Vint Cerf, one of the engineers who designed the internet's core protocols,",
+   "say": "In nineteen seventy-seven, Vint Cerf, one of the engineers who designed the internet's core protocols,"
+  },
+  {
+   "text": "had to decide how long those addresses would be."
+  },
+  {
+   "text": "Some colleagues wanted *128 bits.* Others called that crazy. Cerf picked !32.!",
+   "say": "Some colleagues wanted a hundred and twenty-eight bits. Others called that crazy. Cerf picked thirty-two."
+  }
+ ],
+ "scenes": [
+  {
+   "type": "counter",
+   "cap": [
+    0,
+    2
+   ],
+   "instant": true,
+   "from": 16777216,
+   "to": 0,
+   "dur": 1.6,
+   "delay": 0.1,
+   "color": "o",
+   "label": "free ipv4 addresses",
+   "title": "The internet ran out of !addresses!",
+   "titleY": 220,
+   "y": 420,
+   "size": 140
+  },
+  {
+   "type": "diagram",
+   "cap": [
+    3,
+    5
+   ],
+   "title": "Still online",
+   "nodes": [
+    {
+     "id": "net",
+     "label": "The internet",
+     "x": 960,
+     "y": 300,
+     "c": "g"
+    },
+    {
+     "id": "ph",
+     "label": "Phone",
+     "x": 420,
+     "y": 640,
+     "at": 0.4
+    },
+    {
+     "id": "tv",
+     "label": "TV",
+     "x": 780,
+     "y": 680,
+     "at": 0.8
+    },
+    {
+     "id": "lp",
+     "label": "Laptop",
+     "x": 1140,
+     "y": 680,
+     "at": 1.2
+    },
+    {
+     "id": "fr",
+     "label": "Fridge",
+     "x": 1500,
+     "y": 640,
+     "at": 1.6
+    }
+   ],
+   "edges": [
+    {
+     "from": "net",
+     "to": "ph",
+     "at": 0.5
+    },
+    {
+     "from": "net",
+     "to": "tv",
+     "at": 0.9
+    },
+    {
+     "from": "net",
+     "to": "lp",
+     "at": 1.3
+    },
+    {
+     "from": "net",
+     "to": "fr",
+     "at": 1.7
+    }
+   ]
+  },
+  {
+   "type": "timeline",
+   "cap": [
+    6,
+    7
+   ],
+   "title": "The full story",
+   "y": 520,
+   "stagger": 0.9,
+   "items": [
+    {
+     "label": "1977",
+     "sub": "a guess"
+    },
+    {
+     "label": "Your router",
+     "sub": "a trick"
+    },
+    {
+     "label": "$20",
+     "sub": "per address"
+    },
+    {
+     "label": "30 years",
+     "sub": "the fix",
+     "c": "o"
+    }
+   ]
+  },
+  {
+   "type": "chapter",
+   "cap": [
+    8,
+    8
+   ],
+   "num": 1,
+   "name": "Enough for an *experiment*",
+   "endOffset": 2.6
+  },
+  {
+   "type": "diagram",
+   "cap": [
+    8,
+    8
+   ],
+   "nodes": [
+    {
+     "id": "a",
+     "label": "Your phone",
+     "sub": "203.0.113.7",
+     "x": 360,
+     "y": 560
+    },
+    {
+     "id": "r",
+     "label": "Router",
+     "x": 960,
+     "y": 560,
+     "at": 0.3
+    },
+    {
+     "id": "s",
+     "label": "Website",
+     "sub": "198.51.100.24",
+     "x": 1560,
+     "y": 560,
+     "at": 0.6
+    }
+   ],
+   "edges": [
+    {
+     "from": "a",
+     "to": "r",
+     "at": 0.5
+    },
+    {
+     "from": "r",
+     "to": "s",
+     "at": 0.8
+    }
+   ],
+   "packets": [
+    {
+     "route": [
+      "a",
+      "r",
+      "s"
+     ],
+     "start": 1.3,
+     "dur": 2.2,
+     "labels": [
+      "to: 198.51.100.24",
+      "to: 198.51.100.24"
+     ]
+    }
+   ],
+   "startOffset": 2.6
+  },
+  {
+   "type": "counter",
+   "cap": [
+    9,
+    10
+   ],
+   "from": 1977,
+   "to": 1977,
+   "dur": 0.1,
+   "label": "the decision",
+   "title": "Vint Cerf, co-designer of TCP/IP",
+   "titleY": 200,
+   "y": 380,
+   "size": 160,
+   "raw": true
+  },
+  {
+   "type": "list",
+   "cap": [
+    11,
+    11
+   ],
+   "title": "How long should an address be?",
+   "titleY": 200,
+   "y": 400,
+   "items": [
+    {
+     "label": "Some colleagues",
+     "value": "*128 bits*",
+     "c": "g"
+    },
+    {
+     "label": "Others",
+     "value": "\"crazy\""
+    },
+    {
+     "label": "Cerf's choice",
+     "value": "!32 bits!",
+     "c": "o"
+    }
+   ]
+  }
+ ],
+ "sfx": [
+  {
+   "cap": 0,
+   "at": 0.1,
+   "type": "ticks",
+   "count": 4,
+   "every": 0.4
+  },
+  {
+   "cap": 0,
+   "at": 1.75,
+   "type": "hit"
+  },
+  {
+   "cap": 11,
+   "at": 1.2,
+   "type": "pop"
+  },
+  {
+   "cap": 11,
+   "at": 1.65,
+   "type": "pop"
+  },
+  {
+   "cap": 11,
+   "at": 2.1,
+   "type": "hit"
+  }
+ ],
+ "autoWhoosh": true,
+ "cover": 1.9,
+ "tail": 1.0
+}

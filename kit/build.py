@@ -79,6 +79,8 @@ def resolve(spec, voice):
             a, b = sc['cap']
             sc['start'] = 0 if a == 0 else round(caps[a]['s'] - 0.12, 3)
             sc['end'] = round(caps[b + 1]['s'] - 0.12, 3) if b + 1 < len(caps) else dur
+            if 'endOffset' in sc: sc['end'] = round(sc['start'] + sc['endOffset'], 3)
+            if 'startOffset' in sc: sc['start'] = round(sc['start'] + sc['startOffset'], 3)
     spec['duration'] = dur
     return spec
 
@@ -127,36 +129,66 @@ def build_sfx(spec, path):
 
 
 # ---------- render ----------
-def render(spec, out, fps):
+def size(spec):
+    return (1920, 1080) if spec.get('format') == 'landscape' else (1080, 1920)
+
+
+def render_range(spec, seg, fps, a, b, crf):
     from playwright.sync_api import sync_playwright
-    n = int(round(spec['duration'] * fps))
+    w, h = size(spec)
     enc = subprocess.Popen(['ffmpeg', '-y', '-loglevel', 'error', '-f', 'image2pipe', '-framerate', str(fps), '-i', '-',
-                            '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '18', '-pix_fmt', 'yuv420p', str(out)], stdin=subprocess.PIPE)
+                            '-c:v', 'libx264', '-preset', 'veryfast', '-crf', str(crf), '-pix_fmt', 'yuv420p', str(seg)], stdin=subprocess.PIPE)
     with sync_playwright() as p:
-        b = p.chromium.launch(channel='chrome')
-        pg = b.new_page(viewport={'width': 1080, 'height': 1920})
+        br = p.chromium.launch(channel='chrome'); pg = br.new_page(viewport={'width': w, 'height': h})
         pg.goto((KIT / 'stage.html').as_uri()); pg.wait_for_load_state('load')
         pg.evaluate('s => loadVideo(s)', spec); pg.wait_for_timeout(200)
-        for i in range(n):
-            pg.evaluate(f'render({i / fps})'); enc.stdin.write(pg.screenshot(type='png'))
-            if i % 150 == 0: print(f'  frame {i}/{n}', flush=True)
+        for i in range(a, b):
+            pg.evaluate(f'render({i / fps})'); enc.stdin.write(pg.screenshot(type='jpeg', quality=92) if spec.get('format') == 'landscape' else pg.screenshot(type='png'))
+            if (i - a) % 300 == 0: print(f'  [{a}-{b}] frame {i}', flush=True)
+        br.close()
+    enc.stdin.close(); enc.wait()
+
+
+def _job(args):
+    render_range(*args)
+
+
+def render(spec, out, fps, workers=1):
+    n = int(round(spec['duration'] * fps))
+    crf = spec.get('crf', 18 if spec.get('format') != 'landscape' else 20)
+    if workers <= 1:
+        render_range(spec, out, fps, 0, n, crf)
+    else:
+        import multiprocessing as mp
+        cuts = [round(n * k / workers) for k in range(workers + 1)]
+        segs = [out.with_name(f'{out.stem}.seg{k}.mp4') for k in range(workers)]
+        with mp.get_context('spawn').Pool(workers) as pool:
+            pool.map(_job, [(spec, segs[k], fps, cuts[k], cuts[k + 1], crf) for k in range(workers)])
+        lst = out.with_name(out.stem + '.segs.txt'); lst.write_text(''.join(f"file '{s.name}'\n" for s in segs))
+        subprocess.run(['ffmpeg', '-y', '-loglevel', 'error', '-f', 'concat', '-safe', '0', '-i', str(lst), '-c', 'copy', str(out)], check=True)
+        for s in segs: s.unlink()
+        lst.unlink()
+    from playwright.sync_api import sync_playwright
+    w, h = size(spec)
+    with sync_playwright() as p:
+        br = p.chromium.launch(channel='chrome'); pg = br.new_page(viewport={'width': w, 'height': h})
+        pg.goto((KIT / 'stage.html').as_uri()); pg.evaluate('s => loadVideo(s)', spec)
         pg.evaluate(f"render({spec.get('cover', 1.2)})")
         pg.screenshot(path=str(out.with_name(out.name.replace('.video.mp4', '.cover.png'))))
-        b.close()
-    enc.stdin.close(); enc.wait()
+        br.close()
 
 
 def stills(spec, out, times):
     from playwright.sync_api import sync_playwright
     paths = []
     with sync_playwright() as p:
-        b = p.chromium.launch(channel='chrome'); pg = b.new_page(viewport={'width': 1080, 'height': 1920})
+        b = p.chromium.launch(channel='chrome'); w, h = size(spec); pg = b.new_page(viewport={'width': w, 'height': h})
         pg.goto((KIT / 'stage.html').as_uri()); pg.evaluate('s => loadVideo(s)', spec)
         for t in times:
             pg.evaluate(f'render({t})'); f = out.parent / f'still_{t:06.2f}.png'; pg.screenshot(path=str(f)); paths.append(str(f))
         b.close()
     sheet = out.with_suffix('.stills.png')
-    subprocess.run(['convert', *paths, '-resize', '270x', '+append', str(sheet)], check=True)
+    subprocess.run(['convert', *paths, '-resize', '270x' if size(spec)[0] < 1500 else '640x', *(['+append'] if size(spec)[0] < 1500 else ['-append']), str(sheet)], check=True)
     for f in paths: pathlib.Path(f).unlink()
     print('stills:', sheet)
 
@@ -167,7 +199,7 @@ def srt(caps, path):
 
 
 def main():
-    ap = argparse.ArgumentParser(); ap.add_argument('spec'); ap.add_argument('out'); ap.add_argument('--voice'); ap.add_argument('--fps', type=int, default=30)
+    ap = argparse.ArgumentParser(); ap.add_argument('spec'); ap.add_argument('out'); ap.add_argument('--voice'); ap.add_argument('--fps', type=int, default=30); ap.add_argument('--workers', type=int, default=1)
     ap.add_argument('--script-only', action='store_true', help='just write the TTS script')
     ap.add_argument('--stills', help='comma-separated times: render only these frames to a contact sheet (fast QA)')
     a = ap.parse_args()
@@ -180,7 +212,7 @@ def main():
     if a.stills: return stills(spec, out, [float(x) for x in a.stills.split(',')])
     srt(spec['captions'], out.with_suffix('.srt'))
     sfx = out.with_suffix('.sfx.wav'); print('sfx cues:', build_sfx(spec, sfx))
-    silent = out.with_suffix('.video.mp4'); print(f"rendering {spec['duration']}s @ {a.fps}fps"); render(spec, silent, a.fps)
+    silent = out.with_suffix('.video.mp4'); print(f"rendering {spec['duration']}s @ {a.fps}fps, {a.workers} worker(s)"); render(spec, silent, a.fps, a.workers)
     if a.voice:
         fc = '[1:a]aresample=48000,pan=mono|c0=c0[v];[2:a]volume=0.55[s];[v][s]amix=inputs=2:normalize=0,loudnorm=I=-14:TP=-1.5:LRA=11[a]'
         cmd = ['ffmpeg', '-y', '-loglevel', 'error', '-i', str(silent), '-i', a.voice, '-i', str(sfx), '-filter_complex', fc, '-map', '0:v', '-map', '[a]']
