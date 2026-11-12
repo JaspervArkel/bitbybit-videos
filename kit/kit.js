@@ -11,7 +11,7 @@ const mk = (tag, cls, html) => { const e = document.createElement(tag); if (cls)
 /* split text into words, carrying *green* / !orange! spans across spaces: [{w, c}] */
 const tokens = text => { let st = null; return text.split(/\s+/).map(raw => { let w = raw, c = st;
   const open = w.match(/^([*!])/); if (!st && open) { st = open[1]; c = st; w = w.slice(1); }
-  if (st && w.endsWith(st)) { w = w.slice(0, -1); st = null; } else if (st && w.length > 1 && w.slice(0, -1).endsWith(st)) { w = w.replace(st, ''); st = null; }
+  if (st) { const m = w.match(st === '*' ? /^(.*?)\*([^\w*!]*)$/ : /^(.*?)!([^\w*!]*)$/); if (m) { w = m[1] + m[2]; st = null; } }
   return { w, c: c === '*' ? 'g' : c === '!' ? 'o' : '' }; }); };
 const mark = s => String(s).replace(/\*([^*]+)\*/g, '<span class="g">$1</span>').replace(/!([^!]+)!/g, '<span class="o">$1</span>');
 const pad = n => String(n).padStart(2, '0');
@@ -224,7 +224,7 @@ C.diagram = (root, p) => {
       const s = Math.min(segs - 1, Math.floor(clamp(f) * segs)), g = E.inout(clamp(f) * segs - s);
       const a = pos[k.route[s]], b = pos[k.route[s + 1]];
       e.style.left = a.x + (b.x - a.x) * g + 'px'; e.style.top = a.y + (b.y - a.y) * g + 'px';
-      e.style.opacity = f > 1 ? 1 - (f - 1) / .15 : 1;
+      e.style.opacity = f > .88 ? clamp((1 - f) / .12) : 1;
       e.innerHTML = (k.labels && (k.labels[s] ?? k.labels[k.labels.length - 1])) || '';
     });
   };
@@ -255,7 +255,7 @@ C.linechart = (root, p) => {
   html += `<path d="${d}" fill="none" stroke="#4ADE80" stroke-width="7" stroke-linejoin="round" stroke-linecap="round" data-p/>`;
   const last = p.points[p.points.length - 1];
   html += `<circle cx="${sx(last[0])}" cy="${sy(last[1])}" r="14" fill="#4ADE80" data-dot/>`;
-  if (p.end) html += `<text x="${sx(last[0]) - 24}" y="${sy(last[1]) - 34}" text-anchor="end" font-size="40" font-weight="800" fill="#F5F1E8" data-end>${p.end.label}</text>`;
+  if (p.endLabel) html += `<text x="${sx(last[0]) - 24}" y="${sy(last[1]) - 34}" text-anchor="end" font-size="40" font-weight="800" fill="#F5F1E8" data-end>${p.endLabel}</text>`;
   if (p.note) html += `<text class="note" x="${W}" y="${H + 90}" text-anchor="end">${p.note}</text>`;
   svg.innerHTML = html;
   const path = svg.querySelector('[data-p]'), dot = svg.querySelector('[data-dot]'), endT = svg.querySelector('[data-end]'), L = path.getTotalLength();

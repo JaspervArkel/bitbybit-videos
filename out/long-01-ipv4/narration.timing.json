@@ -1,0 +1,357 @@
+[
+ {
+  "s": 0.15,
+  "e": 1.73,
+  "text": "The internet ran out of addresses."
+ },
+ {
+  "s": 2.05,
+  "e": 2.903,
+  "text": "Not in theory."
+ },
+ {
+  "s": 3.223,
+  "e": 8.703,
+  "text": "On the third of February, twenty eleven, the last free blocks were handed out, at a ceremony in Miami."
+ },
+ {
+  "s": 9.023,
+  "e": 10.187,
+  "text": "And yet you're watching this."
+ },
+ {
+  "s": 10.507,
+  "e": 14.598,
+  "text": "Your phone is online. So is your TV, your laptop, maybe even your fridge."
+ },
+ {
+  "s": 14.918,
+  "e": 17.902,
+  "text": "So how does an internet with no addresses left keep growing?"
+ },
+ {
+  "s": 18.222,
+  "e": 23.015,
+  "text": "The answer involves a guess from nineteen seventy-seven, a trick hiding in your router,"
+ },
+ {
+  "s": 23.335,
+  "e": 28.01,
+  "text": "a market where addresses sell for twenty dollars each, and a fix that took thirty years."
+ },
+ {
+  "s": 28.33,
+  "e": 33.404,
+  "text": "Every device on the internet needs an address, like a phone number, so data knows where to go."
+ },
+ {
+  "s": 33.724,
+  "e": 39.656,
+  "text": "In nineteen seventy-seven, Vint Cerf, one of the engineers who designed the internet's core protocols,"
+ },
+ {
+  "s": 39.976,
+  "e": 42.203,
+  "text": "had to decide how long those addresses would be."
+ },
+ {
+  "s": 42.523,
+  "e": 48.262,
+  "text": "Some colleagues wanted a hundred and twenty-eight bits. Others called that crazy. Cerf picked thirty-two."
+ },
+ {
+  "s": 48.582,
+  "e": 52.066,
+  "text": "Here's the reasoning. They needed a few bits to say which network you're on."
+ },
+ {
+  "s": 52.386,
+  "e": 56.102,
+  "text": "How many countries were there? Nobody knew, and there was no Google to check."
+ },
+ {
+  "s": 56.422,
+  "e": 63.169,
+  "text": "So they guessed a hundred and twenty-eight, doubled it for room, and got two hundred and fifty-six networks. That's eight bits."
+ },
+ {
+  "s": 63.489,
+  "e": 66.963,
+  "text": "The other twenty-four bits named the computer inside each network."
+ },
+ {
+  "s": 67.283,
+  "e": 72.736,
+  "text": "Thirty-two bits gives you two to the thirty-second power: about four point three billion addresses,"
+ },
+ {
+  "s": 73.056,
+  "e": 78.67,
+  "text": "roughly one for every person on Earth at the time. For a research experiment, that was enormous."
+ },
+ {
+  "s": 78.99,
+  "e": 83.394,
+  "text": "Cerf has joked about it ever since. His summary: it was enough for an experiment."
+ },
+ {
+  "s": 83.714,
+  "e": 85.943,
+  "text": "The problem is, the experiment never ended."
+ },
+ {
+  "s": 86.263,
+  "e": 88.685,
+  "text": "For years, addresses were handed out generously."
+ },
+ {
+  "s": 89.005,
+  "e": 93.841,
+  "text": "Early companies and universities got blocks of nearly seventeen million addresses each."
+ },
+ {
+  "s": 94.161,
+  "e": 96.648,
+  "text": "Then came the web, then broadband, then smartphones."
+ },
+ {
+  "s": 96.968,
+  "e": 100.89,
+  "text": "The world's address pool is managed by an organisation called I-A-N-A,"
+ },
+ {
+  "s": 101.21,
+  "e": 103.994,
+  "text": "which hands big blocks to five regional registries:"
+ },
+ {
+  "s": 104.314,
+  "e": 107.993,
+  "text": "North America, Europe, Asia-Pacific, Latin America and Africa."
+ },
+ {
+  "s": 108.313,
+  "e": 113.243,
+  "text": "Each block is one two-hundred-and-fifty-sixth of all I P version four addresses."
+ },
+ {
+  "s": 113.563,
+  "e": 120.007,
+  "text": "At the end of January twenty eleven, I-A-N-A gave two of its last blocks to Asia-Pacific. That left five."
+ },
+ {
+  "s": 120.327,
+  "e": 124.7,
+  "text": "A policy agreed years earlier kicked in: one final block for each region."
+ },
+ {
+  "s": 125.02,
+  "e": 128.821,
+  "text": "On the third of February, they were handed out. The central pool was empty."
+ },
+ {
+  "s": 129.141,
+  "e": 133.236,
+  "text": "Then the regions ran dry, one by one. Asia-Pacific within ten weeks."
+ },
+ {
+  "s": 133.556,
+  "e": 137.339,
+  "text": "Europe rationed its last block for years, handing out tiny slices,"
+ },
+ {
+  "s": 137.659,
+  "e": 144.359,
+  "text": "until the twenty-fifth of November, twenty nineteen, when it made its final allocation and announced it had completely run out."
+ },
+ {
+  "s": 144.679,
+  "e": 148.767,
+  "text": "So how are billions of new devices still getting online? Look at your router."
+ },
+ {
+  "s": 149.087,
+  "e": 153.389,
+  "text": "Your home probably has one public address, the one the rest of the internet sees."
+ },
+ {
+  "s": 153.709,
+  "e": 160.31,
+  "text": "Every device inside gets a private address instead, from ranges that are reused in millions of homes at once."
+ },
+ {
+  "s": 160.63,
+  "e": 166.097,
+  "text": "That's why so many home networks use addresses starting with one nine two, dot, one six eight."
+ },
+ {
+  "s": 166.417,
+  "e": 172.447,
+  "text": "When your phone asks a website for something, the router swaps your phone's private address for the home's public one,"
+ },
+ {
+  "s": 172.767,
+  "e": 175.207,
+  "text": "and writes down a port number to remember who asked."
+ },
+ {
+  "s": 175.527,
+  "e": 179.791,
+  "text": "When the answer comes back, it checks its table and passes the answer to your phone."
+ },
+ {
+  "s": 180.111,
+  "e": 185.264,
+  "text": "This is network address translation, or nat. One public address, dozens of devices."
+ },
+ {
+  "s": 185.584,
+  "e": 192.63,
+  "text": "It works so well that many internet providers now do it a second time, sharing one public address across many customers."
+ },
+ {
+  "s": 192.95,
+  "e": 194.372,
+  "text": "That's called carrier-grade nat."
+ },
+ {
+  "s": 194.692,
+  "e": 199.227,
+  "text": "But it has a cost. Devices behind nat can't easily be reached from the outside."
+ },
+ {
+  "s": 199.547,
+  "e": 208.407,
+  "text": "It's why some online games complain about a strict nat type, why hosting a server at home can be a headache, and why peer-to-peer apps need clever workarounds."
+ },
+ {
+  "s": 208.727,
+  "e": 211.573,
+  "text": "Scarcity did something else: it gave addresses a price."
+ },
+ {
+  "s": 211.893,
+  "e": 218.153,
+  "text": "Companies with spare blocks sell them to companies that need them, through the registries' official transfer process."
+ },
+ {
+  "s": 218.473,
+  "e": 222.779,
+  "text": "In twenty twenty-six, the average price has been around twenty dollars per address."
+ },
+ {
+  "s": 223.099,
+  "e": 227.921,
+  "text": "A small block of two hundred and fifty-six addresses costs several thousand dollars."
+ },
+ {
+  "s": 228.241,
+  "e": 233.984,
+  "text": "Prices have actually fallen over the past year. But the market exists because the old system is full."
+ },
+ {
+  "s": 234.304,
+  "e": 242.162,
+  "text": "The real fix was designed in the nineteen-nineties: I P version six. Instead of thirty-two bits, it uses a hundred and twenty-eight."
+ },
+ {
+  "s": 242.482,
+  "e": 246.635,
+  "text": "That isn't four times as many addresses. Each extra bit doubles the count,"
+ },
+ {
+  "s": 246.955,
+  "e": 251.514,
+  "text": "so it's two to the hundred-and-twenty-eighth: about three hundred and forty undecillion."
+ },
+ {
+  "s": 251.834,
+  "e": 259.828,
+  "text": "That's thirty-four followed by thirty-seven zeros. Enough to give every grain of sand on Earth billions of billions of addresses each."
+ },
+ {
+  "s": 260.148,
+  "e": 266.35,
+  "text": "An I P version six address looks different too: groups of hexadecimal digits separated by colons."
+ },
+ {
+  "s": 266.67,
+  "e": 273.664,
+  "text": "So why didn't everyone just switch? Because I P version six can't talk directly to version four. They're separate languages."
+ },
+ {
+  "s": 273.984,
+  "e": 278.831,
+  "text": "Every website, router, phone and app had to learn the new one while keeping the old one running."
+ },
+ {
+  "s": 279.151,
+  "e": 281.118,
+  "text": "For years, nobody wanted to go first."
+ },
+ {
+  "s": 281.438,
+  "e": 288.045,
+  "text": "Websites didn't bother because users weren't on I P version six, and providers didn't bother because websites weren't."
+ },
+ {
+  "s": 288.365,
+  "e": 291.224,
+  "text": "And nat made the pain bearable, so the deadline kept slipping."
+ },
+ {
+  "s": 291.544,
+  "e": 298.316,
+  "text": "But it kept moving. Mobile networks adopted it early, because they had millions of new phones and no addresses to give them."
+ },
+ {
+  "s": 298.636,
+  "e": 302.99,
+  "text": "In several countries, most users already connect over I P version six."
+ },
+ {
+  "s": 303.31,
+  "e": 306.358,
+  "text": "And in March twenty twenty-six, something symbolic happened:"
+ },
+ {
+  "s": 306.678,
+  "e": 311.951,
+  "text": "for the first time, Google measured more than half of its users reaching it over I P version six."
+ },
+ {
+  "s": 312.271,
+  "e": 314.898,
+  "text": "Fifty point one percent, on the twenty-eighth of March."
+ },
+ {
+  "s": 315.218,
+  "e": 320.897,
+  "text": "So, did the internet run out of addresses? Yes. In twenty eleven, and then in region after region."
+ },
+ {
+  "s": 321.217,
+  "e": 322.502,
+  "text": "But it didn't stop. It bent."
+ },
+ {
+  "s": 322.822,
+  "e": 329.986,
+  "text": "One address shared by a whole home, then by a whole neighbourhood, while a far bigger address system was slowly built alongside."
+ },
+ {
+  "s": 330.306,
+  "e": 332.409,
+  "text": "Your phone may well be using both right now."
+ },
+ {
+  "s": 332.729,
+  "e": 337.765,
+  "text": "One decision from nineteen seventy-seven still shapes how every device you own connects."
+ },
+ {
+  "s": 338.085,
+  "e": 344.356,
+  "text": "Vint Cerf's own summary is still the best one: it was enough for an experiment. The experiment just never ended."
+ }
+]

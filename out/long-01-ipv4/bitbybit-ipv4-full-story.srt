@@ -1,0 +1,283 @@
+1
+00:00:00,150 --> 00:00:02,050
+The internet ran out of addresses.
+
+2
+00:00:02,050 --> 00:00:03,223
+Not in theory.
+
+3
+00:00:03,223 --> 00:00:09,023
+On the third of February 2011, the last free blocks were handed out, at a ceremony in Miami.
+
+4
+00:00:09,023 --> 00:00:10,507
+And yet you're watching this.
+
+5
+00:00:10,507 --> 00:00:14,918
+Your phone is online. So is your TV, your laptop, maybe even your fridge.
+
+6
+00:00:14,918 --> 00:00:18,222
+So how does an internet with no addresses left keep growing?
+
+7
+00:00:18,222 --> 00:00:23,335
+The answer involves a guess from 1977, a trick hiding in your router,
+
+8
+00:00:23,335 --> 00:00:28,330
+a market where addresses sell for twenty dollars each, and a fix that took thirty years.
+
+9
+00:00:28,330 --> 00:00:33,724
+Every device on the internet needs an address, like a phone number, so data knows where to go.
+
+10
+00:00:33,724 --> 00:00:39,976
+In 1977, Vint Cerf, one of the engineers who designed the internet's core protocols,
+
+11
+00:00:39,976 --> 00:00:42,523
+had to decide how long those addresses would be.
+
+12
+00:00:42,523 --> 00:00:48,582
+Some colleagues wanted 128 bits. Others called that crazy. Cerf picked 32.
+
+13
+00:00:48,582 --> 00:00:52,386
+Here's the reasoning. They needed a few bits to say which network you're on.
+
+14
+00:00:52,386 --> 00:00:56,422
+How many countries were there? Nobody knew, and there was no Google to check.
+
+15
+00:00:56,422 --> 00:01:03,489
+So they guessed 128, doubled it for room, and got 256 networks. That's eight bits.
+
+16
+00:01:03,489 --> 00:01:07,283
+The other twenty-four bits named the computer inside each network.
+
+17
+00:01:07,283 --> 00:01:13,056
+Thirty-two bits gives you two to the thirty-second power: about 4.3 billion addresses,
+
+18
+00:01:13,056 --> 00:01:18,990
+roughly one for every person on Earth at the time. For a research experiment, that was enormous.
+
+19
+00:01:18,990 --> 00:01:23,714
+Cerf has joked about it ever since. His summary: it was enough for an experiment.
+
+20
+00:01:23,714 --> 00:01:26,263
+The problem is, the experiment never ended.
+
+21
+00:01:26,263 --> 00:01:29,005
+For years, addresses were handed out generously.
+
+22
+00:01:29,005 --> 00:01:34,161
+Early companies and universities got blocks of nearly seventeen million addresses each.
+
+23
+00:01:34,161 --> 00:01:36,968
+Then came the web, then broadband, then smartphones.
+
+24
+00:01:36,968 --> 00:01:41,210
+The world's address pool is managed by an organisation called IANA,
+
+25
+00:01:41,210 --> 00:01:44,314
+which hands big blocks to five regional registries:
+
+26
+00:01:44,314 --> 00:01:48,313
+North America, Europe, Asia-Pacific, Latin America and Africa.
+
+27
+00:01:48,313 --> 00:01:53,563
+Each block is one two-hundred-and-fifty-sixth of all IPv4 addresses.
+
+28
+00:01:53,563 --> 00:02:00,327
+At the end of January 2011, IANA gave two of its last blocks to Asia-Pacific. That left five.
+
+29
+00:02:00,327 --> 00:02:05,020
+A policy agreed years earlier kicked in: one final block for each region.
+
+30
+00:02:05,020 --> 00:02:09,140
+On the third of February, they were handed out. The central pool was empty.
+
+31
+00:02:09,140 --> 00:02:13,556
+Then the regions ran dry, one by one. Asia-Pacific within ten weeks.
+
+32
+00:02:13,556 --> 00:02:17,659
+Europe rationed its last block for years, handing out tiny slices,
+
+33
+00:02:17,659 --> 00:02:24,679
+until the twenty-fifth of November 2019, when it made its final allocation and announced it had completely run out.
+
+34
+00:02:24,679 --> 00:02:29,087
+So how are billions of new devices still getting online? Look at your router.
+
+35
+00:02:29,087 --> 00:02:33,709
+Your home probably has one public address, the one the rest of the internet sees.
+
+36
+00:02:33,709 --> 00:02:40,630
+Every device inside gets a private address instead, from ranges that are reused in millions of homes at once.
+
+37
+00:02:40,630 --> 00:02:46,417
+That's why so many home networks use addresses starting with 192.168.
+
+38
+00:02:46,417 --> 00:02:52,767
+When your phone asks a website for something, the router swaps your phone's private address for the home's public one,
+
+39
+00:02:52,767 --> 00:02:55,527
+and writes down a port number to remember who asked.
+
+40
+00:02:55,527 --> 00:03:00,111
+When the answer comes back, it checks its table and passes the answer to your phone.
+
+41
+00:03:00,111 --> 00:03:05,584
+This is network address translation, or NAT. One public address, dozens of devices.
+
+42
+00:03:05,584 --> 00:03:12,950
+It works so well that many internet providers now do it a second time, sharing one public address across many customers.
+
+43
+00:03:12,950 --> 00:03:14,692
+That's called carrier-grade NAT.
+
+44
+00:03:14,692 --> 00:03:19,547
+But it has a cost. Devices behind NAT can't easily be reached from the outside.
+
+45
+00:03:19,547 --> 00:03:28,727
+It's why some online games complain about a strict NAT type, why hosting a server at home can be a headache, and why peer-to-peer apps need clever workarounds.
+
+46
+00:03:28,727 --> 00:03:31,893
+Scarcity did something else: it gave addresses a price.
+
+47
+00:03:31,893 --> 00:03:38,473
+Companies with spare blocks sell them to companies that need them, through the registries' official transfer process.
+
+48
+00:03:38,473 --> 00:03:43,099
+In 2026, the average price has been around twenty dollars per address.
+
+49
+00:03:43,099 --> 00:03:48,241
+A small block of 256 addresses costs several thousand dollars.
+
+50
+00:03:48,241 --> 00:03:54,304
+Prices have actually fallen over the past year. But the market exists because the old system is full.
+
+51
+00:03:54,304 --> 00:04:02,482
+The real fix was designed in the 1990s: IPv6. Instead of 32 bits, it uses 128.
+
+52
+00:04:02,482 --> 00:04:06,955
+That isn't four times as many addresses. Each extra bit doubles the count,
+
+53
+00:04:06,955 --> 00:04:11,834
+so it's two to the hundred-and-twenty-eighth: about 340 undecillion.
+
+54
+00:04:11,834 --> 00:04:20,148
+That's 34 followed by 37 zeros. Enough to give every grain of sand on Earth billions of billions of addresses each.
+
+55
+00:04:20,148 --> 00:04:26,670
+An IPv6 address looks different too: groups of hexadecimal digits separated by colons.
+
+56
+00:04:26,670 --> 00:04:33,984
+So why didn't everyone just switch? Because IPv6 can't talk directly to IPv4. They're separate languages.
+
+57
+00:04:33,984 --> 00:04:39,151
+Every website, router, phone and app had to learn the new one while keeping the old one running.
+
+58
+00:04:39,151 --> 00:04:41,438
+For years, nobody wanted to go first.
+
+59
+00:04:41,438 --> 00:04:48,365
+Websites didn't bother because users weren't on IPv6, and providers didn't bother because websites weren't.
+
+60
+00:04:48,365 --> 00:04:51,544
+And NAT made the pain bearable, so the deadline kept slipping.
+
+61
+00:04:51,544 --> 00:04:58,636
+But it kept moving. Mobile networks adopted it early, because they had millions of new phones and no addresses to give them.
+
+62
+00:04:58,636 --> 00:05:03,310
+In several countries, most users already connect over IPv6.
+
+63
+00:05:03,310 --> 00:05:06,678
+And in March 2026, something symbolic happened:
+
+64
+00:05:06,678 --> 00:05:12,271
+for the first time, Google measured more than half of its users reaching it over IPv6.
+
+65
+00:05:12,271 --> 00:05:15,218
+Fifty point one percent, on the twenty-eighth of March.
+
+66
+00:05:15,218 --> 00:05:21,217
+So, did the internet run out of addresses? Yes. In 2011, and then in region after region.
+
+67
+00:05:21,217 --> 00:05:22,822
+But it didn't stop. It bent.
+
+68
+00:05:22,822 --> 00:05:30,306
+One address shared by a whole home, then by a whole neighbourhood, while a far bigger address system was slowly built alongside.
+
+69
+00:05:30,306 --> 00:05:32,729
+Your phone may well be using both right now.
+
+70
+00:05:32,729 --> 00:05:38,085
+One decision from 1977 still shapes how every device you own connects.
+
+71
+00:05:38,085 --> 00:05:44,356
+Vint Cerf's own summary is still the best one: it was enough for an experiment. The experiment just never ended.
