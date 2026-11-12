@@ -50,7 +50,7 @@ Channels: YouTube `6aee4c0ce29c69a17188c931`, TikTok `6aee4bede29c69a17188c865`,
 For each: `create_post` with `mode: customScheduled` and `dueAt` from the entry's `post_time` ("18:00" = `<DATE>T18:00:00+01:00`; "01:00+1" = `<DATE+1>T01:00:00+01:00`; use +02:00 in summer time, and confirm with get_account),
 `schedulingType: automatic`, and the video asset with the raw URL.
 - YouTube: `metadata.youtube` = {title (max ~70 chars, curiosity-driven, no clickbait), categoryId "27" (Education), privacy "public", madeForKids false}. Text = short description + 2–3 hashtags incl. #Shorts.
-- Instagram: `metadata.instagram` = {type "reel", shouldShareToFeed true, firstComment: the question if `ending` is comment_prompt, or "Tomorrow: <topic>" if follow_cta}. Text = hook line + one-sentence payoff + 3–5 hashtags.
+- Instagram: `metadata.instagram` = {type "reel", shouldShareToFeed true, firstComment: the question if `ending` is comment_prompt, or "Tomorrow: <topic>" if follow_cta}. Text = hook line + one-sentence payoff + 3–5 hashtags. The free Buffer plan rejects `firstComment`: leave it out and put that line in the caption, before the hashtags.
 - TikTok: `metadata.tiktok` = {title}. Text = hook + 3–4 hashtags.
 No generic "follow for more". Avoid hashtag walls. Buffer holds at most 10 scheduled posts, so schedule only today's three.
 

@@ -22,5 +22,16 @@
    "instagram": "https://www.instagram.com/reel/DfmSXgRlTA-/",
    "tiktok": "https://tiktok.com/@bitbybit.learn/video/7706861798414208289"
   }
+ },
+ {
+  "date": "2026-11-12",
+  "slug": "bullet-tunneling",
+  "scheduled": "2026-11-12T18:00:00+01:00",
+  "buffer": {
+   "youtube": "6af5b55e149e47535482be43",
+   "instagram": "6af5b567149e47535482c64c",
+   "tiktok": "6af5b55fbe882fe76e224163"
+  },
+  "note": "Instagram firstComment rejected (needs paid Buffer plan); 'Tomorrow:' line put in the caption instead"
  }
 ]
