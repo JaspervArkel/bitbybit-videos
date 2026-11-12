@@ -51,12 +51,12 @@ def time_captions(caps, voice):
     if tj.exists():  # exact per-line timings from narrate.py
         tm = json.loads(tj.read_text()); dur = probe_duration(voice)
         if len(tm) == len(caps):
-            for c, x in zip(caps, tm): c['s'], c['e'] = x['s'], x['e']
+            for c, x in zip(caps, tm): c['s'], c['e'], c['se'] = x['s'], x['e'], x['e']  # se = when speech actually ends
             for a, b in zip(caps, caps[1:]): a['e'] = b['s']
             print('caption timing: exact (narrate.py)'); return dur
     segs, dur = speech_segments(voice)
     if len(segs) == len(caps):
-        for c, (s, e) in zip(caps, segs): c['s'], c['e'] = s, e
+        for c, (s, e) in zip(caps, segs): c['s'], c['e'], c['se'] = s, e, e
         how = 'pause-matched'
     else:  # merge/split proportionally by word count across the speech span
         s0, s1 = segs[0][0], segs[-1][1]
@@ -66,6 +66,7 @@ def time_captions(caps, voice):
         how = f'proportional ({len(segs)} speech segments for {len(caps)} captions)'
     print('caption timing:', how)
     # captions stay up until the next one starts (no flicker during short pauses)
+    for c in caps: c.setdefault('se', c['e'])
     for a, b in zip(caps, caps[1:]): a['e'] = b['s']
     return dur
 

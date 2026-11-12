@@ -179,7 +179,12 @@ window.render = t => {
   const cap = document.getElementById('caption');
   const c = CAP.find(c => t >= c.s && t < c.e);
   if (!c || c.hide || SPEC.captionsOff) { cap.innerHTML = ''; return; }
-  const n = c.words.length, i = Math.min(n - 1, Math.floor((t - c.s) / (c.e - c.s) * n));
+  // highlight runs slightly ahead of the voice: words are weighted by length and spread over the
+  // spoken part only (c.se), shifted earlier by captionLead seconds (default 0.18)
+  const lead = SPEC.captionLead ?? .18, spoken = Math.max(.2, (c.se ?? c.e) - c.s);
+  const wts = c.words.map(({ w }) => w.replace(/[^\w]/g, '').length + 2), tot = wts.reduce((a, b) => a + b, 0);
+  const pos = clamp((t - c.s + lead) / spoken) * tot; let acc = 0, i = 0;
+  for (; i < wts.length - 1; i++) { acc += wts[i]; if (acc > pos) break; }
   cap.innerHTML = c.words.map(({ w, c: k }, j) => `<span class="w ${j === i ? 'now' : k}">${w}</span>`).join(' ');
 };
 
