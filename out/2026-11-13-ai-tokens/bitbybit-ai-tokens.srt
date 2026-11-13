@@ -1,0 +1,47 @@
+1
+00:00:00,150 --> 00:00:01,734
+AI doesn't read words.
+
+2
+00:00:01,734 --> 00:00:02,907
+It reads this.
+
+3
+00:00:02,907 --> 00:00:05,319
+Before a language model sees your message,
+
+4
+00:00:05,319 --> 00:00:07,299
+it chops the text into tokens:
+
+5
+00:00:07,299 --> 00:00:10,157
+common chunks of letters, each turned into a number.
+
+6
+00:00:10,157 --> 00:00:12,294
+"Strawberry" might become three pieces,
+
+7
+00:00:12,294 --> 00:00:14,523
+like "str", "aw" and "berry".
+
+8
+00:00:14,523 --> 00:00:16,974
+The model never sees the individual letters.
+
+9
+00:00:16,974 --> 00:00:19,055
+So when you ask how many R's it has,
+
+10
+00:00:19,055 --> 00:00:21,182
+it's reasoning about chunks, not spelling.
+
+11
+00:00:21,182 --> 00:00:23,233
+Newer models often work around this,
+
+12
+00:00:23,233 --> 00:00:24,838
+but the letters were never what it saw.

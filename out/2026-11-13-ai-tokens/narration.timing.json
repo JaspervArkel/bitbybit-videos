@@ -1,0 +1,62 @@
+[
+ {
+  "s": 0.15,
+  "e": 1.414,
+  "text": "A.I. doesn't read words."
+ },
+ {
+  "s": 1.734,
+  "e": 2.587,
+  "text": "It reads this."
+ },
+ {
+  "s": 2.907,
+  "e": 4.999,
+  "text": "Before a language model sees your message,"
+ },
+ {
+  "s": 5.319,
+  "e": 6.979,
+  "text": "it chops the text into tokens:"
+ },
+ {
+  "s": 7.299,
+  "e": 9.837,
+  "text": "common chunks of letters, each turned into a number."
+ },
+ {
+  "s": 10.157,
+  "e": 11.974,
+  "text": "Strawberry might become three pieces,"
+ },
+ {
+  "s": 12.294,
+  "e": 14.203,
+  "text": "like, ess tee ar, eh double-you, and berry."
+ },
+ {
+  "s": 14.523,
+  "e": 16.654,
+  "text": "The model never sees the individual letters."
+ },
+ {
+  "s": 16.974,
+  "e": 18.735,
+  "text": "So when you ask how many arrs it has,"
+ },
+ {
+  "s": 19.055,
+  "e": 20.862,
+  "text": "it's reasoning about chunks, not spelling."
+ },
+ {
+  "s": 21.182,
+  "e": 22.913,
+  "text": "Newer models often work around this,"
+ },
+ {
+  "s": 23.233,
+  "e": 24.838,
+  "text": "but the letters were never what it saw."
+ }
+]

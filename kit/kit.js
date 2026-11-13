@@ -97,15 +97,23 @@ C.counter = (root, p) => {
   };
 };
 
-/* tokens: {word, pieces:[{t, id}], split=0.8, y=700} */
+/* tokens: {word, pieces:[{t, id}], split=0.8, y=700, instant, ids (big numbers, piece small), title, titleY, titleSize, label, size=84}
+   split < 0 shows the chips from the first frame. */
 C.tokens = (root, p) => {
   const cols = ['#4ADE80', '#FB923C', '#60A5FA', '#F472B6', '#FACC15'];
-  const whole = mk('div', 'title'); whole.style.top = (p.y ?? 700) + 'px'; whole.style.fontSize = '120px'; whole.innerHTML = `<span class="mono">${p.word}</span>`; root.appendChild(whole);
+  const tt = p.title ? C.title(root, { text: p.title, y: p.titleY ?? 330, size: p.titleSize ?? 80, instant: p.instant }) : null;
+  const lab = p.label ? mk('div', 'label') : null;
+  if (lab) { lab.style.cssText = `position:absolute;left:0;right:0;text-align:center;top:${(p.y ?? 700) - 110}px`; lab.innerHTML = mark(p.label); root.appendChild(lab); }
+  const whole = mk('div', 'title'); whole.style.top = (p.y ?? 700) + 'px'; whole.style.fontSize = (p.wordSize ?? 120) + 'px'; whole.innerHTML = `<span class="mono">${p.word ?? ''}</span>`; root.appendChild(whole);
   const box = mk('div', 'chips'); box.style.top = (p.y ?? 700) - 20 + 'px'; root.appendChild(box);
-  const chips = p.pieces.map((pc, i) => { const c = mk('div', 'chip', `${pc.t}<small>${pc.id ?? ''}</small>`); c.style.background = cols[i % cols.length] + '26'; c.style.border = `4px solid ${cols[i % cols.length]}`; c.style.color = cols[i % cols.length]; box.appendChild(c); return c; });
+  const chips = p.pieces.map((pc, i) => { const col = cols[i % cols.length];
+    const c = mk('div', 'chip', p.ids ? `${pc.id}<small>${pc.t}</small>` : `${pc.t}<small>${pc.id ?? ''}</small>`);
+    c.style.background = col + '26'; c.style.border = `4px solid ${col}`; c.style.color = col; if (p.size) c.style.fontSize = p.size + 'px'; box.appendChild(c); return c; });
   return lt => {
+    if (tt) tt(lt);
+    if (lab) lab.style.opacity = p.instant ? 1 : clamp(pop(lt, 0) * 1.5);
     const s = p.split ?? .8; const k = E.out((lt - s) / .45);
-    whole.style.opacity = lt < s ? clamp(pop(lt, 0) * 1.5) : 1 - k;
+    whole.style.opacity = lt < s ? (p.instant ? 1 : clamp(pop(lt, 0) * 1.5)) : 1 - k;
     chips.forEach((c, i) => { const kk = E.back((lt - s - i * .12) / .4); c.style.opacity = clamp(kk * 1.4); c.style.transform = `translateY(${(1 - kk) * 60}px) rotate(${(1 - kk) * (i % 2 ? 6 : -6)}deg)`; });
   };
 };

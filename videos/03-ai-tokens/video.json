@@ -1,0 +1,380 @@
+{
+ "title": "AI doesn't see letters",
+ "captions": [
+  {
+   "text": "AI doesn't !read words.!",
+   "say": "A.I. doesn't read words.",
+   "hide": true
+  },
+  {
+   "text": "It reads *this.*"
+  },
+  {
+   "text": "Before a language model sees your message,"
+  },
+  {
+   "text": "it chops the text into *tokens:*"
+  },
+  {
+   "text": "common chunks of letters, each turned into a *number.*"
+  },
+  {
+   "text": "\"Strawberry\" might become *three pieces,*",
+   "say": "Strawberry might become three pieces,"
+  },
+  {
+   "text": "like *\"str\",* *\"aw\"* and *\"berry\".*",
+   "say": "like, ess tee ar, eh double-you, and berry."
+  },
+  {
+   "text": "The model !never! sees the individual letters."
+  },
+  {
+   "text": "So when you ask how many R's it has,",
+   "say": "So when you ask how many arrs it has,"
+  },
+  {
+   "text": "it's reasoning about *chunks,* !not spelling.!"
+  },
+  {
+   "text": "Newer models often *work around this,*"
+  },
+  {
+   "text": "but the letters were !never! what it saw."
+  }
+ ],
+ "scenes": [
+  {
+   "type": "tokens",
+   "cap": [
+    0,
+    0
+   ],
+   "instant": true,
+   "title": "AI doesn't !read words!",
+   "titleY": 380,
+   "titleSize": 104,
+   "word": "strawberry",
+   "y": 820,
+   "split": 0.35,
+   "pieces": [
+    {
+     "t": "str",
+     "id": 496
+    },
+    {
+     "t": "aw",
+     "id": 675
+    },
+    {
+     "t": "berry",
+     "id": 15717
+    }
+   ]
+  },
+  {
+   "type": "tokens",
+   "cap": [
+    1,
+    1
+   ],
+   "title": "It reads *this*",
+   "titleY": 380,
+   "titleSize": 104,
+   "ids": true,
+   "y": 820,
+   "split": 0.1,
+   "size": 104,
+   "pieces": [
+    {
+     "t": "str",
+     "id": 496
+    },
+    {
+     "t": "aw",
+     "id": 675
+    },
+    {
+     "t": "berry",
+     "id": 15717
+    }
+   ]
+  },
+  {
+   "type": "code",
+   "cap": [
+    2,
+    2
+   ],
+   "y": 700,
+   "lines": [
+    "> Tokenization is weird"
+   ],
+   "cps": 22
+  },
+  {
+   "type": "tokens",
+   "cap": [
+    3,
+    3
+   ],
+   "label": "*tokens*",
+   "word": "Tokenization is weird",
+   "wordSize": 88,
+   "y": 760,
+   "split": 0.45,
+   "pieces": [
+    {
+     "t": "Token",
+     "id": 3404
+    },
+    {
+     "t": "ization",
+     "id": 2065
+    },
+    {
+     "t": "is",
+     "id": 374
+    },
+    {
+     "t": "weird",
+     "id": 16682
+    }
+   ]
+  },
+  {
+   "type": "tokens",
+   "cap": [
+    4,
+    4
+   ],
+   "label": "each one is a *number*",
+   "ids": true,
+   "y": 760,
+   "split": 0.15,
+   "pieces": [
+    {
+     "t": "Token",
+     "id": 3404
+    },
+    {
+     "t": "ization",
+     "id": 2065
+    },
+    {
+     "t": "is",
+     "id": 374
+    },
+    {
+     "t": "weird",
+     "id": 16682
+    }
+   ]
+  },
+  {
+   "type": "tokens",
+   "cap": [
+    5,
+    5
+   ],
+   "label": "GPT-4 tokenizer",
+   "word": "strawberry",
+   "y": 760,
+   "split": 99,
+   "wordSize": 140,
+   "pieces": [
+    {
+     "t": "str",
+     "id": 496
+    },
+    {
+     "t": "aw",
+     "id": 675
+    },
+    {
+     "t": "berry",
+     "id": 15717
+    }
+   ]
+  },
+  {
+   "type": "tokens",
+   "cap": [
+    6,
+    6
+   ],
+   "label": "GPT-4 tokenizer",
+   "word": "strawberry",
+   "y": 760,
+   "split": 0.25,
+   "wordSize": 140,
+   "size": 96,
+   "pieces": [
+    {
+     "t": "str",
+     "id": 496
+    },
+    {
+     "t": "aw",
+     "id": 675
+    },
+    {
+     "t": "berry",
+     "id": 15717
+    }
+   ]
+  },
+  {
+   "type": "list",
+   "cap": [
+    7,
+    7
+   ],
+   "title": "Same word, two views",
+   "y": 640,
+   "items": [
+    {
+     "label": "You see",
+     "value": "*s t r a w b e r r y*",
+     "c": "g"
+    },
+    {
+     "label": "Model sees",
+     "value": "!496 675 15717!",
+     "c": "o"
+    }
+   ]
+  },
+  {
+   "type": "code",
+   "cap": [
+    8,
+    8
+   ],
+   "y": 700,
+   "lines": [
+    "> How many r's in strawberry?"
+   ],
+   "cps": 26
+  },
+  {
+   "type": "tokens",
+   "cap": [
+    9,
+    9
+   ],
+   "title": "Count the r's in:",
+   "titleY": 400,
+   "ids": true,
+   "y": 800,
+   "split": 0.1,
+   "size": 104,
+   "pieces": [
+    {
+     "t": "str",
+     "id": 496
+    },
+    {
+     "t": "aw",
+     "id": 675
+    },
+    {
+     "t": "berry",
+     "id": 15717
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "cap": [
+    10,
+    10
+   ],
+   "title": "Newer models *work around it*",
+   "label": "r's in strawberry",
+   "from": 0,
+   "to": 3,
+   "dur": 1.2,
+   "raw": true,
+   "size": 160
+  },
+  {
+   "type": "endcard",
+   "cap": [
+    11,
+    11
+   ],
+   "text": "AI sees *chunks,* not letters",
+   "y": 560
+  }
+ ],
+ "sfx": [
+  {
+   "cap": 0,
+   "at": 0.35,
+   "type": "pop"
+  },
+  {
+   "cap": 1,
+   "at": 0.1,
+   "type": "ticks",
+   "count": 3,
+   "every": 0.12
+  },
+  {
+   "cap": 2,
+   "at": 0.2,
+   "type": "ticks",
+   "count": 6,
+   "every": 0.12
+  },
+  {
+   "cap": 3,
+   "at": 0.45,
+   "type": "pop"
+  },
+  {
+   "cap": 4,
+   "at": 0.15,
+   "type": "ticks",
+   "count": 4,
+   "every": 0.12
+  },
+  {
+   "cap": 6,
+   "at": 0.25,
+   "type": "pop"
+  },
+  {
+   "cap": 7,
+   "at": 0.55,
+   "type": "pop"
+  },
+  {
+   "cap": 7,
+   "at": 1.0,
+   "type": "glitch"
+  },
+  {
+   "cap": 8,
+   "at": 0.2,
+   "type": "ticks",
+   "count": 6,
+   "every": 0.12
+  },
+  {
+   "cap": 9,
+   "at": 0.3,
+   "type": "glitch"
+  },
+  {
+   "cap": 10,
+   "at": 0.3,
+   "type": "ticks",
+   "count": 3,
+   "every": 0.4
+  }
+ ],
+ "cover": 0.9,
+ "tail": 1.2
+}

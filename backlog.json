@@ -57,12 +57,15 @@
   "title": "AI doesn't see letters",
   "pillar": "B",
   "hook": "AI doesn't read words",
-  "status": "approved",
+  "status": "rendered",
   "script": "AI doesn't read words. It reads this. Before a language model sees your message, it chops the text into tokens: common chunks of letters, each turned into a number. \"Strawberry\" might become three pieces, like \"str\", \"aw\" and \"berry\". The model never sees the individual letters. So when you ask how many R's it has, it's reasoning about chunks, not spelling. Newer models often work around this, but the letters were never what it saw.",
   "check": "Confirm the exact split of 'strawberry' with a current tokenizer (e.g. pip install tiktoken, cl100k_base or o200k_base) and use the real pieces and IDs on screen.",
   "hook_type": "counterintuitive_claim",
   "ending": "implication",
-  "post_time": "18:00"
+  "post_time": "18:00",
+  "spec": "videos/03-ai-tokens/video.json",
+  "video": "out/2026-11-13-ai-tokens/bitbybit-ai-tokens.mp4",
+  "check_result": "Verified 13 Nov with cl100k_base (GPT-4 tokenizer, via js-tiktoken): 'strawberry' = str 496 | aw 675 | berry 15717. Note: ' strawberry' with a leading space is a single token (73700)."
  },
  {
   "n": 4,
