@@ -33,5 +33,15 @@
    "tiktok": "6af5b55fbe882fe76e224163"
   },
   "note": "Instagram firstComment rejected (needs paid Buffer plan); 'Tomorrow:' line put in the caption instead"
+ },
+ {
+  "date": "2026-11-13",
+  "slug": "ai-tokens",
+  "scheduled": "2026-11-13T18:00:00+01:00",
+  "buffer": {
+   "youtube": "6af70672bd1182b0d3f3ab91",
+   "instagram": "6af706729a21933ffad667c0",
+   "tiktok": "6af706739a21933ffad667f8"
+  }
  }
 ]
