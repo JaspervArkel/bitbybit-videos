@@ -1,0 +1,9 @@
+Windows won't let you name a folder con.
+Try it, and Windows says the device name is invalid.
+Device? The reason is older than folders.
+In early DOS, con meant the console: your keyboard and screen.
+P R N was the printer. Null threw everything away.
+Programs used these names like files to talk to hardware.
+When DOS added folders in nineteen eighty-three, the names had to work in every folder.
+So Microsoft reserved them everywhere.
+Over forty years later, Windows still blocks them, for hardware from the eighties.

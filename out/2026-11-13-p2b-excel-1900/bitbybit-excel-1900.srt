@@ -1,0 +1,35 @@
+1
+00:00:00,150 --> 00:00:04,324
+Excel thinks February 29th, 1900 was a real day.
+
+2
+00:00:04,324 --> 00:00:07,091
+It wasn't. 1900 was not a leap year.
+
+3
+00:00:07,091 --> 00:00:10,998
+Century years skip leap day unless they divide by 400.
+
+4
+00:00:10,998 --> 00:00:13,746
+Type it into Excel, and it's accepted as a date.
+
+5
+00:00:13,746 --> 00:00:17,369
+Why? In the eighties, the top spreadsheet was Lotus 1-2-3,
+
+6
+00:00:17,369 --> 00:00:19,888
+and it treated 1900 as a leap year.
+
+7
+00:00:19,888 --> 00:00:23,550
+Microsoft copied that, so Lotus files would open correctly.
+
+8
+00:00:23,550 --> 00:00:28,383
+Fixing it now would shift almost every date in existing spreadsheets by one day.
+
+9
+00:00:28,383 --> 00:00:31,685
+So Excel still keeps a day that never existed, on purpose.

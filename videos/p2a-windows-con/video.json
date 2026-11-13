@@ -1,0 +1,268 @@
+{
+ "title": "Windows won't let you name a folder CON",
+ "captions": [
+  {
+   "text": "Windows won't let you name a folder !CON.!",
+   "say": "Windows won't let you name a folder con.",
+   "hide": true
+  },
+  {
+   "text": "Try it, and Windows says the device name is !invalid.!"
+  },
+  {
+   "text": "Device? The reason is *older than folders.*"
+  },
+  {
+   "text": "In early DOS, *CON* meant the console: your keyboard and screen.",
+   "say": "In early DOS, con meant the console: your keyboard and screen."
+  },
+  {
+   "text": "*PRN* was the printer. !NUL! threw everything away.",
+   "say": "P R N was the printer. Null threw everything away."
+  },
+  {
+   "text": "Programs used these names like *files* to talk to hardware."
+  },
+  {
+   "text": "When DOS added folders in *1983,* the names had to work in !every folder.!",
+   "say": "When DOS added folders in nineteen eighty-three, the names had to work in every folder."
+  },
+  {
+   "text": "So Microsoft reserved them !everywhere.!"
+  },
+  {
+   "text": "Over forty years later, Windows still blocks them, for hardware from the *eighties.*"
+  }
+ ],
+ "scenes": [
+  {
+   "type": "folder",
+   "cap": [
+    0,
+    0
+   ],
+   "instant": true,
+   "title": "Windows won't let you name a folder !CON!",
+   "titleY": 300,
+   "titleSize": 86,
+   "name": "CON",
+   "y": 700,
+   "errorAt": 0.45
+  },
+  {
+   "type": "folder",
+   "cap": [
+    1,
+    1
+   ],
+   "name": "CON",
+   "y": 480,
+   "typeAt": 0.25,
+   "cps": 6
+  },
+  {
+   "type": "counter",
+   "cap": [
+    2,
+    2
+   ],
+   "from": 2026,
+   "to": 1981,
+   "dur": 1.4,
+   "raw": true,
+   "label": "MS-DOS 1.0 · no folders yet",
+   "title": "Older than *folders*",
+   "size": 200
+  },
+  {
+   "type": "list",
+   "cap": [
+    3,
+    3
+   ],
+   "title": "DOS device names",
+   "y": 620,
+   "items": [
+    {
+     "label": "*CON*",
+     "value": "keyboard + screen",
+     "c": "g"
+    }
+   ]
+  },
+  {
+   "type": "list",
+   "cap": [
+    4,
+    4
+   ],
+   "title": "DOS device names",
+   "y": 620,
+   "delay": 0.05,
+   "stagger": 0.9,
+   "items": [
+    {
+     "label": "*PRN*",
+     "value": "printer",
+     "c": "g"
+    },
+    {
+     "label": "!NUL!",
+     "value": "!nowhere!",
+     "c": "o"
+    }
+   ]
+  },
+  {
+   "type": "code",
+   "cap": [
+    5,
+    5
+   ],
+   "y": 620,
+   "cps": 26,
+   "lines": [
+    "C:\\> COPY LETTER.TXT PRN"
+   ],
+   "output": "        1 file(s) copied",
+   "outputColor": "g",
+   "outputAt": 1.5
+  },
+  {
+   "type": "list",
+   "cap": [
+    6,
+    6
+   ],
+   "title": "DOS 2.0 · *1983*",
+   "y": 600,
+   "stagger": 0.4,
+   "items": [
+    {
+     "label": "\\GAMES\\NUL",
+     "value": "!nowhere!",
+     "c": "o"
+    },
+    {
+     "label": "\\WORK\\NUL",
+     "value": "!nowhere!",
+     "c": "o"
+    },
+    {
+     "label": "\\HOME\\NUL",
+     "value": "!nowhere!",
+     "c": "o"
+    }
+   ]
+  },
+  {
+   "type": "tokens",
+   "cap": [
+    7,
+    7
+   ],
+   "word": "",
+   "split": 0.1,
+   "y": 700,
+   "label": "reserved in !every! folder",
+   "pieces": [
+    {
+     "t": "CON",
+     "id": ""
+    },
+    {
+     "t": "PRN",
+     "id": ""
+    },
+    {
+     "t": "AUX",
+     "id": ""
+    },
+    {
+     "t": "NUL",
+     "id": ""
+    },
+    {
+     "t": "COM1",
+     "id": ""
+    },
+    {
+     "t": "LPT1",
+     "id": ""
+    }
+   ]
+  },
+  {
+   "type": "endcard",
+   "cap": [
+    8,
+    8
+   ],
+   "text": "Still blocked, !40+ years! later",
+   "y": 620
+  }
+ ],
+ "sfx": [
+  {
+   "cap": 0,
+   "at": 0.45,
+   "type": "hit"
+  },
+  {
+   "cap": 0,
+   "at": 0.45,
+   "type": "glitch"
+  },
+  {
+   "cap": 1,
+   "at": 0.25,
+   "type": "ticks",
+   "count": 3,
+   "every": 0.167
+  },
+  {
+   "cap": 1,
+   "at": 1.1,
+   "type": "hit"
+  },
+  {
+   "cap": 2,
+   "at": 0.2,
+   "type": "ticks",
+   "count": 4,
+   "every": 0.3
+  },
+  {
+   "cap": 4,
+   "at": 0.95,
+   "type": "pop"
+  },
+  {
+   "cap": 5,
+   "at": 1.5,
+   "type": "pop"
+  },
+  {
+   "cap": 6,
+   "at": 0.5,
+   "type": "pop"
+  },
+  {
+   "cap": 6,
+   "at": 0.9,
+   "type": "pop"
+  },
+  {
+   "cap": 6,
+   "at": 1.3,
+   "type": "pop"
+  },
+  {
+   "cap": 7,
+   "at": 0.2,
+   "type": "hit"
+  }
+ ],
+ "cover": 1.0,
+ "tail": 1.3
+}

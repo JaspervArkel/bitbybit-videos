@@ -1,0 +1,34 @@
+{
+ "pair": 2,
+ "locked_at": "2026-11-13 (before coin flip)",
+ "A": {
+  "slug": "windows-con",
+  "title": "Windows won't let you name a folder CON",
+  "lines": [
+   "Windows won't let you name a folder CON.",
+   "Try it, and Windows says the device name is invalid.",
+   "Device? The reason is older than folders.",
+   "In early DOS, CON meant the console: your keyboard and screen.",
+   "PRN was the printer. NUL threw everything away.",
+   "Programs used these names like files to talk to hardware.",
+   "When DOS added folders in 1983, the names had to work in every folder.",
+   "So Microsoft reserved them everywhere.",
+   "Over forty years later, Windows still blocks them, for hardware from the eighties."
+  ]
+ },
+ "B": {
+  "slug": "excel-1900",
+  "title": "Excel believes in a day that never happened",
+  "lines": [
+   "Excel thinks February 29th, 1900 was a real day.",
+   "It wasn't. 1900 was not a leap year.",
+   "Century years skip leap day unless they divide by 400.",
+   "Type it into Excel, and it's accepted as a date.",
+   "Why? In the eighties, the top spreadsheet was Lotus 1-2-3,",
+   "and it treated 1900 as a leap year.",
+   "Microsoft copied that, so Lotus files would open correctly.",
+   "Fixing it now would shift almost every date in existing spreadsheets by one day.",
+   "So Excel still keeps a day that never existed, on purpose."
+  ]
+ }
+}

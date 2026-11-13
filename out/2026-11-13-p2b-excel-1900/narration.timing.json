@@ -1,0 +1,47 @@
+[
+ {
+  "s": 0.15,
+  "e": 4.004,
+  "text": "Excel thinks February twenty-ninth, nineteen hundred, was a real day."
+ },
+ {
+  "s": 4.324,
+  "e": 6.771,
+  "text": "It wasn't. Nineteen hundred was not a leap year."
+ },
+ {
+  "s": 7.091,
+  "e": 10.678,
+  "text": "Century years skip leap day unless they divide by four hundred."
+ },
+ {
+  "s": 10.998,
+  "e": 13.426,
+  "text": "Type it into Excel, and it's accepted as a date."
+ },
+ {
+  "s": 13.746,
+  "e": 17.049,
+  "text": "Why? In the eighties, the top spreadsheet was Lotus one-two-three,"
+ },
+ {
+  "s": 17.369,
+  "e": 19.568,
+  "text": "and it treated nineteen hundred as a leap year."
+ },
+ {
+  "s": 19.888,
+  "e": 23.23,
+  "text": "Microsoft copied that, so Lotus files would open correctly."
+ },
+ {
+  "s": 23.55,
+  "e": 28.063,
+  "text": "Fixing it now would shift almost every date in existing spreadsheets by one day."
+ },
+ {
+  "s": 28.383,
+  "e": 31.685,
+  "text": "So Excel still keeps a day that never existed, on purpose."
+ }
+]

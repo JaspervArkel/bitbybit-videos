@@ -329,3 +329,76 @@ C.tunnel = (root, p) => {
     if (badge) { const kb = pop(lt, p.badgeAt ?? .6, .4); badge.style.opacity = clamp(kb * 1.5); badge.style.transform = `translateX(-50%) scale(${.85 + .15 * kb})`; }
   };
 };
+
+/* ---------- app-window components (pair 2: legacy quirks) ---------- */
+const winShell = (root, p, head) => {
+  const w = mk('div', 'win'); w.style.top = (p.y ?? 640) + 'px';
+  w.innerHTML = `<div class="bar"><div class="dots"><i></i><i></i><i></i></div><div class="wt">${head}</div></div><div class="body"></div>`;
+  root.appendChild(w); return [w, w.querySelector('.body')];
+};
+const shake = (lt, at, amp = 18, d = .5) => lt >= at ? Math.sin((lt - at) * 70) * amp * clamp(1 - (lt - at) / d) : 0;
+
+/* folder: {name, typeAt=.25, cps=5, errorAt, error, instant, title, titleY, titleSize, y} */
+C.folder = (root, p) => {
+  const tt = p.title ? C.title(root, { text: p.title, y: p.titleY ?? 330, size: p.titleSize ?? 84, instant: p.instant }) : null;
+  const [w, b] = winShell(root, p, p.head ?? 'File Explorer');
+  b.innerHTML = `<div class="fold"><div class="ficon"><i></i></div><div class="fname mono"><span data-n></span><span class="cursor"></span></div></div>`;
+  const dlg = mk('div', 'dlg', `<div class="ico">!</div><div>${mark(p.error ?? 'The specified device name is invalid.')}</div>`); w.appendChild(dlg);
+  const N = b.querySelector('[data-n]'), cur = b.querySelector('.cursor'), nm = b.querySelector('.fname');
+  const name = p.name ?? 'CON', typeAt = p.instant ? -1 : (p.typeAt ?? .25), cps = p.cps ?? 5;
+  const errAt = p.errorAt ?? (p.instant ? .35 : typeAt + name.length / cps + .35);
+  return lt => {
+    if (tt) tt(lt);
+    const n = p.instant ? name.length : clamp(Math.floor((lt - typeAt) * cps), 0, name.length);
+    N.textContent = name.slice(0, n);
+    const err = lt >= errAt;
+    cur.style.opacity = !err && Math.floor(lt * 2.5) % 2 === 0 ? 1 : 0;
+    nm.classList.toggle('bad', err);
+    const k = p.instant ? 1 : pop(lt, 0); w.style.opacity = clamp(k * 1.5);
+    w.style.transform = `translateX(${shake(lt, errAt)}px) scale(${.94 + .06 * k})`;
+    const kd = E.back((lt - errAt) / .35); dlg.style.opacity = err ? clamp(kd * 1.5) : 0; dlg.style.transform = `translateY(${(1 - kd) * 60}px) scale(${.9 + .1 * kd})`;
+  };
+};
+
+/* sheet: {rows:[[..]], cols=['A','B'], typing:{r,c,text,at=.3,cps=9,result,enterAt}, badge, badgeAt, shift:{at, to:[[r,c,text]]}, hot:[r,c], instant, title, y} */
+C.sheet = (root, p) => {
+  const tt = p.title ? C.title(root, { text: p.title, y: p.titleY ?? 330, size: p.titleSize ?? 84, instant: p.instant }) : null;
+  const [w, b] = winShell(root, p, p.head ?? 'Spreadsheet');
+  const cols = p.cols ?? ['A', 'B'];
+  const g = mk('div', 'grid'); g.style.gridTemplateColumns = `90px repeat(${cols.length}, 1fr)`; b.appendChild(g);
+  g.appendChild(mk('div', 'h', '')); cols.forEach(c => g.appendChild(mk('div', 'h', c)));
+  const cells = p.rows.map((row, r) => { g.appendChild(mk('div', 'h', String(r + 1))); return cols.map((_, c) => { const e = mk('div', 'c mono', row[c] ?? ''); g.appendChild(e); return e; }); });
+  const badge = p.badge ? mk('div', 'badge2', mark(p.badge)) : null; if (badge) w.appendChild(badge);
+  const ty = p.typing, hot = p.hot ?? (ty ? [ty.r, ty.c] : null);
+  const tAt = ty ? (p.instant ? -1 : ty.at ?? .3) : 0, enterAt = ty ? (ty.enterAt ?? tAt + ty.text.length / (ty.cps ?? 9) + .3) : 0;
+  return lt => {
+    if (tt) tt(lt);
+    const k = p.instant ? 1 : pop(lt, 0); w.style.opacity = clamp(k * 1.5); w.style.transform = `scale(${.94 + .06 * k})`;
+    if (hot) { const e = cells[hot[0]][hot[1]]; e.classList.add('sel'); e.style.boxShadow = `0 0 ${30 + 20 * Math.sin(lt * 6)}px rgba(251,146,60,.35)`; }
+    if (ty) {
+      const e = cells[ty.r][ty.c];
+      if (lt < enterAt) { const n = clamp(Math.floor((lt - tAt) * (ty.cps ?? 9)), 0, ty.text.length); e.innerHTML = ty.text.slice(0, n) + (Math.floor(lt * 2.5) % 2 ? '' : '<span class="cursor"></span>'); e.classList.remove('done'); }
+      else { e.textContent = ty.result ?? ty.text; e.classList.add('done'); }
+    }
+    if (badge) { const at = p.badgeAt ?? (ty ? enterAt + .2 : .4); const kb = E.back((lt - at) / .35); badge.style.opacity = lt >= at ? clamp(kb * 1.5) : 0; badge.style.transform = `translateX(-50%) scale(${.8 + .2 * kb})`; }
+    if (p.shift) p.shift.to.forEach(([r, c, txt, orig], i) => { const at = p.shift.at + i * (p.shift.stagger ?? .18); const e = cells[r][c];
+      if (lt >= at) { e.textContent = txt; e.classList.add('shifted'); e.style.transform = `translateY(${(1 - E.out((lt - at) / .25)) * -24}px)`; } else { e.textContent = p.rows[r][c]; e.classList.remove('shifted'); e.style.transform = ''; } });
+  };
+};
+
+/* calendar: {month, startDow (0=Mon), days=28, extra:{day:29, mode:'ghost'|'real', at}, label, title, y} */
+C.calendar = (root, p) => {
+  const tt = p.title ? C.title(root, { text: p.title, y: p.titleY ?? 330, size: p.titleSize ?? 80, instant: p.instant }) : null;
+  const card = mk('div', 'cal'); card.style.top = (p.y ?? 560) + 'px'; root.appendChild(card);
+  card.innerHTML = `<div class="label">${mark(p.label ?? '')}</div><div class="mname">${mark(p.month)}</div><div class="cg"></div>`;
+  const cg = card.querySelector('.cg'); ['M', 'T', 'W', 'T', 'F', 'S', 'S'].forEach(d => cg.appendChild(mk('div', 'dw', d)));
+  for (let i = 0; i < (p.startDow ?? 0); i++) cg.appendChild(mk('div', 'd blank', ''));
+  const ds = []; for (let d = 1; d <= (p.days ?? 28); d++) { const e = mk('div', 'd', d); cg.appendChild(e); ds.push(e); }
+  const x = p.extra ? mk('div', 'd x ' + (p.extra.mode ?? 'ghost'), String(p.extra.day)) : null; if (x) cg.appendChild(x);
+  return lt => {
+    if (tt) tt(lt);
+    const k = p.instant ? 1 : pop(lt, 0); card.style.opacity = clamp(k * 1.5); card.style.transform = `scale(${.94 + .06 * k})`;
+    ds.forEach((e, i) => { const kk = p.instant ? 1 : E.out((lt - .1 - i * .025) / .25); e.style.opacity = clamp(kk); });
+    if (x) { const at = p.extra.at ?? 1.0; const kx = E.back((lt - at) / .4); x.style.opacity = lt >= at ? clamp(kx * 1.5) : 0; x.style.transform = `scale(${.5 + .5 * kx}) rotate(${(1 - kx) * -12}deg)`; x.classList.toggle('struck', p.extra.mode === 'ghost' && lt >= at + .45); }
+  };
+};

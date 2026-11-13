@@ -1,0 +1,8 @@
+{
+ "pair": 2,
+ "method": "secrets.choice(['A','B'])",
+ "own_voice": "A",
+ "ai_voice": "B",
+ "scripts_sha256_at_flip": "35f0be8ecd96b3d2f5e0051fbd80c926475889c2c1ec404511f8ac11fc3a9416",
+ "flipped_at": "2026-11-13T17:51:47.205937+00:00"
+}

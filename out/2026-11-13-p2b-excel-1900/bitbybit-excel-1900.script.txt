@@ -1,0 +1,9 @@
+Excel thinks February twenty-ninth, nineteen hundred, was a real day.
+It wasn't. Nineteen hundred was not a leap year.
+Century years skip leap day unless they divide by four hundred.
+Type it into Excel, and it's accepted as a date.
+Why? In the eighties, the top spreadsheet was Lotus one-two-three,
+and it treated nineteen hundred as a leap year.
+Microsoft copied that, so Lotus files would open correctly.
+Fixing it now would shift almost every date in existing spreadsheets by one day.
+So Excel still keeps a day that never existed, on purpose.

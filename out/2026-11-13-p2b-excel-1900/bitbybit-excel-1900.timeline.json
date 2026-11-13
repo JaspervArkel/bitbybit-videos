@@ -1,0 +1,363 @@
+{
+ "title": "Excel believes in a day that never happened",
+ "captions": [
+  {
+   "text": "Excel thinks February 29th, 1900 was a !real day.!",
+   "say": "Excel thinks February twenty-ninth, nineteen hundred, was a real day.",
+   "hide": true,
+   "s": 0.15,
+   "e": 4.324,
+   "se": 4.004
+  },
+  {
+   "text": "It wasn't. 1900 was !not! a leap year.",
+   "say": "It wasn't. Nineteen hundred was not a leap year.",
+   "s": 4.324,
+   "e": 7.091,
+   "se": 6.771
+  },
+  {
+   "text": "Century years skip leap day unless they divide by *400.*",
+   "say": "Century years skip leap day unless they divide by four hundred.",
+   "s": 7.091,
+   "e": 10.998,
+   "se": 10.678
+  },
+  {
+   "text": "Type it into Excel, and it's !accepted! as a date.",
+   "s": 10.998,
+   "e": 13.746,
+   "se": 13.426
+  },
+  {
+   "text": "Why? In the eighties, the top spreadsheet was *Lotus 1-2-3,*",
+   "say": "Why? In the eighties, the top spreadsheet was Lotus one-two-three,",
+   "s": 13.746,
+   "e": 17.369,
+   "se": 17.049
+  },
+  {
+   "text": "and it treated 1900 as a !leap year.!",
+   "say": "and it treated nineteen hundred as a leap year.",
+   "s": 17.369,
+   "e": 19.888,
+   "se": 19.568
+  },
+  {
+   "text": "Microsoft copied that, so Lotus files would open *correctly.*",
+   "s": 19.888,
+   "e": 23.55,
+   "se": 23.23
+  },
+  {
+   "text": "Fixing it now would shift almost every date in existing spreadsheets by !one day.!",
+   "s": 23.55,
+   "e": 28.383,
+   "se": 28.063
+  },
+  {
+   "text": "So Excel still keeps a day that never existed, *on purpose.*",
+   "s": 28.383,
+   "e": 31.685,
+   "se": 31.685
+  }
+ ],
+ "scenes": [
+  {
+   "type": "sheet",
+   "cap": [
+    0,
+    0
+   ],
+   "instant": true,
+   "title": "Excel thinks this day was !real!",
+   "titleY": 300,
+   "titleSize": 86,
+   "y": 700,
+   "rows": [
+    [
+     "29-Feb-1900",
+     ""
+    ],
+    [
+     "",
+     ""
+    ]
+   ],
+   "hot": [
+    0,
+    0
+   ],
+   "badge": "!\u2713 valid date!",
+   "badgeAt": 0.35,
+   "start": 0,
+   "end": 4.204
+  },
+  {
+   "type": "calendar",
+   "cap": [
+    1,
+    1
+   ],
+   "month": "February 1900",
+   "startDow": 3,
+   "days": 28,
+   "extra": {
+    "day": 29,
+    "mode": "ghost",
+    "at": 0.9
+   },
+   "label": "the real calendar",
+   "y": 430,
+   "start": 4.204,
+   "end": 6.971
+  },
+  {
+   "type": "list",
+   "cap": [
+    2,
+    2
+   ],
+   "title": "Leap day rule",
+   "y": 620,
+   "stagger": 0.4,
+   "items": [
+    {
+     "label": "1900",
+     "value": "!no Feb 29!",
+     "c": "o"
+    },
+    {
+     "label": "2000 *\u00f7 400*",
+     "value": "*Feb 29*",
+     "c": "g"
+    },
+    {
+     "label": "2100",
+     "value": "!no Feb 29!",
+     "c": "o"
+    }
+   ],
+   "start": 6.971,
+   "end": 10.878
+  },
+  {
+   "type": "sheet",
+   "cap": [
+    3,
+    3
+   ],
+   "y": 560,
+   "rows": [
+    [
+     "",
+     ""
+    ],
+    [
+     "",
+     ""
+    ]
+   ],
+   "badge": "!accepted!",
+   "typing": {
+    "r": 0,
+    "c": 0,
+    "text": "29/2/1900",
+    "at": 0.3,
+    "cps": 9,
+    "result": "29-Feb-1900"
+   },
+   "start": 10.878,
+   "end": 13.626
+  },
+  {
+   "type": "counter",
+   "cap": [
+    4,
+    4
+   ],
+   "from": 2026,
+   "to": 1983,
+   "dur": 1.4,
+   "raw": true,
+   "label": "Lotus 1-2-3 \u00b7 top spreadsheet",
+   "title": "Back to the *eighties*",
+   "size": 200,
+   "start": 13.626,
+   "end": 17.249
+  },
+  {
+   "type": "calendar",
+   "cap": [
+    5,
+    5
+   ],
+   "month": "February 1900",
+   "startDow": 3,
+   "days": 28,
+   "extra": {
+    "day": 29,
+    "mode": "real",
+    "at": 0.6
+   },
+   "label": "according to Lotus 1-2-3",
+   "y": 430,
+   "start": 17.249,
+   "end": 19.768
+  },
+  {
+   "type": "list",
+   "cap": [
+    6,
+    6
+   ],
+   "title": "Same day numbers",
+   "y": 620,
+   "stagger": 0.5,
+   "items": [
+    {
+     "label": "Lotus: day 61",
+     "value": "*1 Mar 1900*",
+     "c": "g"
+    },
+    {
+     "label": "Excel: day 61",
+     "value": "*1 Mar 1900*",
+     "c": "g"
+    }
+   ],
+   "start": 19.768,
+   "end": 23.43
+  },
+  {
+   "type": "sheet",
+   "cap": [
+    7,
+    7
+   ],
+   "y": 520,
+   "cols": [
+    "A"
+   ],
+   "rows": [
+    [
+     "14-Mar-2023"
+    ],
+    [
+     "02-Jul-2024"
+    ],
+    [
+     "19-Nov-2026"
+    ]
+   ],
+   "shift": {
+    "at": 1.2,
+    "stagger": 0.25,
+    "to": [
+     [
+      0,
+      0,
+      "13-Mar-2023"
+     ],
+     [
+      1,
+      0,
+      "01-Jul-2024"
+     ],
+     [
+      2,
+      0,
+      "18-Nov-2026"
+     ]
+    ]
+   },
+   "head": "If Microsoft fixed it",
+   "badge": "!every date: \u22121 day!",
+   "badgeAt": 2.0,
+   "start": 23.43,
+   "end": 28.263
+  },
+  {
+   "type": "endcard",
+   "cap": [
+    8,
+    8
+   ],
+   "text": "A day that never existed, kept !on purpose!",
+   "y": 620,
+   "start": 28.263,
+   "end": 33.3
+  }
+ ],
+ "sfx": [
+  {
+   "cap": 0,
+   "at": 0.35,
+   "type": "hit"
+  },
+  {
+   "cap": 0,
+   "at": 0.35,
+   "type": "glitch"
+  },
+  {
+   "cap": 1,
+   "at": 0.9,
+   "type": "pop"
+  },
+  {
+   "cap": 1,
+   "at": 1.35,
+   "type": "hit"
+  },
+  {
+   "cap": 2,
+   "at": 0.1,
+   "type": "pop"
+  },
+  {
+   "cap": 2,
+   "at": 0.5,
+   "type": "pop"
+  },
+  {
+   "cap": 2,
+   "at": 0.9,
+   "type": "pop"
+  },
+  {
+   "cap": 3,
+   "at": 0.3,
+   "type": "ticks",
+   "count": 4,
+   "every": 0.11
+  },
+  {
+   "cap": 3,
+   "at": 1.4,
+   "type": "hit"
+  },
+  {
+   "cap": 4,
+   "at": 0.2,
+   "type": "ticks",
+   "count": 4,
+   "every": 0.3
+  },
+  {
+   "cap": 5,
+   "at": 0.6,
+   "type": "pop"
+  },
+  {
+   "cap": 7,
+   "at": 1.2,
+   "type": "ticks",
+   "count": 3,
+   "every": 0.25
+  }
+ ],
+ "cover": 1.0,
+ "tail": 1.3,
+ "duration": 33.3
+}
