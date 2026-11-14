@@ -45,14 +45,19 @@
   }
  },
  {
-  "date": "2026-11-17",
+  "date": "2026-11-14",
   "slug": "excel-1900",
-  "experiment": "narration pair 2, AI voice",
-  "scheduled": "2026-11-17T21:00:00+01:00",
+  "experiment": "narration experiment cancelled; posted as a normal extra video",
+  "scheduled": null,
   "buffer": {
    "youtube": "6af750453dec48715926551e",
    "instagram": "6af75047832266b7e906a1b9",
    "tiktok": "6af7504a1047b6144cb89b77"
+  },
+  "sent": {
+   "youtube": "2026-11-14T11:16+01:00",
+   "tiktok": "2026-11-14T11:18+01:00",
+   "instagram": "2026-11-14T11:19+01:00"
   }
  }
 ]
