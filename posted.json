@@ -75,5 +75,16 @@
    "instagram": "6af83df5d16af15d4d0c4fc6",
    "tiktok": "6af83dffbb36d0090904b363"
   }
+ },
+ {
+  "date": "2026-11-14",
+  "slug": "password-hash",
+  "scheduled": "2026-11-14T18:00:00+01:00",
+  "buffer": {
+   "youtube": "6af85813918fe79d2e7b91ec",
+   "instagram": "6af85813c5b364e062ef13bf",
+   "tiktok": "6af85814e5a113497a81e12c"
+  },
+  "note": "follow_cta (E5); Instagram follow line in caption (free plan, no firstComment). beats.py flags: no number in beats 1-3, no loop, 4.9s over 30s target"
  }
 ]

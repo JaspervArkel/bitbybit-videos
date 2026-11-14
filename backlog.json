@@ -76,12 +76,14 @@
   "title": "This website doesn't know your password",
   "pillar": "F",
   "hook": "It never stores it",
-  "status": "rendered",
+  "status": "scheduled",
   "script": "This website doesn't know your password. And that's a good thing. When you sign up, a well-built site runs your password through a hash: a one-way function that turns it into fixed-length gibberish. Change one letter, and the result changes completely. It stores only the hash, plus a random salt, so identical passwords look different. When you log in, it hashes what you typed and compares. Steal the database, and you get hashes, not passwords. Weak ones can still be guessed, one hash at a time.",
   "source": "https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html",
   "hook_type": "counterintuitive_claim",
   "ending": "follow_cta",
-  "post_time": "18:00"
+  "post_time": "18:00",
+  "visual": "tokens+code+list+counter",
+  "length_s": 33.2
  },
  {
   "n": 5,
