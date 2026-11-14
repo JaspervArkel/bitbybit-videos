@@ -1,0 +1,341 @@
+{
+ "title": "This website doesn't know your password",
+ "captions": [
+  {
+   "text": "This website doesn't know your !password.!",
+   "hide": true
+  },
+  {
+   "text": "And that's a *good* thing."
+  },
+  {
+   "text": "When you sign up, a well-built site"
+  },
+  {
+   "text": "runs your password through a *hash:*"
+  },
+  {
+   "text": "a *one-way* function that turns it into fixed-length gibberish."
+  },
+  {
+   "text": "Change one letter, and the result changes !completely.!"
+  },
+  {
+   "text": "It stores only the *hash,* plus a random *salt,*"
+  },
+  {
+   "text": "so identical passwords look !different.!"
+  },
+  {
+   "text": "When you log in, it hashes what you typed and *compares.*"
+  },
+  {
+   "text": "Steal the database, and you get *hashes,* not passwords."
+  },
+  {
+   "text": "Weak ones can still be !guessed,! one hash at a time."
+  },
+  {
+   "text": "Follow: tomorrow, why 1 TB shows 931 GB.",
+   "say": "Follow. Tomorrow: why one terabyte shows nine hundred thirty-one gigabytes."
+  }
+ ],
+ "scenes": [
+  {
+   "type": "tokens",
+   "cap": [
+    0,
+    0
+   ],
+   "instant": true,
+   "title": "This website doesn't know your !password!",
+   "titleY": 330,
+   "titleSize": 96,
+   "word": "kitten42",
+   "wordSize": 130,
+   "y": 860,
+   "split": 0.35,
+   "size": 64,
+   "pieces": [
+    {
+     "t": "1d3c761c"
+    },
+    {
+     "t": "79b4d968"
+    },
+    {
+     "t": "540ed1f7"
+    },
+    {
+     "t": "757f56a7"
+    },
+    {
+     "t": "208441c4"
+    },
+    {
+     "t": "5ccc022c"
+    },
+    {
+     "t": "8f11bd15"
+    },
+    {
+     "t": "810c59a2"
+    }
+   ]
+  },
+  {
+   "type": "title",
+   "cap": [
+    1,
+    1
+   ],
+   "text": "It never *stores* it",
+   "y": 760,
+   "size": 110
+  },
+  {
+   "type": "code",
+   "cap": [
+    2,
+    2
+   ],
+   "y": 640,
+   "cps": 40,
+   "lines": [
+    "> sign up",
+    "email:    you@mail.com",
+    "password: kitten42"
+   ]
+  },
+  {
+   "type": "code",
+   "cap": [
+    3,
+    3
+   ],
+   "y": 600,
+   "cps": 30,
+   "outputColor": "g",
+   "outputAt": 1.0,
+   "lines": [
+    "hash(\"kitten42\")"
+   ],
+   "output": "1d3c761c79b4d968\n540ed1f7757f56a7\n208441c45ccc022c\n8f11bd15810c59a2"
+  },
+  {
+   "type": "list",
+   "cap": [
+    4,
+    4
+   ],
+   "title": "Any input: *64 characters*",
+   "y": 640,
+   "stagger": 0.4,
+   "items": [
+    {
+     "label": "a",
+     "value": "*ca978112…*",
+     "c": "g"
+    },
+    {
+     "label": "kitten42",
+     "value": "*1d3c761c…*",
+     "c": "g"
+    },
+    {
+     "label": "hello world",
+     "value": "*b94d27b9…*",
+     "c": "g"
+    },
+    {
+     "label": "hash → password",
+     "value": "!no way back!",
+     "c": "o"
+    }
+   ]
+  },
+  {
+   "type": "list",
+   "cap": [
+    5,
+    5
+   ],
+   "title": "One letter changed",
+   "y": 700,
+   "stagger": 0.6,
+   "items": [
+    {
+     "label": "*k*itten42",
+     "value": "*1d3c761c…*",
+     "c": "g"
+    },
+    {
+     "label": "!m!itten42",
+     "value": "!ce7be713…!",
+     "c": "o"
+    }
+   ]
+  },
+  {
+   "type": "list",
+   "cap": [
+    6,
+    6
+   ],
+   "title": "What the site *stores*",
+   "y": 640,
+   "stagger": 0.45,
+   "items": [
+    {
+     "label": "password",
+     "value": "!never!",
+     "c": "o"
+    },
+    {
+     "label": "salt",
+     "value": "*9f3kQz2x*",
+     "c": "g"
+    },
+    {
+     "label": "hash",
+     "value": "*170f76f0…*",
+     "c": "g"
+    }
+   ]
+  },
+  {
+   "type": "list",
+   "cap": [
+    7,
+    7
+   ],
+   "title": "Same password, !different! hashes",
+   "y": 700,
+   "stagger": 0.5,
+   "items": [
+    {
+     "label": "Ana: kitten42",
+     "value": "*170f76f0…*",
+     "c": "g"
+    },
+    {
+     "label": "Ben: kitten42",
+     "value": "!cf9722fd…!",
+     "c": "o"
+    }
+   ]
+  },
+  {
+   "type": "code",
+   "cap": [
+    8,
+    8
+   ],
+   "y": 640,
+   "cps": 30,
+   "outputColor": "g",
+   "outputAt": 2.3,
+   "lines": [
+    "typed = \"kitten42\"",
+    "hash(salt + typed)",
+    "  == stored hash ?"
+   ],
+   "output": "✓ match: logged in"
+  },
+  {
+   "type": "list",
+   "cap": [
+    9,
+    9
+   ],
+   "title": "!Stolen! database",
+   "y": 640,
+   "stagger": 0.35,
+   "items": [
+    {
+     "label": "Ana",
+     "value": "*170f76f0…*",
+     "c": "g"
+    },
+    {
+     "label": "Ben",
+     "value": "*cf9722fd…*",
+     "c": "g"
+    },
+    {
+     "label": "Cat",
+     "value": "*04875714…*",
+     "c": "g"
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "cap": [
+    10,
+    10
+   ],
+   "title": "Weak passwords get !guessed!",
+   "titleY": 400,
+   "from": 0,
+   "to": 1000000,
+   "dur": 2.2,
+   "label": "guesses tried, each one hashed",
+   "color": "o",
+   "size": 120,
+   "y": 760
+  },
+  {
+   "type": "endcard",
+   "cap": [
+    11,
+    11
+   ],
+   "text": "Sites keep the *hash,* not your password",
+   "sub": "Follow · tomorrow: why 1 TB shows 931 GB",
+   "y": 560,
+   "subSize": 34
+  }
+ ],
+ "sfx": [
+  {
+   "cap": 0,
+   "at": 0.35,
+   "type": "glitch"
+  },
+  {
+   "cap": 0,
+   "at": 0.4,
+   "type": "pop"
+  },
+  {
+   "cap": 3,
+   "at": 1.0,
+   "type": "pop"
+  },
+  {
+   "cap": 5,
+   "at": 0.7,
+   "type": "hit"
+  },
+  {
+   "cap": 7,
+   "at": 0.6,
+   "type": "hit"
+  },
+  {
+   "cap": 8,
+   "at": 2.3,
+   "type": "pop"
+  },
+  {
+   "cap": 10,
+   "at": 0.2,
+   "type": "ticks",
+   "count": 5,
+   "every": 0.45
+  }
+ ],
+ "cover": 1.4,
+ "tail": 1.2
+}
