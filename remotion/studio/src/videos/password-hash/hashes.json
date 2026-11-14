@@ -1,0 +1,28 @@
+{
+ "pw": "sunflower42",
+ "pw2": "sunflower43",
+ "h1": "4568199f85cf84263ed16d17f400fc7f68ecf69387abccbe10c08a186ceeb5af",
+ "h2": "fb6bd25358290a039fc6f226edf98519eb1d16c70253f5d4759d553fa09d9111",
+ "saltA": "Qx7p9L",
+ "saltB": "k2Zr4W",
+ "hA": "b4236b13779a18bbe0da58015e3ad6af535631ccac8017b2834a90e859d11ecc",
+ "hB": "a46882cea80685609c3d377a5dd94dca7da0de740687002272032ea79520cc33",
+ "guesses": [
+  [
+   "123456",
+   "34fb6f56d3e16ba3d118cbb4bd8165249a89703bcff598dcefd27e2a1c9d5db6"
+  ],
+  [
+   "password",
+   "483023e62bbf22ec995ecfb06cf6a8df829ebbb24326aa2f5ff4eb8ab8640f11"
+  ],
+  [
+   "qwerty",
+   "fead22cfc452214619d86e5f29e2015afc31645ef90419706c34dd365036786f"
+  ],
+  [
+   "sunflower42",
+   "b4236b13779a18bbe0da58015e3ad6af535631ccac8017b2834a90e859d11ecc"
+  ]
+ ]
+}

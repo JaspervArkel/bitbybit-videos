@@ -1,0 +1,62 @@
+[
+ {
+  "s": 0.15,
+  "e": 1.967,
+  "text": "This website doesn't know your password."
+ },
+ {
+  "s": 2.287,
+  "e": 3.247,
+  "text": "And that's a good thing."
+ },
+ {
+  "s": 3.567,
+  "e": 5.123,
+  "text": "When you sign up, a well-built site"
+ },
+ {
+  "s": 5.443,
+  "e": 6.906,
+  "text": "runs your password through a hash:"
+ },
+ {
+  "s": 7.226,
+  "e": 10.311,
+  "text": "a one-way function that turns it into fixed-length gibberish."
+ },
+ {
+  "s": 10.631,
+  "e": 13.343,
+  "text": "Change one letter, and the result changes completely."
+ },
+ {
+  "s": 13.663,
+  "e": 15.981,
+  "text": "It stores only the hash, plus a random salt,"
+ },
+ {
+  "s": 16.301,
+  "e": 18.146,
+  "text": "so identical passwords look different."
+ },
+ {
+  "s": 18.466,
+  "e": 21.162,
+  "text": "When you log in, it hashes what you typed and compares."
+ },
+ {
+  "s": 21.482,
+  "e": 24.282,
+  "text": "Steal the database, and you get hashes, not passwords."
+ },
+ {
+  "s": 24.602,
+  "e": 27.066,
+  "text": "Weak ones can still be guessed, one hash at a time."
+ },
+ {
+  "s": 27.386,
+  "e": 31.655,
+  "text": "Follow. Tomorrow: why one terabyte shows nine hundred thirty-one gigabytes."
+ }
+]
