@@ -11,6 +11,8 @@ Goal: make next week's videos more engaging, based on this week's results. Chang
 - Only compare posts at least 72 h old. Younger posts are listed as "too early".
 - Normalise: likes, comments, shares and saves **per 1,000 views**. Compare within each platform, never across platforms.
 - Group by tag (`hook_type`, `ending`, `pillar`, `length_s` band) and by the current experiment's arms.
+- Read `kit/skills/marketing/ab-testing/SKILL.md` (and its sample-size guide) and `kit/skills/instagram/ig-audit/SKILL.md` for how to read the numbers. Our small-sample rules below still decide what counts as evidence.
+- Include the beat-sheet flags the daily runs reported; check whether flagged videos retained worse.
 - Small-sample rules: fewer than 3 videos per group = "signal only". Call a difference **evidence** only if it holds on at least 2 of 3 platforms and the gap is at least 1.5x.
 
 ## 3. Update `learnings.md`
@@ -22,6 +24,9 @@ Goal: make next week's videos more engaging, based on this week's results. Chang
 ## 4. Propose next week's topics
 - Write 7 new entries into `backlog.json` with `status: "proposed"`, dated after the last approved entry. Include a script (75–85 words, written to the Rules in force), sources for every factual claim, and planned tags.
 - Lean into what performed (pillars, hook types), but keep at least 3 different pillars in the week, and never repeat a topic.
+- For topic ideas, use `kit/skills/marketing/content-strategy/` and `kit/skills/marketing/social/references/short-form-video.md`.
+- For each hook, draft 3 options from different formulas in `kit/skills/instagram/ig-reel/hooks.json`, score them with `hookscore.py`, and pick the one that best fits the Rules in force (score breaks ties only). Put the score in a `hook_score` field.
+- Run every proposed script through `ig-human/humanize.py --report` and the `marketing/copy-editing` checks (cut AI tells, keep it spoken). Keep it at 75–85 words and every fact sourced.
 - Never set `approved` yourself. The user approves in chat.
 
 ## 5. Report to the user (SendUserMessage)
