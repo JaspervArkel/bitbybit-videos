@@ -82,8 +82,10 @@
   "hook_type": "counterintuitive_claim",
   "ending": "follow_cta",
   "post_time": "18:00",
-  "visual": "tokens+code+list+counter",
-  "length_s": 33.2
+  "visual": "remotion: login form+hash machine+db table+guess list",
+  "length_s": 32.9,
+  "format": "remotion",
+  "note": "Rebuilt in Remotion on 14 Nov 16:30 and swapped into the 18:00 Buffer posts (kit version not posted)."
  },
  {
   "n": 5,

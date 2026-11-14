@@ -11,38 +11,66 @@ It renders the video, pushes it here, and schedules it in Buffer at the entry's 
 
 ## 1. Setup (fresh cloud session)
 ```
-pip install --break-system-packages -q kokoro-onnx soundfile tiktoken
+pip install --break-system-packages -q kokoro-onnx soundfile tiktoken scipy
 mkdir -p tts && cd tts
 curl -sSLO https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/kokoro-v1.0.onnx
 curl -sSLO https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/voices-v1.0.bin
+cd ../remotion/studio && npm ci
 ```
 Narration voice: **am_puck**, full-precision model, speed 1.0. Never switch voices.
 
-## 2. Write the spec: `videos/NN-slug/video.json`
+**Format (since 14 Nov 2026): every video is built in Remotion** (`remotion/studio/`, read its README first).
+The old HTML kit (`kit/build.py`) is now only used to make the narration script, and as the **fallback**:
+if the Remotion build or its QA fails twice, build with the kit as before (kit spec rules below), post that,
+and say so in the report. Never miss a posting day because of Remotion.
+
+## 2. Write the spec: `videos/NN-slug/video.json` (narration + captions source)
 - **First read `learnings.md`.** Apply every rule under "Rules in force", and the current experiment's instructions for this entry (e.g. its `ending`). The learnings file wins over older guidance below if they conflict, but never over the approved script's facts.
 - Split the approved script into captions of one spoken phrase each (4 to 12 words). Keep the wording exactly; don't add claims.
 - Add `say` wherever numbers, years, units or symbols need a spoken form ("twenty thirty-eight", "thirty-two-bit", "one point eight six two terabytes").
-- Hide caption 0 (`"hide": true`) when scene 0's title already shows the hook. Scene 0 uses `"instant": true` so frame 1 is complete.
-- Build scenes from the kit components (`title`, `clock`, `bitrow`, `counter`, `tokens`, `code`, `bar`, `list`, `endcard`). Use a visual change every 1.5 to 3 s, green for normal, orange for broken or surprising, and an `endcard` last.
-- Use `videos/01-y2k38/video.json` as the reference example.
+- Mark key words: `*green*` for normal emphasis, `!orange!` for broken/surprising. These colors carry into the Remotion captions.
 - If the entry has a `check`, do it first and use the verified result.
+- (Kit `scenes` are only needed for the fallback; use `videos/01-y2k38/video.json` as the example.)
 
-## 3. Build and QA
+## 3. Build in Remotion and QA
+Narration and timing (slug = backlog slug, Comp = slug in PascalCase, e.g. `password-hash` → `PasswordHash`):
 ```
+S=remotion/studio; P=$S/public/videos/<slug>; V=$S/src/videos/<slug>; mkdir -p $P $V out/DATE-slug
 python3 kit/build.py videos/NN-slug/video.json out/DATE-slug/x.mp4 --script-only
-KOKORO_DIR=tts python3 kit/narrate.py out/DATE-slug/x.script.txt out/DATE-slug/narration.wav
-python3 kit/build.py videos/NN-slug/video.json out/DATE-slug/x.mp4 --stills 0,<scene midpoints>   # look at it
-python3 kit/build.py videos/NN-slug/video.json out/DATE-slug/bitbybit-slug.mp4 --voice out/DATE-slug/narration.wav
+KOKORO_DIR=tts python3 kit/narrate.py out/DATE-slug/x.script.txt $P/narration.wav
+python3 remotion/tools/spec_to_lines.py videos/NN-slug/video.json remotion/tools/<slug>.lines.json
+python3 remotion/tools/word_timing.py $P/narration.wav $P/narration.timing.json remotion/tools/<slug>.lines.json $V/words.json
+python3 remotion/tools/sound.py /tmp/snd <narration seconds + 2> && cp /tmp/snd/music.wav $P/
 ```
-Name the final file `bitbybit-<slug>.mp4`. QA gate (all must pass, or stop and report):
-- ffprobe: 1080x1920, h264 + aac, 25 to 42 s
-- Look at the stills: frame 1 shows the complete hook; nothing clipped or overlapping; captions in place
-- Captions match the narration (exact timing from narrate.py)
-- Advisory (does not block): run `python3 -I kit/skills/instagram/ig-reel/beats.py out/DATE-slug/x.script.txt --target 30` and list its flags in the report. Never edit the approved script to fix them; the weekly review uses them.
-- Delete stray working files; keep the mp4, cover.png, srt, narration.wav and narration.timing.json
+Check `word_timing.py`'s printout: every word has a start time and none is shorter than ~0.08 s.
+
+Then write `src/videos/<slug>/<Comp>.tsx`, starting from a copy of `src/videos/password-hash/PasswordHash.tsx`:
+1. **Storyboard first** (a comment at the top of the file): for each script line, the one object on screen and
+   what it does on which word. One world that evolves, not a slideshow. Build new components when the topic
+   needs them (a game character, a CPU, a chat window…); add generally useful ones to `src/lib/ui.tsx`.
+2. Hook: `Headline`-style title (≤8 words, the key word big in orange mono) + the hook visual, both complete at frame 0.
+3. Every scene inside `<Scene a b>`; events timed with `W(line, word)`; SFX cue list at the bottom.
+4. Endings follow the current experiment (`follow_cta`: end card with the follow button + tomorrow's topic;
+   `implication`: end on the takeaway visual; `comment_prompt`: the question big on screen).
+5. Register the composition in `src/Root.tsx`.
+
+Preview stills while building (fast, ~3 s each): `cd remotion/studio && COMP=<Comp> node stills.mjs 0 3.5 8 …`
+(writes `/tmp/st/*.png`; make a contact sheet with `montage` and look at it). Fix overlaps before rendering.
+
+Render + QA (~3 min):
+```
+remotion/tools/render.sh <Comp> out/DATE-slug <slug> "0 <one time inside every scene> <last second>"
+```
+Name: `bitbybit-<slug>.mp4`. QA gate (all must pass, or fix; after 2 failed attempts use the kit fallback):
+- ffprobe: 1080x1920, h264 + aac, 25 to 42 s; decode ok; loudness −15 to −13 LUFS
+- Look at `out/DATE-slug/qa-sheet.png`: frame 1 shows the complete hook; nothing clipped, overlapping or off-screen;
+  captions readable and never covered; every scene has its object on screen
+- Captions match the narration (word timing from the real audio)
+- Advisory (does not block): run `python3 -I kit/skills/instagram/ig-reel/beats.py out/DATE-slug/x.script.txt --target 30` and list its flags in the report. Never edit the approved script to fix them.
+- Delete stray working files (`x.*`); keep the mp4, cover.png, and the Remotion sources
 
 ## 4. Publish the file
-Commit `videos/NN-slug/` and `out/DATE-slug/`, set the entry's status to `rendered`, and push to `main`.
+Commit `videos/NN-slug/`, `out/DATE-slug/`, `remotion/studio/src/videos/<slug>/`, `remotion/studio/public/videos/<slug>/`, `remotion/tools/<slug>.lines.json` and `src/Root.tsx`, set the entry's status to `rendered`, and push to `main`.
 Video URL: `https://raw.githubusercontent.com/JaspervArkel/bitbybit-videos/main/out/DATE-slug/bitbybit-slug.mp4`
 Check it returns HTTP 200 before using it.
 

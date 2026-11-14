@@ -14,6 +14,7 @@ Every new video applies these. The weekly review adds, changes or removes rules,
 6. No generic CTAs ("follow for more"). Endings follow the current experiment below.
 7. Frame 1 must be readable in under 1 second: one big number, one short phrase or one striking visual. Never open on a timestamp, a code block or more than 8 words of on-screen text. *(provisional, from evidence 3; the review confirms or removes it)*
 8. Prefer present-tense, everyday stakes in the hook ("your…", "the internet…"). Avoid hedge words like "some" or "might" in the first sentence when an accurate unhedged version exists. Never trade accuracy for this. *(provisional, from evidence 3)*
+9. **Format: Remotion** (`remotion/studio/`, since 14 Nov). One evolving visual world per video, events timed to individual words, word-by-word captions, an SFX on every visual event, music bed. The HTML kit is only the fallback. *(provisional, from evidence 4; the review confirms or reverts it after ≥5 Remotion videos)*
 
 ## Evidence
 1. Instagram snapshot, 10–11 Nov 2026, 5 Reels: "255 + 1 = 0" got 1,254 views (11.8x the median of the other four), 10.2 s average watch vs about 6 s, and a 41.6% 3-second skip rate vs about 48%. One clear winner; the cause is unproven (topic, hook and timing all differed).
@@ -21,7 +22,10 @@ Every new video applies these. The weekly review adds, changes or removes rules,
 
 3. **Signal (user-reported, 11 Nov, one pair, early):** "The internet ran out of addresses" (posted 11:39) became the account's best retention so far; "The 2038 clock bug" (posted 18:00) had near-zero retention in its first hour. Differences: present, relatable stakes vs a far-future date; one big number in frame 1 vs a full timestamp to read; a certain claim vs a hedged one ("some computers"). Exact numbers to be added from the user's screenshots.
 
+4. **Remotion vs HTML kit, 14 Nov, n=1 pair, ~3 h after posting (both ~11:00, different topics):** Instagram: Remotion "Windows CON" 536 views / 359 reach, 13.3 s avg (42%), 5 likes, 2 saves vs kit "Excel 1900" 153 / 116, 15.5 s (47%), 0 likes, 1 share. TikTok: Remotion 312 views, 8.5 s (27%) vs kit 702 views, 10.7 s (32%). YouTube: no data yet. Reach clearly up on Instagram; retention not better on either platform; topic differs, so format isn't proven as the cause.
+
 ## Working hypotheses (to test)
+- H8: The Remotion format (evolving scene world, word-timed visuals, SFX) raises reach and likes per 1,000 views vs the HTML kit without hurting average % viewed. Test: all videos from 14 Nov in Remotion; compare per-platform medians against the kit videos of 11–13 Nov at 72 h. *(from evidence 4)*
 - H7: Hooks about the viewer's present world, stated with certainty, beat future or hedged stakes. Frame 1 must be readable in under 1 s (one number or one short phrase, not a timestamp or a paragraph). *(from evidence 3)*
 - H1: Hooks that show an impossible result on screen beat question hooks on 3 s skip rate.
 - H2: Gaming and AI topics get more shares than number-system topics.
@@ -47,7 +51,8 @@ Each backlog entry's `post_time` decides when it goes out: "18:00" = 18:00 Europ
 - `hook_type`: impossible_result | counterintuitive_claim | everyday_mystery | scale_analogy | story
 - `ending`: implication | comment_prompt | follow_cta
 - `post_time`: "18:00" | "01:00+1"
-- `visual`: the main kit components used, e.g. "clock+bitrow"
+- `visual`: "remotion: <main objects>", e.g. "remotion: login form+hash machine+db table" (kit fallback: the kit components used)
+- `format`: remotion | kit
 - `length_s`: final duration in seconds
 
 ## Review history
