@@ -1,0 +1,47 @@
+[
+ {
+  "s": 0.15,
+  "e": 2.021,
+  "text": "Windows won't let you name a folder con."
+ },
+ {
+  "s": 2.341,
+  "e": 5.066,
+  "text": "Try it, and Windows says the device name is invalid."
+ },
+ {
+  "s": 5.386,
+  "e": 7.669,
+  "text": "Device? The reason is older than folders."
+ },
+ {
+  "s": 7.989,
+  "e": 11.458,
+  "text": "In early DOS, con meant the console: your keyboard and screen."
+ },
+ {
+  "s": 11.778,
+  "e": 14.662,
+  "text": "P R N was the printer. Null threw everything away."
+ },
+ {
+  "s": 14.982,
+  "e": 18.225,
+  "text": "Programs used these names like files to talk to hardware."
+ },
+ {
+  "s": 18.545,
+  "e": 23.571,
+  "text": "When DOS added folders in nineteen eighty-three, the names had to work in every folder."
+ },
+ {
+  "s": 23.891,
+  "e": 25.864,
+  "text": "So Microsoft reserved them everywhere."
+ },
+ {
+  "s": 26.184,
+  "e": 30.353,
+  "text": "Over forty years later, Windows still blocks them, for hardware from the eighties."
+ }
+]
