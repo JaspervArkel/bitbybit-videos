@@ -94,11 +94,14 @@
   "title": "Your 1 TB drive shows 931 GB",
   "pillar": "A",
   "hook": "Where did 69 GB go?",
-  "status": "rendered",
+  "status": "scheduled",
   "script": "You bought a one-terabyte drive. Windows says 931 gigabytes. Nothing's missing. Drive makers count in powers of ten: a terabyte is one trillion bytes. Windows counts in powers of two: its \"gigabyte\" is 1,073,741,824 bytes. Divide a trillion by that, and you get 931. Same bytes, different ruler. The binary unit even has its own name, the gibibyte, but almost nobody uses it. So a two-terabyte drive shows 1,862.",
   "hook_type": "everyday_mystery",
   "ending": "implication",
-  "post_time": "18:00"
+  "post_time": "18:00",
+  "visual": "remotion: drive box+disk tile+unit chain+GB bars+byte bar with two rulers+GiB label",
+  "length_s": 34.5,
+  "format": "remotion"
  },
  {
   "n": 6,

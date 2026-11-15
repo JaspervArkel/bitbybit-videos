@@ -88,5 +88,18 @@
   "note": "follow_cta (E5); Instagram follow line in caption (free plan, no firstComment). beats.py flags: no number in beats 1-3, no loop, 4.9s over 30s target",
   "video": "https://raw.githubusercontent.com/JaspervArkel/bitbybit-videos/main/out/2026-11-14-password-hash-remotion/bitbybit-password-hash-remotion.mp4",
   "format": "remotion"
+ },
+ {
+  "date": "2026-11-15",
+  "slug": "terabyte-931",
+  "scheduled": "2026-11-15T18:00:00+01:00",
+  "buffer": {
+   "youtube": "6af9aa0de86a5789a60e42fc",
+   "instagram": "6af9aa0de86a5789a60e432c",
+   "tiktok": "6af9aa0ee86a5789a60e4366"
+  },
+  "note": "implication (E5), no CTA. beats.py flags: no number/name in beat 1 (spoken), 5.5s beat on 1,073,741,824 (visual types digits), beats 3-5 flagged as not concrete, 34.5s total",
+  "video": "https://raw.githubusercontent.com/JaspervArkel/bitbybit-videos/main/out/2026-11-15-terabyte-931/bitbybit-terabyte-931.mp4",
+  "format": "remotion"
  }
 ]
