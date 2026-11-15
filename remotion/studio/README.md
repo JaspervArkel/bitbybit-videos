@@ -29,3 +29,13 @@ Reference videos: `src/videos/password-hash/PasswordHash.tsx` (newest pattern) a
 - Use real values where the topic has them (real SHA-256 hashes, real error text), computed in Python, never invented.
 - No real logos, brand UI or people. Generic windows/forms are fine.
 - Don't use the grain overlay (it blotches after downscaling).
+
+## Long-form (16:9) videos
+`src/videos/int-max/` is the reference (first long-form in Remotion, 15 Nov 2026): `parts.tsx` (timing, `at(line, "word")`,
+wide background, chapter cards, top progress bar, bit row, icons), `chaptersA/B.tsx` (one component per chapter), `IntMax.tsx`
+(composition + SFX cues), `Thumb.tsx` (1280x720 thumbnail as a `<Still>`).
+- Spec + narration: `videos/long-NN-slug/make_spec.py` → `video.json` (captions + chapter starts), then
+  `remotion/tools/narrate_long.py` (adds a 1.25 s pause before each chapter, used for the chapter card).
+- Captions: `<Captions maxChars={40} top={920} size={56} side={160} />`. Stage is y 120–880.
+- Render takes ~25 min for 5 min at 2 cores. Re-encode the raw render with `-crf 22` so the mp4 stays under GitHub's 100 MB limit.
+- To fix a few seconds, render only that range (`--frames=a-b`) and splice it into the raw render with ffmpeg `concat`.

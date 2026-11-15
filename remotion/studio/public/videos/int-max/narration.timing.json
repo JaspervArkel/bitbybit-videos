@@ -1,0 +1,337 @@
+[
+ {
+  "s": 0.15,
+  "e": 1.889,
+  "text": "This number keeps breaking computers."
+ },
+ {
+  "s": 2.229,
+  "e": 8.064,
+  "text": "two billion, one hundred forty-seven million, four hundred eighty-three thousand, six hundred forty-seven."
+ },
+ {
+  "s": 8.404,
+  "e": 10.298,
+  "text": "It made YouTube rebuild its view counter."
+ },
+ {
+  "s": 10.638,
+  "e": 14.326,
+  "text": "It made regulators order airlines to switch a jet off and on again."
+ },
+ {
+  "s": 14.666,
+  "e": 18.606,
+  "text": "Its bigger twin is the prime suspect in the loss of a NASA spacecraft."
+ },
+ {
+  "s": 18.946,
+  "e": 21.97,
+  "text": "And in January twenty thirty-eight, it's coming for the clocks."
+ },
+ {
+  "s": 22.31,
+  "e": 25.74,
+  "text": "All for the same reason. Somebody thought: we'll never count that high."
+ },
+ {
+  "s": 26.99,
+  "e": 31.315,
+  "text": "Computers store numbers in bits: tiny switches that are either zero or one."
+ },
+ {
+  "s": 31.655,
+  "e": 35.452,
+  "text": "For decades, the standard size for a whole number was thirty-two of them."
+ },
+ {
+  "s": 35.792,
+  "e": 39.561,
+  "text": "Thirty-two switches give about four point three billion combinations."
+ },
+ {
+  "s": 39.901,
+  "e": 44.136,
+  "text": "But programs need negative numbers too, so one switch is used for the sign."
+ },
+ {
+  "s": 44.476,
+  "e": 53.955,
+  "text": "That leaves thirty-one for the value. Set them all to one, and you get two billion, one hundred forty-seven million, four hundred eighty-three thousand, six hundred forty-seven."
+ },
+ {
+  "s": 54.295,
+  "e": 57.638,
+  "text": "It works like an old car odometer with every digit at nine."
+ },
+ {
+  "s": 57.978,
+  "e": 59.912,
+  "text": "Add one more, and everything rolls over."
+ },
+ {
+  "s": 60.252,
+  "e": 63.454,
+  "text": "Except here, it doesn't roll to zero. The sign switch flips,"
+ },
+ {
+  "s": 63.794,
+  "e": 67.108,
+  "text": "and the biggest positive number becomes the most negative one."
+ },
+ {
+  "s": 67.448,
+  "e": 71.931,
+  "text": "That's an integer overflow. And it has happened in some very expensive places."
+ },
+ {
+  "s": 73.181,
+  "e": 77.889,
+  "text": "December twenty fourteen. Gangnam Style is the most-watched video on YouTube,"
+ },
+ {
+  "s": 78.229,
+  "e": 81.265,
+  "text": "and its view count is closing in on two point one billion."
+ },
+ {
+  "s": 81.605,
+  "e": 83.03,
+  "text": "Then YouTube posts a message."
+ },
+ {
+  "s": 83.37,
+  "e": 87.923,
+  "text": "It never thought a video would be watched more times than a thirty-two-bit number can hold."
+ },
+ {
+  "s": 88.263,
+  "e": 90.467,
+  "text": "Headlines said Gangnam Style broke YouTube."
+ },
+ {
+  "s": 90.807,
+  "e": 94.712,
+  "text": "The truth is better. Days later, YouTube said the post was an Easter egg."
+ },
+ {
+  "s": 95.052,
+  "e": 100.24,
+  "text": "Its engineers had seen the number coming, and moved the counter to sixty-four bits months earlier."
+ },
+ {
+  "s": 100.58,
+  "e": 102.899,
+  "text": "The new limit is over nine quintillion views."
+ },
+ {
+  "s": 103.239,
+  "e": 106.715,
+  "text": "That's the happy version of this story: someone was watching the number."
+ },
+ {
+  "s": 107.965,
+  "e": 109.447,
+  "text": "The next one was found in a lab."
+ },
+ {
+  "s": 109.787,
+  "e": 115.09,
+  "text": "In twenty fifteen, Boeing told regulators about a problem in the seven eighty-seven Dreamliner."
+ },
+ {
+  "s": 115.43,
+  "e": 120.648,
+  "text": "Each of its generators is managed by a control unit. Inside its software is a counter."
+ },
+ {
+  "s": 120.988,
+  "e": 125.489,
+  "text": "After two hundred forty-eight days of continuous power, that counter overflows,"
+ },
+ {
+  "s": 125.829,
+  "e": 127.809,
+  "text": "and the unit drops into failsafe mode."
+ },
+ {
+  "s": 128.149,
+  "e": 133.795,
+  "text": "Power them all up together, and they all overflow together. The plane could lose all of its A C power."
+ },
+ {
+  "s": 134.135,
+  "e": 137.577,
+  "text": "The F A A never published the counter's details. But do the maths."
+ },
+ {
+  "s": 137.917,
+  "e": 145.405,
+  "text": "Count hundredths of a second in a signed thirty-two-bit number, and you run out after two hundred forty-eight point five five days."
+ },
+ {
+  "s": 145.745,
+  "e": 151.689,
+  "text": "The official fix, until new software arrived: switch the power off and on again before the counter gets there."
+ },
+ {
+  "s": 152.029,
+  "e": 153.785,
+  "text": "It was caught in testing, not in the air."
+ },
+ {
+  "s": 155.035,
+  "e": 156.928,
+  "text": "A NASA spacecraft wasn't so lucky."
+ },
+ {
+  "s": 157.268,
+  "e": 161.959,
+  "text": "Deep Impact launched in two thousand five, and famously fired a probe into a comet."
+ },
+ {
+  "s": 162.299,
+  "e": 165.413,
+  "text": "Eight years later, in August twenty thirteen, it went silent."
+ },
+ {
+  "s": 165.753,
+  "e": 171.743,
+  "text": "NASA never confirmed the exact cause, but it found a potential problem with how the computer tagged time."
+ },
+ {
+  "s": 172.083,
+  "e": 179.834,
+  "text": "Outside engineers noticed something. Count tenths of a second from the first of January two thousand, in a thirty-two-bit number,"
+ },
+ {
+  "s": 180.174,
+  "e": 185.283,
+  "text": "and you hit the limit, about four point two nine billion, on the eleventh of August twenty thirteen."
+ },
+ {
+  "s": 185.623,
+  "e": 187.269,
+  "text": "The same week contact was lost."
+ },
+ {
+  "s": 187.609,
+  "e": 194.362,
+  "text": "The suspected result: the computer kept rebooting, the craft lost its orientation, and its antennas turned away from Earth."
+ },
+ {
+  "s": 194.702,
+  "e": 196.785,
+  "text": "A month later, the mission was declared over."
+ },
+ {
+  "s": 198.035,
+  "e": 199.141,
+  "text": "It hits money, too."
+ },
+ {
+  "s": 199.481,
+  "e": 205.234,
+  "text": "In May twenty twenty-one, one share of Berkshire Hathaway cost more than four hundred twenty thousand dollars."
+ },
+ {
+  "s": 205.574,
+  "e": 211.189,
+  "text": "Some Nasdaq price feeds stored prices as thirty-two-bit numbers, with four decimal places."
+ },
+ {
+  "s": 211.529,
+  "e": 218.253,
+  "text": "So the highest price they could carry was four hundred twenty-nine thousand, four hundred ninety-six dollars. And change."
+ },
+ {
+  "s": 218.593,
+  "e": 224.662,
+  "text": "As the share closed in, Nasdaq stopped broadcasting its price on those feeds until the software was upgraded."
+ },
+ {
+  "s": 225.912,
+  "e": 227.29,
+  "text": "Which brings us to the big one."
+ },
+ {
+  "s": 227.63,
+  "e": 232.911,
+  "text": "Many computers keep time by counting the seconds since the first of January nineteen seventy."
+ },
+ {
+  "s": 233.251,
+  "e": 237.984,
+  "text": "It's called Unix time, and for decades it was stored in a signed thirty-two-bit number."
+ },
+ {
+  "s": 238.324,
+  "e": 239.518,
+  "text": "You already know its limit."
+ },
+ {
+  "s": 239.858,
+  "e": 248.672,
+  "text": "That many seconds after nineteen seventy lands on the nineteenth of January twenty thirty-eight, at seven seconds past three fourteen in the morning, U T C."
+ },
+ {
+  "s": 249.012,
+  "e": 254.641,
+  "text": "One second later, the counter flips negative, and an unpatched system thinks it's December nineteen oh one."
+ },
+ {
+  "s": 254.981,
+  "e": 256.928,
+  "text": "This is the Year twenty thirty-eight problem."
+ },
+ {
+  "s": 257.268,
+  "e": 261.176,
+  "text": "The fix is the one YouTube used: store time in sixty-four bits."
+ },
+ {
+  "s": 261.516,
+  "e": 264.125,
+  "text": "That lasts about two hundred ninety-two billion years."
+ },
+ {
+  "s": 264.465,
+  "e": 267.312,
+  "text": "Most modern phones and laptops already made the switch."
+ },
+ {
+  "s": 267.652,
+  "e": 273.794,
+  "text": "The risk is in older and embedded systems: machines built to run for decades, that are hard to update."
+ },
+ {
+  "s": 274.134,
+  "e": 277.004,
+  "text": "Engineers have a little over eleven years to find them."
+ },
+ {
+  "s": 278.254,
+  "e": 280.492,
+  "text": "Every one of these stories started the same way."
+ },
+ {
+  "s": 280.832,
+  "e": 284.152,
+  "text": "Someone picked a size for a number, and it seemed impossibly big."
+ },
+ {
+  "s": 284.492,
+  "e": 289.566,
+  "text": "Two billion views. Eight months without a reboot. A share worth four hundred thousand dollars."
+ },
+ {
+  "s": 289.906,
+  "e": 292.08,
+  "text": "The number didn't change. The world grew into it."
+ },
+ {
+  "s": 292.42,
+  "e": 297.059,
+  "text": "So when someone says we'll never count that high, remember: eventually, something does."
+ }
+]

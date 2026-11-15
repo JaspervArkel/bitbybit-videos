@@ -1,0 +1,270 @@
+{
+ "title": "The Number That Keeps Breaking Computers",
+ "format": "landscape",
+ "chapters": [
+  {
+   "line": 0,
+   "title": "The number"
+  },
+  {
+   "line": 7,
+   "title": "Why this number"
+  },
+  {
+   "line": 17,
+   "title": "The view counter"
+  },
+  {
+   "line": 26,
+   "title": "The 248-day jet"
+  },
+  {
+   "line": 36,
+   "title": "The lost spacecraft"
+  },
+  {
+   "line": 45,
+   "title": "The share price"
+  },
+  {
+   "line": 50,
+   "title": "19 January 2038"
+  },
+  {
+   "line": 62,
+   "title": "The pattern"
+  }
+ ],
+ "captions": [
+  {
+   "text": "This number keeps breaking computers."
+  },
+  {
+   "text": "!2,147,483,647.!",
+   "say": "two billion, one hundred forty-seven million, four hundred eighty-three thousand, six hundred forty-seven."
+  },
+  {
+   "text": "It made YouTube rebuild its *view counter.*"
+  },
+  {
+   "text": "It made regulators order airlines to switch a jet *off and on again.*"
+  },
+  {
+   "text": "Its bigger twin is the prime suspect in the loss of a *NASA spacecraft.*"
+  },
+  {
+   "text": "And in January !2038,! it's coming for the clocks.",
+   "say": "And in January twenty thirty-eight, it's coming for the clocks."
+  },
+  {
+   "text": "All for the same reason. Somebody thought: !we'll never count that high.!"
+  },
+  {
+   "text": "Computers store numbers in *bits:* tiny switches that are either zero or one."
+  },
+  {
+   "text": "For decades, the standard size for a whole number was *32* of them.",
+   "say": "For decades, the standard size for a whole number was thirty-two of them."
+  },
+  {
+   "text": "32 switches give about *4.3 billion* combinations.",
+   "say": "Thirty-two switches give about four point three billion combinations."
+  },
+  {
+   "text": "But programs need negative numbers too, so one switch is used for the !sign.!"
+  },
+  {
+   "text": "That leaves 31 for the value. Set them all to one, and you get *2,147,483,647.*",
+   "say": "That leaves thirty-one for the value. Set them all to one, and you get two billion, one hundred forty-seven million, four hundred eighty-three thousand, six hundred forty-seven."
+  },
+  {
+   "text": "It works like an old car odometer with every digit at nine."
+  },
+  {
+   "text": "Add one more, and everything !rolls over.!"
+  },
+  {
+   "text": "Except here, it doesn't roll to zero. The sign switch flips,"
+  },
+  {
+   "text": "and the biggest positive number becomes the most !negative! one."
+  },
+  {
+   "text": "That's an *integer overflow.* And it has happened in some very expensive places."
+  },
+  {
+   "text": "December 2014. Gangnam Style is the most-watched video on YouTube,",
+   "say": "December twenty fourteen. Gangnam Style is the most-watched video on YouTube,"
+  },
+  {
+   "text": "and its view count is closing in on *2.1 billion.*",
+   "say": "and its view count is closing in on two point one billion."
+  },
+  {
+   "text": "Then YouTube posts a message."
+  },
+  {
+   "text": "It never thought a video would be watched more times than a *32-bit* number can hold.",
+   "say": "It never thought a video would be watched more times than a thirty-two-bit number can hold."
+  },
+  {
+   "text": "Headlines said Gangnam Style !broke YouTube.!"
+  },
+  {
+   "text": "The truth is better. Days later, YouTube said the post was an *Easter egg.*"
+  },
+  {
+   "text": "Its engineers had seen the number coming, and moved the counter to *64 bits* months earlier.",
+   "say": "Its engineers had seen the number coming, and moved the counter to sixty-four bits months earlier."
+  },
+  {
+   "text": "The new limit is over *nine quintillion* views."
+  },
+  {
+   "text": "That's the happy version of this story: someone was watching the number."
+  },
+  {
+   "text": "The next one was found in a lab."
+  },
+  {
+   "text": "In 2015, Boeing told regulators about a problem in the *787 Dreamliner.*",
+   "say": "In twenty fifteen, Boeing told regulators about a problem in the seven eighty-seven Dreamliner."
+  },
+  {
+   "text": "Each of its generators is managed by a control unit. Inside its software is a *counter.*"
+  },
+  {
+   "text": "After *248 days* of continuous power, that counter overflows,",
+   "say": "After two hundred forty-eight days of continuous power, that counter overflows,"
+  },
+  {
+   "text": "and the unit drops into !failsafe mode.!"
+  },
+  {
+   "text": "Power them all up together, and they all overflow together. The plane could lose !all of its AC power.!",
+   "say": "Power them all up together, and they all overflow together. The plane could lose all of its A C power."
+  },
+  {
+   "text": "The FAA never published the counter's details. But do the maths.",
+   "say": "The F A A never published the counter's details. But do the maths."
+  },
+  {
+   "text": "Count hundredths of a second in a signed 32-bit number, and you run out after *248.55 days.*",
+   "say": "Count hundredths of a second in a signed thirty-two-bit number, and you run out after two hundred forty-eight point five five days."
+  },
+  {
+   "text": "The official fix, until new software arrived: switch the power *off and on again* before the counter gets there."
+  },
+  {
+   "text": "It was caught in testing, not in the air."
+  },
+  {
+   "text": "A NASA spacecraft wasn't so lucky."
+  },
+  {
+   "text": "Deep Impact launched in 2005, and famously fired a probe into a *comet.*",
+   "say": "Deep Impact launched in two thousand five, and famously fired a probe into a comet."
+  },
+  {
+   "text": "Eight years later, in August 2013, it went !silent.!",
+   "say": "Eight years later, in August twenty thirteen, it went silent."
+  },
+  {
+   "text": "NASA never confirmed the exact cause, but it found a potential problem with how the computer *tagged time.*"
+  },
+  {
+   "text": "Outside engineers noticed something. Count tenths of a second from the first of January 2000, in a 32-bit number,",
+   "say": "Outside engineers noticed something. Count tenths of a second from the first of January two thousand, in a thirty-two-bit number,"
+  },
+  {
+   "text": "and you hit the limit, about *4.29 billion,* on the !11th of August 2013.!",
+   "say": "and you hit the limit, about four point two nine billion, on the eleventh of August twenty thirteen."
+  },
+  {
+   "text": "The same week contact was lost."
+  },
+  {
+   "text": "The suspected result: the computer kept !rebooting,! the craft lost its orientation, and its antennas turned away from Earth."
+  },
+  {
+   "text": "A month later, the mission was declared over."
+  },
+  {
+   "text": "It hits money, too."
+  },
+  {
+   "text": "In May 2021, one share of Berkshire Hathaway cost more than *420,000 dollars.*",
+   "say": "In May twenty twenty-one, one share of Berkshire Hathaway cost more than four hundred twenty thousand dollars."
+  },
+  {
+   "text": "Some Nasdaq price feeds stored prices as 32-bit numbers, with four decimal places.",
+   "say": "Some Nasdaq price feeds stored prices as thirty-two-bit numbers, with four decimal places."
+  },
+  {
+   "text": "So the highest price they could carry was !$429,496.! And change.",
+   "say": "So the highest price they could carry was four hundred twenty-nine thousand, four hundred ninety-six dollars. And change."
+  },
+  {
+   "text": "As the share closed in, Nasdaq stopped broadcasting its price on those feeds until the software was *upgraded.*"
+  },
+  {
+   "text": "Which brings us to the big one."
+  },
+  {
+   "text": "Many computers keep time by counting the *seconds* since the first of January 1970.",
+   "say": "Many computers keep time by counting the seconds since the first of January nineteen seventy."
+  },
+  {
+   "text": "It's called *Unix time,* and for decades it was stored in a signed 32-bit number.",
+   "say": "It's called Unix time, and for decades it was stored in a signed thirty-two-bit number."
+  },
+  {
+   "text": "You already know its limit."
+  },
+  {
+   "text": "That many seconds after 1970 lands on the !19th of January 2038,! at seven seconds past 3:14 in the morning, UTC.",
+   "say": "That many seconds after nineteen seventy lands on the nineteenth of January twenty thirty-eight, at seven seconds past three fourteen in the morning, U T C."
+  },
+  {
+   "text": "One second later, the counter flips negative, and an unpatched system thinks it's !December 1901.!",
+   "say": "One second later, the counter flips negative, and an unpatched system thinks it's December nineteen oh one."
+  },
+  {
+   "text": "This is the *Year 2038 problem.*",
+   "say": "This is the Year twenty thirty-eight problem."
+  },
+  {
+   "text": "The fix is the one YouTube used: store time in *64 bits.*",
+   "say": "The fix is the one YouTube used: store time in sixty-four bits."
+  },
+  {
+   "text": "That lasts about *292 billion years.*",
+   "say": "That lasts about two hundred ninety-two billion years."
+  },
+  {
+   "text": "Most modern phones and laptops already made the switch."
+  },
+  {
+   "text": "The risk is in older and embedded systems: machines built to run for decades, that are !hard to update.!"
+  },
+  {
+   "text": "Engineers have a little over *eleven years* to find them."
+  },
+  {
+   "text": "Every one of these stories started the same way."
+  },
+  {
+   "text": "Someone picked a size for a number, and it seemed *impossibly big.*"
+  },
+  {
+   "text": "Two billion views. Eight months without a reboot. A share worth 400,000 dollars.",
+   "say": "Two billion views. Eight months without a reboot. A share worth four hundred thousand dollars."
+  },
+  {
+   "text": "The number didn't change. The world !grew into it.!"
+  },
+  {
+   "text": "So when someone says *we'll never count that high,* remember: eventually, something does."
+  }
+ ]
+}
