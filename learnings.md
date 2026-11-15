@@ -24,12 +24,14 @@ Every new video applies these. The weekly review adds, changes or removes rules,
 
 4. **Remotion vs HTML kit, 14 Nov, n=1 pair, ~3 h after posting (both ~11:00, different topics):** Instagram: Remotion "Windows CON" 536 views / 359 reach, 13.3 s avg (42%), 5 likes, 2 saves vs kit "Excel 1900" 153 / 116, 15.5 s (47%), 0 likes, 1 share. TikTok: Remotion 312 views, 8.5 s (27%) vs kit 702 views, 10.7 s (32%). YouTube: no data yet. Reach clearly up on Instagram; retention not better on either platform; topic differs, so format isn't proven as the cause.
 
+5. **Weekly review 15 Nov (Buffer metrics, only 2 videos ≥72 h; n=1 per arm, signal only).** "2038 clock bug" vs "Internet ran out of addresses", per 1,000 views: YouTube likes 23.7 vs 16.7 (1,139 / 1,021 views); Instagram likes 22.4 vs 6.3, saves 14.9 vs 6.3, shares 7.5 vs 6.3 (134 / 158 views, so 1–3 actions each); TikTok likes 17.1 vs 27.5 (759 / 1,344 views). Buffer average watch time: Instagram 6.4 s vs 13.0 s, TikTok 11.0 s vs 14.5 s. So ipv4 held viewers longer on both platforms that report it (fits evidence 3), but likes per view did not follow: 2038 led on YouTube (1.4x) and Instagram (3.5x, on 3 likes), ipv4 on TikTok (1.6x). Beat-sheet flags: password-hash (flagged: no number in beats 1–3, 4.9 s over target) has the week's lowest average watch so far (Instagram 3.9 s, TikTok 5.8 s), but at ~20 h; recheck at 72 h. Comments were 0 on all six posts. Does not move H7 to evidence.
+
 ## Working hypotheses (to test)
 - H8: The Remotion format (evolving scene world, word-timed visuals, SFX) raises reach and likes per 1,000 views vs the HTML kit without hurting average % viewed. Test: all videos from 14 Nov in Remotion; compare per-platform medians against the kit videos of 11–13 Nov at 72 h. *(from evidence 4)*
-- H7: Hooks about the viewer's present world, stated with certainty, beat future or hedged stakes. Frame 1 must be readable in under 1 s (one number or one short phrase, not a timestamp or a paragraph). *(from evidence 3)*
+- H7: Hooks about the viewer's present world, stated with certainty, beat future or hedged stakes. Frame 1 must be readable in under 1 s (one number or one short phrase, not a timestamp or a paragraph). *(from evidence 3; 15 Nov: watch time supports it, likes per view don't yet, see evidence 5)*
 - H1: Hooks that show an impossible result on screen beat question hooks on 3 s skip rate.
 - H2: Gaming and AI topics get more shares than number-system topics.
-- H3: Ending with a specific, answerable question raises comments without hurting likes.
+- H3: Ending with a specific, answerable question raises comments without hurting likes. *(baseline 15 Nov: 0 comments on all 6 posts ≥72 h; E6 tests it)*
 - H4: Shorter videos (25–28 s) complete more often than 32–35 s versions of similar topics.
 - H5: A specific follow CTA that previews tomorrow's video raises follows per 1,000 views without lowering likes.
 - H6: Posting at US evening time (01:00 Amsterdam) gets more views than 18:00 Amsterdam (US midday).
@@ -39,6 +41,7 @@ Every new video applies these. The weekly review adds, changes or removes rules,
 - `ending: follow_cta` (backlog n = 2, 4, 6, 8): after the last script line, add one spoken caption, "Follow: tomorrow, <next video's topic in 3–6 words>." The next video is the next approved backlog entry; use its plain title, e.g. "Follow: tomorrow, why AI can't spell." The endcard shows the takeaway plus "Follow · tomorrow: <topic>". Captions end with the same line. If there is no next approved entry, use `implication` instead.
 - `ending: implication` (n = 3, 5, 7): the endcard states the takeaway. No CTA.
 - Measured on follows (if Buffer or screenshots provide them) and likes, comments and shares per 1,000 views, at 72 hours or older.
+- *Status 15 Nov:* 4 of 7 videos posted, none ≥72 h at the Buffer snapshot (bullet-tunneling 68–71 h). Too early; not closed. Read on 22 Nov (needs 6+ videos ≥72 h; extend a week if fewer).
 
 ## Upcoming experiments (already scheduled in backlog tags)
 - **E6, 19–25 Nov: question ending (tests H3).** `ending: comment_prompt` (n = 10, 12, 14): the endcard becomes a short, specific question the viewer can answer from their own life ("What does your drive say?"). The Instagram `firstComment` asks it too, and the captions end with it. Odd n: `implication`.
@@ -57,3 +60,4 @@ Each backlog entry's `post_time` decides when it goes out: "18:00" = 18:00 Europ
 
 ## Review history
 *(The weekly review appends one dated line per week: what changed and why.)*
+- 2026-11-15: First weekly review. Only y2k38 and ipv4 were ≥72 h, so no rule changes; added evidence 5 (n=1 pair, signal only), E5 too early (read 22 Nov), H8 needs ≥5 Remotion videos at 72 h. Proposed 7 topics for 25 Nov–1 Dec (pillars A, B, C, D, E, F). No retention screenshots in analytics/ this week.
