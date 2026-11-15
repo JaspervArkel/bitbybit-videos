@@ -1,0 +1,57 @@
+[
+ {
+  "s": 0.15,
+  "e": 1.62,
+  "text": "You bought a one-terabyte drive."
+ },
+ {
+  "s": 1.94,
+  "e": 5.569,
+  "text": "Windows says nine hundred thirty-one gigabytes. Nothing's missing."
+ },
+ {
+  "s": 5.889,
+  "e": 7.742,
+  "text": "Drive makers count in powers of ten:"
+ },
+ {
+  "s": 8.062,
+  "e": 9.895,
+  "text": "a terabyte is one trillion bytes."
+ },
+ {
+  "s": 10.215,
+  "e": 11.792,
+  "text": "Windows counts in powers of two:"
+ },
+ {
+  "s": 12.112,
+  "e": 18.935,
+  "text": "its gigabyte is one billion, seventy-three million, seven hundred forty-one thousand, eight hundred twenty-four bytes."
+ },
+ {
+  "s": 19.255,
+  "e": 22.408,
+  "text": "Divide a trillion by that, and you get nine hundred thirty-one."
+ },
+ {
+  "s": 22.728,
+  "e": 24.094,
+  "text": "Same bytes, different ruler."
+ },
+ {
+  "s": 24.414,
+  "e": 26.505,
+  "text": "The binary unit even has its own name,"
+ },
+ {
+  "s": 26.825,
+  "e": 28.925,
+  "text": "the gibby-byte, but almost nobody uses it."
+ },
+ {
+  "s": 29.245,
+  "e": 32.892,
+  "text": "So a two-terabyte drive shows one thousand, eight hundred sixty-two."
+ }
+]

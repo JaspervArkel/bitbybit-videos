@@ -1,0 +1,18 @@
+{
+ "title": "Your 1 TB drive shows 931 GB",
+ "captions": [
+  {"text": "You bought a *one-terabyte* drive.", "hide": true},
+  {"text": "Windows says !931 gigabytes.! *Nothing's missing.*", "say": "Windows says nine hundred thirty-one gigabytes. Nothing's missing."},
+  {"text": "Drive makers count in powers of *ten:*"},
+  {"text": "a terabyte is *one trillion* bytes."},
+  {"text": "Windows counts in powers of !two:!"},
+  {"text": "its \"gigabyte\" is !1,073,741,824! bytes.", "say": "its gigabyte is one billion, seventy-three million, seven hundred forty-one thousand, eight hundred twenty-four bytes."},
+  {"text": "Divide a trillion by that, and you get !931.!", "say": "Divide a trillion by that, and you get nine hundred thirty-one."},
+  {"text": "Same bytes, *different ruler.*"},
+  {"text": "The binary unit even has its own name,"},
+  {"text": "the *gibibyte,* but almost nobody uses it.", "say": "the gibby-byte, but almost nobody uses it."},
+  {"text": "So a two-terabyte drive shows !1,862.!", "say": "So a two-terabyte drive shows one thousand, eight hundred sixty-two."}
+ ],
+ "cover": 0.5,
+ "tail": 1.4
+}
