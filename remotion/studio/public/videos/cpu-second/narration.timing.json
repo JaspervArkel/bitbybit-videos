@@ -1,0 +1,52 @@
+[
+ {
+  "s": 0.15,
+  "e": 2.534,
+  "text": "Your C P U spends most of its life waiting."
+ },
+ {
+  "s": 2.854,
+  "e": 5.662,
+  "text": "Slow it down so a single clock tick takes one second."
+ },
+ {
+  "s": 5.982,
+  "e": 9.122,
+  "text": "Grabbing data from its closest cache: about three seconds."
+ },
+ {
+  "s": 9.442,
+  "e": 10.7,
+  "text": "The next cache: around ten."
+ },
+ {
+  "s": 11.02,
+  "e": 12.794,
+  "text": "Main memory, the RAM: six minutes."
+ },
+ {
+  "s": 13.114,
+  "e": 14.873,
+  "text": "Reading from an S S D: days."
+ },
+ {
+  "s": 15.193,
+  "e": 16.899,
+  "text": "A spinning hard drive: months."
+ },
+ {
+  "s": 17.219,
+  "e": 19.027,
+  "text": "That's why chips are covered in caches,"
+ },
+ {
+  "s": 19.347,
+  "e": 22.25,
+  "text": "and why fast code is mostly about keeping data close."
+ },
+ {
+  "s": 22.57,
+  "e": 24.632,
+  "text": "Follow. Tomorrow: why loading bars lie."
+ }
+]

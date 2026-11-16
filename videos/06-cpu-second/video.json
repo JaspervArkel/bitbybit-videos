@@ -1,0 +1,17 @@
+{
+ "title": "If a CPU cycle took one second",
+ "captions": [
+  {"text": "Your CPU spends most of its life !waiting.!", "say": "Your C P U spends most of its life waiting.", "hide": true},
+  {"text": "Slow it down so a single clock tick takes *one second.*"},
+  {"text": "Grabbing data from its closest cache: about *three seconds.*"},
+  {"text": "The next cache: around *ten.*"},
+  {"text": "Main memory, the RAM: !six minutes.!"},
+  {"text": "Reading from an SSD: !days.!", "say": "Reading from an S S D: days."},
+  {"text": "A spinning hard drive: !months.!"},
+  {"text": "That's why chips are covered in *caches,*"},
+  {"text": "and why fast code is mostly about keeping data *close.*"},
+  {"text": "Follow: tomorrow, why loading bars lie.", "say": "Follow. Tomorrow: why loading bars lie."}
+ ],
+ "cover": 0.5,
+ "tail": 1.4
+}
