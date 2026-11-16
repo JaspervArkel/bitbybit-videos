@@ -110,12 +110,15 @@
   "title": "If a CPU cycle took one second",
   "pillar": "E",
   "hook": "Your CPU mostly waits",
-  "status": "rendered",
+  "status": "scheduled",
   "script": "Your CPU spends most of its life waiting. Slow it down so a single clock tick takes one second. Grabbing data from its closest cache: about three seconds. The next cache: around ten. Main memory, the RAM: six minutes. Reading from an SSD: days. A spinning hard drive: months. That's why chips are covered in caches, and why fast code is mostly about keeping data close.",
   "source": "https://gist.github.com/seboudry/8415846",
   "hook_type": "scale_analogy",
   "ending": "follow_cta",
-  "post_time": "18:00"
+  "post_time": "18:00",
+  "visual": "remotion: cpu chip+slowed clock+memory ladder (L1/L2/RAM/SSD/HDD)+chip die+loading bar",
+  "length_s": 26.1,
+  "format": "remotion"
  },
  {
   "n": 7,
