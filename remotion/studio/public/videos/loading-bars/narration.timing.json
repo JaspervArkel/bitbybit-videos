@@ -1,0 +1,57 @@
+[
+ {
+  "s": 0.15,
+  "e": 2.329,
+  "text": "Why is it always stuck at ninety-nine percent?"
+ },
+ {
+  "s": 2.649,
+  "e": 4.62,
+  "text": "Most progress bars don't measure time."
+ },
+ {
+  "s": 4.94,
+  "e": 8.487,
+  "text": "They count steps: files copied, chunks downloaded, tasks finished."
+ },
+ {
+  "s": 8.807,
+  "e": 9.902,
+  "text": "But steps aren't equal."
+ },
+ {
+  "s": 10.222,
+  "e": 12.015,
+  "text": "A thousand tiny files fly by,"
+ },
+ {
+  "s": 12.335,
+  "e": 15.11,
+  "text": "then one huge file or a final check takes forever,"
+ },
+ {
+  "s": 15.43,
+  "e": 16.561,
+  "text": "and the bar sits still."
+ },
+ {
+  "s": 16.881,
+  "e": 18.356,
+  "text": "The program can't know in advance"
+ },
+ {
+  "s": 18.676,
+  "e": 19.999,
+  "text": "how long each step will take,"
+ },
+ {
+  "s": 20.319,
+  "e": 21.656,
+  "text": "so the bar is really a guess."
+ },
+ {
+  "s": 21.976,
+  "e": 24.568,
+  "text": "Some apps even ease the bar forward to look smooth."
+ }
+]

@@ -1,0 +1,18 @@
+{
+ "title": "Why loading bars lie",
+ "captions": [
+  {"text": "Why is it always stuck at !99%?!", "say": "Why is it always stuck at ninety-nine percent?", "hide": true},
+  {"text": "Most progress bars don't measure *time.*"},
+  {"text": "They count *steps:* files copied, chunks downloaded, tasks finished."},
+  {"text": "But steps aren't !equal.!"},
+  {"text": "A thousand tiny files *fly by,*"},
+  {"text": "then one huge file or a final check !takes forever,!"},
+  {"text": "and the bar !sits still.!"},
+  {"text": "The program can't know in advance"},
+  {"text": "how long each step will take,"},
+  {"text": "so the bar is really a !guess.!"},
+  {"text": "Some apps even *ease the bar forward* to look smooth."}
+ ],
+ "cover": 0.5,
+ "tail": 1.6
+}
