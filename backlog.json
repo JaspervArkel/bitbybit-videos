@@ -127,11 +127,14 @@
   "title": "Why loading bars lie",
   "pillar": "D",
   "hook": "Stuck at 99%",
-  "status": "rendered",
+  "status": "scheduled",
   "script": "Why is it always stuck at 99%? Most progress bars don't measure time. They count steps: files copied, chunks downloaded, tasks finished. But steps aren't equal. A thousand tiny files fly by, then one huge file or a final check takes forever, and the bar sits still. The program can't know in advance how long each step will take, so the bar is really a guess. Some apps even ease the bar forward to look smooth.",
   "hook_type": "everyday_mystery",
   "ending": "implication",
-  "post_time": "18:00"
+  "post_time": "18:00",
+  "visual": "remotion: progress window+stopwatch+step checklist+time lane (tiny files/huge file/check)+flying files+elapsed clock+time-left guesses+GUESS stamp+real vs eased bars",
+  "length_s": 26.9,
+  "format": "remotion"
  },
  {
   "n": 8,

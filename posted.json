@@ -114,5 +114,18 @@
   "note": "follow_cta (E5); Instagram follow line in caption (free plan, no firstComment). Fact check vs seboudry gist passed. beats.py flags: beat 1 3.6s / no number in beat 1, beats 1-3 not concrete, no loop; 27.6s vs 30s target",
   "video": "https://raw.githubusercontent.com/JaspervArkel/bitbybit-videos/main/out/2026-11-16-cpu-second/bitbybit-cpu-second.mp4",
   "format": "remotion"
+ },
+ {
+  "date": "2026-11-17",
+  "slug": "loading-bars",
+  "scheduled": "2026-11-17T18:00:00+01:00",
+  "buffer": {
+   "youtube": "6afc4d94bdb250961b94ce2a",
+   "instagram": "6afc4d95223fb0bae76f4af6",
+   "tiktok": "6afc4d96bdb250961b94cebf"
+  },
+  "note": "implication (E5), no CTA. No check field; script is conceptual, no external figures (1,000/1,002 steps on screen is an illustrative job). beats.py flags: no number in beat 1 (99% spoken as words), beats 1-3 not concrete, no loop; 28.0s vs 30s target",
+  "video": "https://raw.githubusercontent.com/JaspervArkel/bitbybit-videos/main/out/2026-11-17-loading-bars/bitbybit-loading-bars.mp4",
+  "format": "remotion"
  }
 ]
