@@ -161,7 +161,7 @@
   "title": "This chip can become any circuit",
   "pillar": "E",
   "hook": "Any circuit",
-  "status": "rendered",
+  "status": "scheduled",
   "script": "This chip can become any circuit you want. It's called an FPGA. A normal processor's wiring is fixed forever. An FPGA is a sea of tiny lookup tables, each able to act like any small logic gate, joined by switches you can flip. Load a file, and those switches turn the chip into your circuit, running many tasks at once, in hardware. Engineers test new chips on them, and fans rebuild old game consoles as real circuits. Turn most of them off, and they forget what they were.",
   "note": "Topic chosen by the user on 18 Nov to replace ariane-5; script written in-session.",
   "hook_type": "counterintuitive_claim",

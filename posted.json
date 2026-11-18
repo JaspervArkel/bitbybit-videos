@@ -137,8 +137,22 @@
    "instagram": "6afd9e7b3cc95fb47cf0336c",
    "tiktok": "6afd9e7c67b44b742a56b8f3"
   },
-  "note": "follow_cta (E5, last E5 video); Instagram follow line in caption (free plan, no firstComment). Fact check vs inquiry report passed (breakup ~H0+39 s, BH 64-bit float -> 16-bit signed int, SRI reused from Ariane 4, backup failed 72 ms earlier). beats.py flags: beat 1 no number, beats 1-3 / 5-7 not concrete, no loop; 3.1s over 30s target (35.6s total incl. follow line). Captions word gap widened slightly in lib/Captions.tsx.",
+  "note": "follow_cta (E5, last E5 video); Instagram follow line in caption (free plan, no firstComment). Fact check vs inquiry report passed (breakup ~H0+39 s, BH 64-bit float -> 16-bit signed int, SRI reused from Ariane 4, backup failed 72 ms earlier). beats.py flags: beat 1 no number, beats 1-3 / 5-7 not concrete, no loop; 3.1s over 30s target (35.6s total incl. follow line). Captions word gap widened slightly in lib/Captions.tsx. CANCELLED 18 Nov: user found the topic boring; the three Buffer posts were deleted before publishing and replaced by fpga.",
   "video": "https://raw.githubusercontent.com/JaspervArkel/bitbybit-videos/main/out/2026-11-18-ariane-5/bitbybit-ariane-5.mp4",
+  "format": "remotion",
+  "cancelled": true
+ },
+ {
+  "date": "2026-11-18",
+  "slug": "fpga",
+  "scheduled": "2026-11-18T18:00:00+01:00",
+  "buffer": {
+   "youtube": "6afdb267ea3aea9074f8ef0a",
+   "instagram": "6afdb267ea3aea9074f8ef5a",
+   "tiktok": "6afdb268b24db460bb062c70"
+  },
+  "note": "Replaces ariane-5 at the user's request (topic picked by the user, script written in-session). follow_cta (E5). beats.py flags: no number in beat 1, beats 4 and 7 over 4 s, beats 1-3 not concrete, no loop, over 30 s target (32.6 s total).",
+  "video": "https://raw.githubusercontent.com/JaspervArkel/bitbybit-videos/main/out/2026-11-18-fpga/bitbybit-fpga.mp4",
   "format": "remotion"
  }
 ]
