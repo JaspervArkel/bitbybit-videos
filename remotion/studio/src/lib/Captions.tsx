@@ -35,7 +35,7 @@ export const Captions: React.FC<{ lines: Line[]; skip?: number[]; maxChars?: num
   if (!c) return null;
   const out = ramp(t, c.e - 0.08, 0.08);
   return (
-    <div style={{ position: "absolute", left: side, right: side, top, display: "flex", flexWrap: "wrap", justifyContent: "center", alignContent: "flex-start", gap: `4px ${Math.round(size * 0.26)}px`, opacity: 1 - out }}>
+    <div style={{ position: "absolute", left: side, right: side, top, display: "flex", flexWrap: "wrap", justifyContent: "center", alignContent: "flex-start", gap: `4px ${Math.round(size * 0.34)}px`, opacity: 1 - out }}>
       {c.words.map((w, i) => {
         const k = pop(t, w.s - 0.04, 13, 260);
         const nextS = c.words[i + 1]?.s ?? c.e;

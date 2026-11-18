@@ -1,0 +1,19 @@
+{
+ "title": "The rocket destroyed by one number",
+ "captions": [
+  {"text": "In 1996, a brand-new rocket broke apart", "say": "In nineteen ninety-six, a brand-new rocket broke apart", "hide": true},
+  {"text": "about *forty seconds* after launch, because of !one number.!"},
+  {"text": "Ariane 5's guidance software was *reused*", "say": "Ariane five's guidance software was reused"},
+  {"text": "from the smaller *Ariane 4.*", "say": "from the smaller Ariane four."},
+  {"text": "One value, tied to *horizontal velocity,*"},
+  {"text": "was a *64-bit float* converted into a !16-bit integer.!", "say": "was a sixty-four-bit float converted into a sixteen-bit integer."},
+  {"text": "The biggest number that fits is !32,767.!", "say": "The biggest number that fits is thirty-two thousand, seven hundred sixty-seven."},
+  {"text": "Ariane 5 flew *faster,* the value got !too big,!", "say": "Ariane five flew faster, the value got too big,"},
+  {"text": "and the conversion !failed.!"},
+  {"text": "Its *backup computer* ran the same code,"},
+  {"text": "and had !failed the same way! moments earlier."},
+  {"text": "Follow: tomorrow, 60 FPS that still stutters.", "say": "Follow. Tomorrow: sixty F P S that still stutters."}
+ ],
+ "cover": 0.5,
+ "tail": 1.6
+}

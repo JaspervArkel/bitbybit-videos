@@ -143,7 +143,7 @@
   "title": "The rocket destroyed by one number",
   "pillar": "F",
   "hook": "Ariane 5, 1996",
-  "status": "approved",
+  "status": "rendered",
   "script": "In 1996, a brand-new rocket broke apart about forty seconds after launch, because of one number. Ariane 5's guidance software was reused from the smaller Ariane 4. One value, tied to horizontal velocity, was a 64-bit float converted into a 16-bit integer. The biggest number that fits is 32,767. Ariane 5 flew faster, the value got too big, and the conversion failed. Its backup computer ran the same code, and had failed the same way moments earlier.",
   "source": "https://www.dcs.gla.ac.uk/~johnson/teaching/safety/reports/ariane5.html",
   "hook_type": "story",

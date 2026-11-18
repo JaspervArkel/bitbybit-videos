@@ -1,0 +1,62 @@
+[
+ {
+  "s": 0.15,
+  "e": 3.037,
+  "text": "In nineteen ninety-six, a brand-new rocket broke apart"
+ },
+ {
+  "s": 3.357,
+  "e": 6.203,
+  "text": "about forty seconds after launch, because of one number."
+ },
+ {
+  "s": 6.523,
+  "e": 8.789,
+  "text": "Ariane five's guidance software was reused"
+ },
+ {
+  "s": 9.109,
+  "e": 10.396,
+  "text": "from the smaller Ariane four."
+ },
+ {
+  "s": 10.716,
+  "e": 13.165,
+  "text": "One value, tied to horizontal velocity,"
+ },
+ {
+  "s": 13.485,
+  "e": 17.031,
+  "text": "was a sixty-four-bit float converted into a sixteen-bit integer."
+ },
+ {
+  "s": 17.351,
+  "e": 21.7,
+  "text": "The biggest number that fits is thirty-two thousand, seven hundred sixty-seven."
+ },
+ {
+  "s": 22.02,
+  "e": 24.67,
+  "text": "Ariane five flew faster, the value got too big,"
+ },
+ {
+  "s": 24.99,
+  "e": 26.216,
+  "text": "and the conversion failed."
+ },
+ {
+  "s": 26.536,
+  "e": 28.466,
+  "text": "Its backup computer ran the same code,"
+ },
+ {
+  "s": 28.786,
+  "e": 30.715,
+  "text": "and had failed the same way moments earlier."
+ },
+ {
+  "s": 31.035,
+  "e": 33.892,
+  "text": "Follow. Tomorrow: sixty F P S that still stutters."
+ }
+]
