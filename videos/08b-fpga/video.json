@@ -1,0 +1,19 @@
+{
+ "title": "This chip can become any circuit",
+ "captions": [
+  {"text": "This chip can become !any circuit! you want.", "hide": true},
+  {"text": "It's called an *FPGA.*", "say": "It's called an F P G A."},
+  {"text": "A normal processor's wiring is !fixed forever.!"},
+  {"text": "An FPGA is a sea of tiny *lookup tables,*", "say": "An F P G A is a sea of tiny lookup tables,"},
+  {"text": "each able to act like *any small logic gate,*"},
+  {"text": "joined by *switches* you can flip."},
+  {"text": "Load a file, and those switches turn the chip into *your circuit,*"},
+  {"text": "running many tasks *at once,* in hardware."},
+  {"text": "Engineers test *new chips* on them,"},
+  {"text": "and fans rebuild *old game consoles* as real circuits."},
+  {"text": "Turn most of them off, and they !forget what they were.!"},
+  {"text": "Follow: tomorrow, 60 FPS that still stutters.", "say": "Follow. Tomorrow: sixty F P S that still stutters."}
+ ],
+ "cover": 0.5,
+ "tail": 1.6
+}

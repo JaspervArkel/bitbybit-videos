@@ -1,0 +1,62 @@
+[
+ {
+  "s": 0.15,
+  "e": 2.057,
+  "text": "This chip can become any circuit you want."
+ },
+ {
+  "s": 2.377,
+  "e": 3.758,
+  "text": "It's called an F P G A."
+ },
+ {
+  "s": 4.078,
+  "e": 6.379,
+  "text": "A normal processor's wiring is fixed forever."
+ },
+ {
+  "s": 6.699,
+  "e": 9.455,
+  "text": "An F P G A is a sea of tiny lookup tables,"
+ },
+ {
+  "s": 9.775,
+  "e": 12.215,
+  "text": "each able to act like any small logic gate,"
+ },
+ {
+  "s": 12.535,
+  "e": 14.13,
+  "text": "joined by switches you can flip."
+ },
+ {
+  "s": 14.45,
+  "e": 17.308,
+  "text": "Load a file, and those switches turn the chip into your circuit,"
+ },
+ {
+  "s": 17.628,
+  "e": 19.584,
+  "text": "running many tasks at once, in hardware."
+ },
+ {
+  "s": 19.904,
+  "e": 21.597,
+  "text": "Engineers test new chips on them,"
+ },
+ {
+  "s": 21.917,
+  "e": 25.012,
+  "text": "and fans rebuild old game consoles as real circuits."
+ },
+ {
+  "s": 25.332,
+  "e": 27.778,
+  "text": "Turn most of them off, and they forget what they were."
+ },
+ {
+  "s": 28.098,
+  "e": 30.955,
+  "text": "Follow. Tomorrow: sixty F P S that still stutters."
+ }
+]
