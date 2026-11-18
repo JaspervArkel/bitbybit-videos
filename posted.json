@@ -127,5 +127,18 @@
   "note": "implication (E5), no CTA. No check field; script is conceptual, no external figures (1,000/1,002 steps on screen is an illustrative job). beats.py flags: no number in beat 1 (99% spoken as words), beats 1-3 not concrete, no loop; 28.0s vs 30s target",
   "video": "https://raw.githubusercontent.com/JaspervArkel/bitbybit-videos/main/out/2026-11-17-loading-bars/bitbybit-loading-bars.mp4",
   "format": "remotion"
+ },
+ {
+  "date": "2026-11-18",
+  "slug": "ariane-5",
+  "scheduled": "2026-11-18T18:00:00+01:00",
+  "buffer": {
+   "youtube": "6afd9e7b03c6b6e75e0aa6a1",
+   "instagram": "6afd9e7b3cc95fb47cf0336c",
+   "tiktok": "6afd9e7c67b44b742a56b8f3"
+  },
+  "note": "follow_cta (E5, last E5 video); Instagram follow line in caption (free plan, no firstComment). Fact check vs inquiry report passed (breakup ~H0+39 s, BH 64-bit float -> 16-bit signed int, SRI reused from Ariane 4, backup failed 72 ms earlier). beats.py flags: beat 1 no number, beats 1-3 / 5-7 not concrete, no loop; 3.1s over 30s target (35.6s total incl. follow line). Captions word gap widened slightly in lib/Captions.tsx.",
+  "video": "https://raw.githubusercontent.com/JaspervArkel/bitbybit-videos/main/out/2026-11-18-ariane-5/bitbybit-ariane-5.mp4",
+  "format": "remotion"
  }
 ]
