@@ -154,5 +154,18 @@
   "note": "Replaces ariane-5 at the user's request (topic picked by the user, script written in-session). follow_cta (E5). beats.py flags: no number in beat 1, beats 4 and 7 over 4 s, beats 1-3 not concrete, no loop, over 30 s target (32.6 s total).",
   "video": "https://raw.githubusercontent.com/JaspervArkel/bitbybit-videos/main/out/2026-11-18-fpga/bitbybit-fpga.mp4",
   "format": "remotion"
+ },
+ {
+  "date": "2026-11-19",
+  "slug": "frame-pacing",
+  "scheduled": "2026-11-20T01:00:00+01:00",
+  "buffer": {
+   "youtube": "6afef02827d8063ed29b28dd",
+   "instagram": "6afef02927d8063ed29b2910",
+   "tiktok": "6afef028d541877eb93a69d4"
+  },
+  "note": "implication (E5/E6 odd n), first 01:00+1 slot (E7). beats.py flags: beat 1 4.0 s and no digit (numbers are spoken as words), beats 1-3 not concrete; length on target. Buffer showed yesterday's fpga Instagram post in error (lost Instagram authorization); this Instagram post may fail too unless the channel is refreshed.",
+  "video": "https://raw.githubusercontent.com/JaspervArkel/bitbybit-videos/main/out/2026-11-19-frame-pacing/bitbybit-frame-pacing.mp4",
+  "format": "remotion"
  }
 ]
