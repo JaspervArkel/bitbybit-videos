@@ -1,0 +1,62 @@
+[
+ {
+  "s": 0.15,
+  "e": 2.982,
+  "text": "Your game says sixty F P S, but it feels choppy."
+ },
+ {
+  "s": 3.302,
+  "e": 4.572,
+  "text": "F P S is an average."
+ },
+ {
+  "s": 4.892,
+  "e": 7.24,
+  "text": "Sixty frames in a second could arrive evenly,"
+ },
+ {
+  "s": 7.56,
+  "e": 9.791,
+  "text": "one every sixteen point seven milliseconds."
+ },
+ {
+  "s": 10.111,
+  "e": 12.067,
+  "text": "Or most could arrive fast and a few late:"
+ },
+ {
+  "s": 12.387,
+  "e": 13.853,
+  "text": "eight milliseconds, then forty."
+ },
+ {
+  "s": 14.173,
+  "e": 15.615,
+  "text": "The counter still says sixty,"
+ },
+ {
+  "s": 15.935,
+  "e": 17.267,
+  "text": "but your eyes notice the gaps."
+ },
+ {
+  "s": 17.587,
+  "e": 18.635,
+  "text": "That's frame pacing."
+ },
+ {
+  "s": 18.955,
+  "e": 22.735,
+  "text": "It's why reviewers now show frame-time graphs and one percent lows,"
+ },
+ {
+  "s": 23.055,
+  "e": 24.533,
+  "text": "and why capping your frame rate"
+ },
+ {
+  "s": 24.853,
+  "e": 26.324,
+  "text": "can make a game feel smoother."
+ }
+]

@@ -1,0 +1,19 @@
+{
+ "title": "60 FPS that still stutters",
+ "captions": [
+  {"text": "Your game says *60 FPS,* but it feels !choppy.!", "say": "Your game says sixty F P S, but it feels choppy.", "hide": true},
+  {"text": "FPS is an *average.*", "say": "F P S is an average."},
+  {"text": "Sixty frames in a second could arrive *evenly,*"},
+  {"text": "one every *16.7 milliseconds.*", "say": "one every sixteen point seven milliseconds."},
+  {"text": "Or most could arrive fast and a few !late:!"},
+  {"text": "*8 milliseconds,* then !40.!", "say": "eight milliseconds, then forty."},
+  {"text": "The counter still says *60,*", "say": "The counter still says sixty,"},
+  {"text": "but your eyes notice the !gaps.!"},
+  {"text": "That's *frame pacing.*"},
+  {"text": "It's why reviewers now show *frame-time graphs* and *1% lows,*", "say": "It's why reviewers now show frame-time graphs and one percent lows,"},
+  {"text": "and why *capping your frame rate*"},
+  {"text": "can make a game feel *smoother.*"}
+ ],
+ "cover": 0.5,
+ "tail": 1.6
+}

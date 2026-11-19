@@ -178,7 +178,7 @@
   "title": "60 FPS that still stutters",
   "pillar": "C",
   "hook": "60 FPS, still choppy",
-  "status": "approved",
+  "status": "rendered",
   "script": "Your game says 60 FPS, but it feels choppy. FPS is an average. Sixty frames in a second could arrive evenly, one every 16.7 milliseconds. Or most could arrive fast and a few late: 8 milliseconds, then 40. The counter still says 60, but your eyes notice the gaps. That's frame pacing. It's why reviewers now show frame-time graphs and 1% lows, and why capping your frame rate can make a game feel smoother.",
   "hook_type": "everyday_mystery",
   "ending": "implication",
