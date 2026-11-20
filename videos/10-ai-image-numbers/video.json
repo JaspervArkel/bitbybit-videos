@@ -1,0 +1,18 @@
+{
+ "title": "AI sees images as numbers",
+ "captions": [
+  {"text": "AI doesn't see a !picture.!", "hide": true},
+  {"text": "It sees a *grid of numbers.*"},
+  {"text": "Every pixel is *three values:* red, green and blue."},
+  {"text": "Many modern vision models cut the image into small square *patches,*"},
+  {"text": "turn each patch into a *list of numbers,*"},
+  {"text": "and compare *every patch* with every other."},
+  {"text": "From *millions* of labelled examples,"},
+  {"text": "they learn which number patterns mean *\"cat ears\"* or *\"wheel\".*"},
+  {"text": "No eyes, no !light.!"},
+  {"text": "Just *patterns in numbers.*"},
+  {"text": "What's the weirdest thing your *photo app* !mislabelled?!"}
+ ],
+ "cover": 0.5,
+ "tail": 2.4
+}

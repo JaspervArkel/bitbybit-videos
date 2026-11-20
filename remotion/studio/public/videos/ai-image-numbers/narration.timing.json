@@ -1,0 +1,57 @@
+[
+ {
+  "s": 0.15,
+  "e": 1.522,
+  "text": "AI doesn't see a picture."
+ },
+ {
+  "s": 1.842,
+  "e": 3.083,
+  "text": "It sees a grid of numbers."
+ },
+ {
+  "s": 3.403,
+  "e": 6.151,
+  "text": "Every pixel is three values: red, green and blue."
+ },
+ {
+  "s": 6.471,
+  "e": 10.177,
+  "text": "Many modern vision models cut the image into small square patches,"
+ },
+ {
+  "s": 10.497,
+  "e": 12.378,
+  "text": "turn each patch into a list of numbers,"
+ },
+ {
+  "s": 12.698,
+  "e": 14.469,
+  "text": "and compare every patch with every other."
+ },
+ {
+  "s": 14.789,
+  "e": 16.497,
+  "text": "From millions of labelled examples,"
+ },
+ {
+  "s": 16.817,
+  "e": 19.583,
+  "text": "they learn which number patterns mean \"cat ears\" or \"wheel\"."
+ },
+ {
+  "s": 19.903,
+  "e": 20.896,
+  "text": "No eyes, no light."
+ },
+ {
+  "s": 21.216,
+  "e": 22.423,
+  "text": "Just patterns in numbers."
+ },
+ {
+  "s": 22.743,
+  "e": 25.117,
+  "text": "What's the weirdest thing your photo app mislabelled?"
+ }
+]
