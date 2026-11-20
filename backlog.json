@@ -194,11 +194,14 @@
   "title": "AI sees images as numbers",
   "pillar": "B",
   "hook": "This is what AI sees",
-  "status": "rendered",
+  "status": "scheduled",
   "script": "AI doesn't see a picture. It sees a grid of numbers. Every pixel is three values: red, green and blue. Many modern vision models cut the image into small square patches, turn each patch into a list of numbers, and compare every patch with every other. From millions of labelled examples, they learn which number patterns mean \"cat ears\" or \"wheel\". No eyes, no light. Just patterns in numbers.",
   "hook_type": "counterintuitive_claim",
   "ending": "comment_prompt",
-  "post_time": "01:00+1"
+  "post_time": "01:00+1",
+  "visual": "remotion: 16x16 pixel cat (scan bar to RGB numbers, R/G/B pixel card, cut into 16 patches, 48-number patch list, all-pairs comparison web)+9 labelled cat/wheel thumbnails+cat ears / wheel patch highlights+slashed eye & sun+question endcard with wrong \"wheel?\" label",
+  "length_s": 27.6,
+  "format": "remotion"
  },
  {
   "n": 11,

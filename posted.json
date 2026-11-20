@@ -167,5 +167,18 @@
   "note": "implication (E5/E6 odd n), first 01:00+1 slot (E7). beats.py flags: beat 1 4.0 s and no digit (numbers are spoken as words), beats 1-3 not concrete; length on target. Buffer showed yesterday's fpga Instagram post in error (lost Instagram authorization); this Instagram post may fail too unless the channel is refreshed. Instagram failed at 01:00; republished on user request 2026-11-20 10:06 Amsterdam.",
   "video": "https://raw.githubusercontent.com/JaspervArkel/bitbybit-videos/main/out/2026-11-19-frame-pacing/bitbybit-frame-pacing.mp4",
   "format": "remotion"
+ },
+ {
+  "date": "2026-11-20",
+  "slug": "ai-image-numbers",
+  "scheduled": "2026-11-21T01:00:00+01:00",
+  "buffer": {
+   "youtube": "6b0041e27efc64d5e41c5437",
+   "instagram": "6b0041e25d9549971ca600b6",
+   "tiktok": "6b0041e377e195b7220044c1"
+  },
+  "note": "comment_prompt (E6, first question ending): spoken + endcard question \"What's the weirdest thing your photo app mislabelled?\"; firstComment not used (free plan), question is in each caption. 01:00+1 (E7). beats.py flags: no number/name in beat 1, beats 1-3 not concrete, no loop; length on target. Instagram channel connected at scheduling time.",
+  "video": "https://raw.githubusercontent.com/JaspervArkel/bitbybit-videos/main/out/2026-11-20-ai-image-numbers/bitbybit-ai-image-numbers.mp4",
+  "format": "remotion"
  }
 ]
