@@ -184,12 +184,17 @@
  {
   "date": "2026-11-21",
   "slug": "random-seed",
-  "note": "extra video outside backlog/experiments; 20.0 s; ending implication (silent prediction payoff); 21:00 slot to avoid clashing with deleted-files at 01:00",
-  "scheduled": "2026-11-21T21:00:00+01:00",
+  "note": "extra video outside backlog/experiments; 20.0 s; ending implication (silent prediction payoff); published immediately at user's request",
+  "scheduled": null,
   "buffer": {
    "youtube": "6b0177b2846b0ee907fdb235",
    "instagram": "6b0177b38bd84d5966de0d4e",
    "tiktok": "6b0177b3d7b30c8cdd2996c0"
+  },
+  "sent": {
+   "youtube": "2026-11-21T11:52+01:00",
+   "tiktok": "2026-11-21T11:54+01:00",
+   "instagram": "2026-11-21T11:55+01:00"
   }
  }
 ]
