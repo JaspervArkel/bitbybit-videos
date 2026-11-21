@@ -1,0 +1,32 @@
+[
+ {
+  "s": 0.15,
+  "e": 2.768,
+  "text": "These two computers rolled the exact same numbers."
+ },
+ {
+  "s": 3.088,
+  "e": 5.685,
+  "text": "Not luck: most computer randomness is a formula."
+ },
+ {
+  "s": 6.005,
+  "e": 8.351,
+  "text": "Start with a seed, scramble it, get the next number."
+ },
+ {
+  "s": 8.671,
+  "e": 10.862,
+  "text": "Same seed, same sequence. Every time."
+ },
+ {
+  "s": 11.182,
+  "e": 13.502,
+  "text": "That's how one game seed builds the same world."
+ },
+ {
+  "s": 13.822,
+  "e": 16.026,
+  "text": "Know the seed, and you can predict every roll."
+ }
+]

@@ -10,6 +10,7 @@ import { ARIANE_5_FRAMES, Ariane5 } from "./videos/ariane-5/Ariane5";
 import { FPGA_FRAMES, Fpga } from "./videos/fpga/Fpga";
 import { FRAME_PACING_FRAMES, FramePacing } from "./videos/frame-pacing/FramePacing";
 import { AI_IMAGE_NUMBERS_FRAMES, AiImageNumbers } from "./videos/ai-image-numbers/AiImageNumbers";
+import { RANDOM_SEED_FRAMES, RandomSeed } from "./videos/random-seed/RandomSeed";
 import { TERABYTE_931_FRAMES, Terabyte931 } from "./videos/terabyte-931/Terabyte931";
 
 // One <Composition> per video. id = backlog slug in PascalCase.
@@ -23,6 +24,7 @@ export const RemotionRoot: React.FC = () => (
     <Composition id="Fpga" component={Fpga} durationInFrames={FPGA_FRAMES} fps={FPS} width={1080} height={1920} />
     <Composition id="FramePacing" component={FramePacing} durationInFrames={FRAME_PACING_FRAMES} fps={FPS} width={1080} height={1920} />
     <Composition id="AiImageNumbers" component={AiImageNumbers} durationInFrames={AI_IMAGE_NUMBERS_FRAMES} fps={FPS} width={1080} height={1920} />
+    <Composition id="RandomSeed" component={RandomSeed} durationInFrames={RANDOM_SEED_FRAMES} fps={FPS} width={1080} height={1920} />
     {/* long-form (16:9) */}
     <Composition id="IntMax" component={IntMax} durationInFrames={INT_MAX_FRAMES} fps={FPS} width={1920} height={1080} />
     <Still id="IntMaxThumb" component={IntMaxThumb} width={1280} height={720} />

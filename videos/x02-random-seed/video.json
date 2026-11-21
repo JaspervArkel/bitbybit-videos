@@ -1,0 +1,13 @@
+{
+ "title": "Random numbers are a formula",
+ "captions": [
+  {"text": "These two computers rolled the !exact same! numbers.", "hide": true},
+  {"text": "Not luck: most computer randomness is a *formula.*"},
+  {"text": "Start with a *seed,* scramble it, get the next number."},
+  {"text": "*Same seed,* same sequence. Every time."},
+  {"text": "That's how one *game seed* builds the same world."},
+  {"text": "Know the seed, and you can !predict! every roll."}
+ ],
+ "cover": 0.5,
+ "tail": 1.5
+}
