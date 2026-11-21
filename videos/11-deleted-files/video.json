@@ -1,0 +1,16 @@
+{
+ "title": "Deleted files aren't (always) gone",
+ "captions": [
+  {"text": "When you delete a file, your computer usually doesn't !erase it.!", "hide": true},
+  {"text": "It just marks the space as *free.*"},
+  {"text": "On a spinning *hard drive,*"},
+  {"text": "the data stays until something new !overwrites it.!"},
+  {"text": "That's why *recovery tools* work."},
+  {"text": "!SSDs are different.! The computer sends a *TRIM* command,", "say": "S S Ds are different. The computer sends a trim command,"},
+  {"text": "and the drive *clears those blocks* in the background, usually soon after."},
+  {"text": "So on a modern laptop, deleted often *really means gone.*"},
+  {"text": "On an old hard drive, it means !\"not yet\".!"}
+ ],
+ "cover": 0.5,
+ "tail": 2.2
+}

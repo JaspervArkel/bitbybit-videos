@@ -1,0 +1,47 @@
+[
+ {
+  "s": 0.15,
+  "e": 3.3,
+  "text": "When you delete a file, your computer usually doesn't erase it."
+ },
+ {
+  "s": 3.62,
+  "e": 5.128,
+  "text": "It just marks the space as free."
+ },
+ {
+  "s": 5.448,
+  "e": 6.717,
+  "text": "On a spinning hard drive,"
+ },
+ {
+  "s": 7.037,
+  "e": 9.488,
+  "text": "the data stays until something new overwrites it."
+ },
+ {
+  "s": 9.808,
+  "e": 11.384,
+  "text": "That's why recovery tools work."
+ },
+ {
+  "s": 11.704,
+  "e": 15.007,
+  "text": "S S Ds are different. The computer sends a trim command,"
+ },
+ {
+  "s": 15.327,
+  "e": 19.048,
+  "text": "and the drive clears those blocks in the background, usually soon after."
+ },
+ {
+  "s": 19.368,
+  "e": 22.507,
+  "text": "So on a modern laptop, deleted often really means gone."
+ },
+ {
+  "s": 22.827,
+  "e": 24.995,
+  "text": "On an old hard drive, it means \"not yet\"."
+ }
+]
