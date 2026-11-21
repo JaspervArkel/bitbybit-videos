@@ -210,7 +210,7 @@
   "title": "Deleted files aren't (always) gone",
   "pillar": "D",
   "hook": "Delete doesn't erase",
-  "status": "rendered",
+  "status": "scheduled",
   "script": "When you delete a file, your computer usually doesn't erase it. It just marks the space as free. On a spinning hard drive, the data stays until something new overwrites it. That's why recovery tools work. SSDs are different. The computer sends a TRIM command, and the drive clears those blocks in the background, usually soon after. So on a modern laptop, deleted often really means gone. On an old hard drive, it means \"not yet\".",
   "source": "https://dmitrybrant.com/2020/06",
   "hook_type": "counterintuitive_claim",

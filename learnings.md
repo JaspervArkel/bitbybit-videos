@@ -63,3 +63,4 @@ Each backlog entry's `post_time` decides when it goes out: "18:00" = 18:00 Europ
 - 2026-11-15: First weekly review. Only y2k38 and ipv4 were ≥72 h, so no rule changes; added evidence 5 (n=1 pair, signal only), E5 too early (read 22 Nov), H8 needs ≥5 Remotion videos at 72 h. Proposed 7 topics for 25 Nov–1 Dec (pillars A, B, C, D, E, F). No retention screenshots in analytics/ this week.
 2026-11-19 scheduled frame-pacing 01:00+1 implication
 2026-11-20 scheduled ai-image-numbers 01:00+1 comment_prompt
+2026-11-21 scheduled deleted-files 01:00+1 implication
