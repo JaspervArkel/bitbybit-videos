@@ -337,7 +337,7 @@
   ],
   "check": "'Paris 90%, France 5%' is an illustration; label it 'example' on screen or show real probabilities from a small open model.",
   "hook_type": "counterintuitive_claim",
-  "ending": "pending: set from the E5/E6 results at the 22/29 Nov reviews; default implication",
+  "ending": "pending: E6 readout at the 29 Nov review (comment_prompt vs implication); default implication",
   "post_time": "18:00",
   "visual_plan": "remotion: two chat windows side by side+probability bars+dice",
   "script": "Ask AI twice. You get two different answers. That's on purpose. For each next chunk of text, the model scores every option it knows. \"Paris\" might get ninety percent, \"France\" five, and so on. A setting called temperature decides how it picks. Near zero, it almost always takes the top choice, and replies barely change. Chatbots usually run warmer, rolling weighted dice for every chunk. One different roll early on, and the whole answer takes another path.",
@@ -378,7 +378,7 @@
    "https://www.scienceabc.com/innovation/do-microwaves-interfere-with-wifi-signals.html (2.45 GHz oven; some leakage; 5 GHz 'not affected by microwave-oven interference')"
   ],
   "hook_type": "counterintuitive_claim",
-  "ending": "pending: set from the E5/E6 results at the 22/29 Nov reviews; default implication",
+  "ending": "pending: E6 readout at the 29 Nov review (comment_prompt vs implication); default implication",
   "post_time": "18:00",
   "visual_plan": "remotion: microwave+router+radio waves+video call freezing",
   "script": "Your microwave is jamming your Wi-Fi. Start it, and the video call freezes. A microwave oven heats food with a very powerful radio signal in the 2.4 gigahertz band. Lots of Wi-Fi uses that same band. The metal box and the mesh in the door hold almost all of it in. But almost isn't everything. A tiny leak from that much power can drown out your router nearby. Switch to 5 gigahertz Wi-Fi, and the microwave can't touch it.",
@@ -417,7 +417,7 @@
    "https://en.wikipedia.org/wiki/Quartz_clock ('In nearly all quartz clocks and watches, the frequency is 32768 Hz'; 2^15; '15-bit binary digital counter ... will overflow once per second'; 'just high enough to exceed the human hearing range'; low-frequency crystals are physically large)"
   ],
   "hook_type": "scale_analogy",
-  "ending": "pending: set from the E5/E6 results at the 22/29 Nov reviews; default implication",
+  "ending": "pending: E6 readout at the 29 Nov review (comment_prompt vs implication); default implication",
   "post_time": "18:00",
   "visual_plan": "remotion: big counter 32,768 running+quartz fork vibrating+halving chain of 15 stages",
   "script": "32,768 vibrations make one second on your watch. Inside is a tiny sliver of quartz. Put voltage on it, and it vibrates 32,768 times a second. That number is two to the fifteenth. A chip halves the signal fifteen times in a row: 16,384, 8,192, all the way down to one. One tick, one second. It's this fast because a slower crystal would have to be bigger, and 32,768 sits just above what your ears can hear.",
@@ -459,7 +459,7 @@
   ],
   "check": "Screenshot a real Chrome Task Manager with ~10 tabs and confirm 'dozens' of processes before using the number on screen.",
   "hook_type": "counterintuitive_claim",
-  "ending": "pending: set from the E5/E6 results at the 22/29 Nov reviews; default implication",
+  "ending": "pending: E6 readout at the 29 Nov review (comment_prompt vs implication); default implication",
   "post_time": "18:00",
   "visual_plan": "remotion: browser window splitting into walled process boxes+task manager list+RAM bar",
   "script": "Your browser is dozens of programs pretending to be one. Open your task manager and count. Chrome runs different websites in separate processes, each walled off from the others. If one site crashes, only its own tab goes down. If a malicious page breaks in, it's stuck inside a sandbox. The price is memory. Every process carries its own engine for drawing web pages. That's a big part of why Chrome looks so hungry. You're paying for walls between your tabs.",
@@ -502,7 +502,7 @@
   ],
   "check": "Confirm the 30 June 2012 date on a primary source (IERS Bulletin C 43) before building.",
   "hook_type": "impossible_result",
-  "ending": "pending: set from the E5/E6 results at the 22/29 Nov reviews; default implication",
+  "ending": "pending: E6 readout at the 29 Nov review (comment_prompt vs implication); default implication",
   "post_time": "18:00",
   "visual_plan": "remotion: big clock face with 61 ticks+seconds counter 59->60+server rack overheating",
   "script": "This minute had 61 seconds. On June 30, 2012, official clocks went from 23:59:59 to 23:59:60. A leap second, added because Earth's spin doesn't keep perfect time. Lots of software assumed a minute can't have 61 seconds. A Linux bug left servers spinning at full power, and Reddit, LinkedIn and an airline booking system went down. Google now smears the extra second across many hours, so its clocks never show sixty. And timekeepers have voted to scrap leap seconds by 2035.",
@@ -542,7 +542,7 @@
   ],
   "check": "Tear the corner WITHOUT a finder pattern (bottom-right) and test-scan the exact on-screen code at level H. '30%' is of codewords, not area: keep the wording 'of the data'.",
   "hook_type": "impossible_result",
-  "ending": "pending: set from the E5/E6 results at the 22/29 Nov reviews; default implication",
+  "ending": "pending: E6 readout at the 29 Nov review (comment_prompt vs implication); default implication",
   "post_time": "18:00",
   "visual_plan": "remotion: QR code tearing+phone scanner+highlighted check blocks rebuilding",
   "script": "Rip off a corner. The QR code still scans. Next to your link, a QR code stores extra check data, made with math called Reed-Solomon codes. That data is spread across the whole square, so the scanner can rebuild pieces that are missing. At the highest setting, up to thirty percent of the data can be restored. That's why a logo in the middle doesn't break it. Just don't touch the big squares in the other three corners. The scanner needs them.",
@@ -552,5 +552,298 @@
   "hook_score": 52.4,
   "proposed_by": "weekly review 2026-11-15",
   "post_time_note": "E7 readout pending (19-25 Nov at 01:00+1 vs 12-18 Nov at 18:00); a later review may switch this"
+ },
+ {
+  "n": 22,
+  "date": "2026-12-02",
+  "slug": "charger-apollo",
+  "title": "A USB-C charger out-computes Apollo 11",
+  "pillar": "E",
+  "hook": "This USB-C charger out-computes the Apollo 11 computer.",
+  "hook_options": [
+   {
+    "formula": "impossible result",
+    "text": "This USB-C charger out-computes the Apollo 11 computer.",
+    "score": 47.0
+   },
+   {
+    "formula": "23 The Statistic",
+    "text": "48 megahertz in a charger. Apollo had one.",
+    "score": 50.6
+   },
+   {
+    "formula": "26 The Superlative",
+    "text": "The computer that flew to the Moon loses to a charger.",
+    "score": 39.2
+   }
+  ],
+  "hook_choice_note": "Picked the lower-scoring option: states the result plainly (rule 3); 'Apollo had one' is ambiguous on screen (rule 7).",
+  "sources": [
+   "https://eejournal.com/article/apollo-11-vs-the-usb-charger (Anker $49 charger, Cypress CYPD4225, Cortex-M0 at 48 MHz; AGC 1.024 MHz; 'nearly a 48x improvement in clock speed'; 'more than 500x faster'; 'twice as much RAM and nearly twice as much ROM'; based on Forrest Heller's analysis)",
+   "https://forrestheller.com/Apollo-11-Computer-vs-USB-C-chargers/ (original analysis; charger chip negotiates USB Power Delivery with the phone)"
+  ],
+  "check": "Open Heller's page and confirm the exact Anker model and that its chip handles USB-PD negotiation (the 'agrees on how much power' line). Say 'about one megahertz' (1.024 MHz). Keep '32-bit processor' (Cortex-M0).",
+  "hook_type": "scale_analogy",
+  "visual_plan": "remotion: charger cutaway+tiny chip with clock dial 48 MHz+Apollo DSKY panel at 1 MHz+speed bars+phone handshake arrows",
+  "hook_score": 47.0,
+  "script": "This USB-C charger out-computes the Apollo 11 computer. Inside one Anker charger sits a tiny chip with a 32-bit processor running at 48 megahertz. Apollo's guidance computer ran at about one megahertz. That's nearly 48 times the clock speed, and one analysis puts the charger at over 500 times the performance. It has twice the RAM, too. Why does a charger need a computer? It talks to your phone and agrees on how much power is safe to send. Apollo reached the Moon with less.",
+  "words": 85,
+  "status": "proposed",
+  "format": "remotion",
+  "ending": "pending: E6 readout at the 29 Nov review (comment_prompt vs implication); default implication",
+  "post_time": "18:00",
+  "post_time_note": "E7 readout pending (19-25 Nov at 01:00+1 vs 12-18 Nov at 18:00); a later review may switch this",
+  "proposed_by": "weekly review 2026-11-22"
+ },
+ {
+  "n": 23,
+  "date": "2026-12-03",
+  "slug": "banana-toaster",
+  "title": "A sticker turns a banana into a toaster (for AI)",
+  "pillar": "B",
+  "hook": "This AI is 99% sure this banana is a toaster.",
+  "hook_options": [
+   {
+    "formula": "impossible result",
+    "text": "This AI is 99% sure this banana is a toaster.",
+    "score": 47.6
+   },
+   {
+    "formula": "23 The Statistic",
+    "text": "99% sure it's a toaster. It's a banana.",
+    "score": 47.6
+   },
+   {
+    "formula": "18 Cold Open Demo",
+    "text": "Watch this sticker fool an AI.",
+    "score": 36.6
+   }
+  ],
+  "sources": [
+   "https://arxiv.org/abs/1712.09665 (Brown, Mane, Roy, Abadi, Gilmer, Google Brain, 'Adversarial Patch', NIPS 2017 workshop; Fig. 1: VGG16 reports 'banana' with 97% confidence; with a physical sticker targeted to 'toaster' the photo is 'classified as a toaster with 99% confidence'; patch is optimised against the networks)"
+  ],
+  "check": "Recreate the figure with a banana + generic swirly patch drawn by us (do not copy the paper's patch image). 'Google researchers': authors were at Google Brain.",
+  "hook_type": "impossible_result",
+  "visual_plan": "remotion: tabletop photo+AI label bar chart (banana 97%)+sticker sliding in+bars flipping to toaster 99%",
+  "hook_score": 47.6,
+  "script": "This AI is 99% sure this banana is a toaster. In 2017, Google researchers put a banana on a table and showed the photo to an image recognition network. Banana, it said, 97 percent sure. Then they placed a printed, swirly sticker next to it. Toaster, 99 percent sure. A computer designed that sticker by testing it against the network itself, packing in the patterns it links most with toasters. To the network, one loud patch can outvote the whole banana.",
+  "words": 81,
+  "status": "proposed",
+  "format": "remotion",
+  "ending": "pending: E6 readout at the 29 Nov review (comment_prompt vs implication); default implication",
+  "post_time": "18:00",
+  "post_time_note": "E7 readout pending (19-25 Nov at 01:00+1 vs 12-18 Nov at 18:00); a later review may switch this",
+  "proposed_by": "weekly review 2026-11-22"
+ },
+ {
+  "n": 24,
+  "date": "2026-12-04",
+  "slug": "sky-banding",
+  "title": "Why the sky in videos has stripes",
+  "pillar": "A",
+  "hook": "16.7 million colors, and the sky still has stripes.",
+  "hook_options": [
+   {
+    "formula": "23 The Statistic",
+    "text": "16.7 million colors, and the sky still has stripes.",
+    "score": 62.6
+   },
+   {
+    "formula": "impossible result",
+    "text": "The sky in this video is made of stripes.",
+    "score": 15.0
+   },
+   {
+    "formula": "everyday mystery (question)",
+    "text": "Why sunsets on your phone turn into stripes.",
+    "score": 37.8
+   }
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Colour_banding (banding from insufficient bit depth in smooth gradients; worsened by compression; dithering/noise hides it)",
+   "https://cloudinary.com/glossary/8-bit-video (8-bit = 256 levels per channel, ~16.7 million colours)",
+   "https://hdr10plus.org/color-banding-hdr10-plus/ (10-bit = 1,024 levels per channel, reduces banding in skies)"
+  ],
+  "check": "On-screen sky: build a real 8-bit gradient whose blue changes only a few levels across 1080 px so the bands are genuinely visible, then the 10-bit version (simulate with 4x more steps). '4x narrower' = 1,024/256.",
+  "hook_type": "everyday_mystery",
+  "visual_plan": "remotion: sunset sky with visible bands+zoomed pixel strip with 8-bit numbers ticking+256-step ruler vs 1,024-step ruler",
+  "hook_score": 62.6,
+  "script": "16.7 million colors, and the sky still has stripes. Most video stores red, green and blue as 8-bit numbers, so each gets just 256 levels. Together that's 16.7 million colors. Sounds like plenty, but a sunset sky fades very slowly. Across the whole frame, the blue may only change by a few steps, so each step becomes a wide band. Compression smooths away the fine noise that would hide the edges. 10-bit video has 1,024 levels per channel, so the bands get four times narrower.",
+  "words": 85,
+  "status": "proposed",
+  "format": "remotion",
+  "ending": "pending: E6 readout at the 29 Nov review (comment_prompt vs implication); default implication",
+  "post_time": "18:00",
+  "post_time_note": "E7 readout pending (19-25 Nov at 01:00+1 vs 12-18 Nov at 18:00); a later review may switch this",
+  "proposed_by": "weekly review 2026-11-22"
+ },
+ {
+  "n": 25,
+  "date": "2026-12-05",
+  "slug": "z-fighting",
+  "title": "Why walls flicker in games (Z-fighting)",
+  "pillar": "C",
+  "hook": "Two walls in this game are fighting over one spot.",
+  "hook_options": [
+   {
+    "formula": "impossible result",
+    "text": "Two walls in this game are fighting over one spot.",
+    "score": 47.6
+   },
+   {
+    "formula": "18 Cold Open Demo",
+    "text": "Watch this wall flicker. Nothing is broken.",
+    "score": 76.6
+   },
+   {
+    "formula": "everyday mystery",
+    "text": "You've seen this flicker in every 3D game.",
+    "score": 48.2
+   }
+  ],
+  "hook_choice_note": "Picked over the higher-scoring 'Nothing is broken' because that line is debatable (it is a rendering artefact) and rule 3 wants the strange result stated.",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Z-fighting (coplanar or near-coplanar primitives with similar depth values; limited depth-buffer precision; flicker as the camera moves; fixes include offsetting one surface)",
+   "https://wikis.khronos.org/opengl/Depth_Buffer_Precision (perspective depth buffer precision is concentrated near the camera and falls off with distance)"
+  ],
+  "check": "Demo must show two textured walls (orange + green) almost coplanar, flicker increasing with distance. Keep 'precision gets worse far from the camera' (perspective depth).",
+  "hook_type": "impossible_result",
+  "visual_plan": "remotion: game corridor with two overlapping walls flickering in stripes+pixel depth readout rounding to same number+camera dolly back+wall nudged forward",
+  "hook_score": 47.6,
+  "script": "Two walls in this game are fighting over one spot. When two surfaces sit at almost the same depth, the graphics card must decide, pixel by pixel, which one is in front. It stores each pixel's distance as a number with limited precision, and that precision gets worse far from the camera. So both walls round to the same value. Tiny camera moves flip the winner, and the stripes flicker. Developers call it Z-fighting. The usual fix: nudge one surface slightly forward.",
+  "words": 82,
+  "status": "proposed",
+  "format": "remotion",
+  "ending": "pending: E6 readout at the 29 Nov review (comment_prompt vs implication); default implication",
+  "post_time": "18:00",
+  "post_time_note": "E7 readout pending (19-25 Nov at 01:00+1 vs 12-18 Nov at 18:00); a later review may switch this",
+  "proposed_by": "weekly review 2026-11-22"
+ },
+ {
+  "n": 26,
+  "date": "2026-12-06",
+  "slug": "boeing-248-days",
+  "title": "The Boeing 787 that had to be switched off and on",
+  "pillar": "D",
+  "hook": "After 248 days on, a 787 could lose all power.",
+  "hook_options": [
+   {
+    "formula": "23 The Statistic",
+    "text": "After 248 days on, a 787 could lose all power.",
+    "score": 62.6
+   },
+   {
+    "formula": "impossible result",
+    "text": "A Boeing 787 had to be switched off to stay safe.",
+    "score": 50.6
+   },
+   {
+    "formula": "3 Nobody Tells You",
+    "text": "Nobody tells you a Boeing 787 needed turning off and on.",
+    "score": 84.4
+   }
+  ],
+  "hook_choice_note": "'could' is needed for accuracy (no in-flight event happened); rule 8 allows the hedge when no accurate unhedged version exists. 'Nobody tells you' scores highest but hides the result.",
+  "sources": [
+   "https://www.federalregister.gov/documents/2015/05/01/2015-10066/airworthiness-directives-the-boeing-company-airplanes (FAA AD 2015-09-07: 'a software counter internal to the GCUs that will overflow after 248 days of continuous power'; all four main GCUs into failsafe -> 'loss of all AC electrical power regardless of flight phase'; repeat power deactivation 'at intervals not to exceed 120 days'; interim action, GCU software upgrade in development)"
+  ],
+  "check": "Do NOT say 32-bit or hundredths of a second: not in the sources (2^31 centiseconds = 248.55 days is our arithmetic only). 'Generator controllers' = generator control units (GCUs).",
+  "hook_type": "impossible_result",
+  "visual_plan": "remotion: 787 silhouette with power-on day counter racing to 248+four generator lights going dark+FAA notice card+power switch reset to 0",
+  "hook_score": 62.6,
+  "script": "After 248 days on, a 787 could lose all power. In 2015, the FAA found a software counter inside the Boeing 787's generator controllers. It counted up the whole time the plane had power. After 248 days, it overflowed. Then all four generators could shut down at once, even mid-flight. Until new software arrived, the fix was to switch the plane's power off at least every 120 days, which reset the counter to zero. Sometimes turning it off and on again really is the fix.",
+  "words": 85,
+  "status": "proposed",
+  "format": "remotion",
+  "ending": "pending: E6 readout at the 29 Nov review (comment_prompt vs implication); default implication",
+  "post_time": "18:00",
+  "post_time_note": "E7 readout pending (19-25 Nov at 01:00+1 vs 12-18 Nov at 18:00); a later review may switch this",
+  "proposed_by": "weekly review 2026-11-22"
+ },
+ {
+  "n": 27,
+  "date": "2026-12-07",
+  "slug": "touchscreen-sausage",
+  "title": "Why a sausage works on a touchscreen but gloves don't",
+  "pillar": "E",
+  "hook": "A sausage can text. Your gloved finger can't.",
+  "hook_options": [
+   {
+    "formula": "impossible result",
+    "text": "A sausage can text. Your gloved finger can't.",
+    "score": 62.2
+   },
+   {
+    "formula": "everyday mystery",
+    "text": "Your phone ignores gloves, but a sausage works fine.",
+    "score": 45.0
+   },
+   {
+    "formula": "2 Negative Command",
+    "text": "Stop buying touchscreen gloves. Here's what actually works.",
+    "score": 85.8
+   }
+  ],
+  "hook_choice_note": "'Stop buying touchscreen gloves' scores highest but is a misleading command (the video ends by explaining how those gloves work).",
+  "sources": [
+   "https://www.mcgill.ca/oss/node/11574 (capacitive screens sense the conductive finger; ordinary gloves insulate)",
+   "https://scienceline.org/2012/01/okay-but-how-do-touch-screens-actually-work/ (grid of transparent electrodes, finger changes the local capacitance/draws charge)",
+   "https://www.ted.com/talks/charles_wallace_and_sajan_saini_why_a_sausage_can_do_what_your_gloves_cannot (sausage works because it is conductive like a finger)",
+   "https://www.popsci.com/technology/article/2010-02/meat-iphone-sausage-stylus (2010: South Koreans used snack sausages as iPhone styluses in cold weather)",
+   "https://www.gearpatrol.com/outdoors/a38804510/smartphone-compatible-gloves-explained/ (touchscreen gloves use conductive thread)"
+  ],
+  "check": "Keep 'mostly salty water, which conducts' (not 'electricity flows out of you'). Confirm the 2010 Korea date in the popsci piece.",
+  "hook_type": "everyday_mystery",
+  "visual_plan": "remotion: phone glass with glowing electrode grid+finger dip in field lines+glove bouncing off with no change+sausage tapping a message",
+  "hook_score": 62.2,
+  "script": "A sausage can text. Your gloved finger can't. Your phone's glass hides a grid of transparent electrodes holding a tiny electric field. Your finger is mostly salty water, which conducts, so touching the glass draws away a little charge at one spot. The phone measures that change and finds your finger. Wool and leather don't conduct, so nothing changes. A sausage is salty and wet too. In 2010, people in South Korea used them on iPhones in the cold. Touchscreen gloves weave in conductive thread.",
+  "words": 85,
+  "status": "proposed",
+  "format": "remotion",
+  "ending": "pending: E6 readout at the 29 Nov review (comment_prompt vs implication); default implication",
+  "post_time": "18:00",
+  "post_time_note": "E7 readout pending (19-25 Nov at 01:00+1 vs 12-18 Nov at 18:00); a later review may switch this",
+  "proposed_by": "weekly review 2026-11-22"
+ },
+ {
+  "n": 28,
+  "date": "2026-12-08",
+  "slug": "undersea-cables",
+  "title": "Over 99% of intercontinental data runs under the ocean",
+  "pillar": "F",
+  "hook": "Over 99% of data between continents runs under the ocean.",
+  "hook_options": [
+   {
+    "formula": "23 The Statistic",
+    "text": "Over 99% of data between continents runs under the ocean.",
+    "score": 47.6
+   },
+   {
+    "formula": "everyday mystery",
+    "text": "Your video call to another continent travels along the seabed.",
+    "score": 26.8
+   },
+   {
+    "formula": "26 The Superlative",
+    "text": "The internet's biggest highway is a cable the size of a hose.",
+    "score": 28.6
+   }
+  ],
+  "sources": [
+   "https://resources.telegeography.com/2023-mythbusting-part-3 (TeleGeography on 'over 99% of intercontinental data traffic': 'We can confirm that this is true.' Satellites are the small remainder)",
+   "https://www2.telegeography.com/submarine-cable-faqs-frequently-asked-questions (deep-sea cable about the diameter of a garden hose; optical fibers carry light)"
+  ],
+  "check": "Confirm the garden-hose wording in the TeleGeography FAQ. Keep 'between continents' (not 'all internet traffic').",
+  "hook_type": "scale_analogy",
+  "visual_plan": "remotion: globe with call arc diving under the ocean+seabed cable cross-section (hose-size) zooming to hair-thin fibers with light pulses",
+  "hook_score": 47.6,
+  "script": "Over 99% of data between continents runs under the ocean. Your video call to a friend overseas rides a cable lying on the seabed. Satellites carry only a tiny slice of that traffic. Out in the deep sea, many of these cables are about as thick as a garden hose, and inside are glass fibers as thin as a hair, carrying pulses of laser light. So every message you send abroad is light. Racing through glass, under kilometers of water.",
+  "words": 80,
+  "status": "proposed",
+  "format": "remotion",
+  "ending": "pending: E6 readout at the 29 Nov review (comment_prompt vs implication); default implication",
+  "post_time": "18:00",
+  "post_time_note": "E7 readout pending (19-25 Nov at 01:00+1 vs 12-18 Nov at 18:00); a later review may switch this",
+  "proposed_by": "weekly review 2026-11-22"
  }
 ]
