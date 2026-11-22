@@ -64,3 +64,4 @@ Each backlog entry's `post_time` decides when it goes out: "18:00" = 18:00 Europ
 2026-11-19 scheduled frame-pacing 01:00+1 implication
 2026-11-20 scheduled ai-image-numbers 01:00+1 comment_prompt
 2026-11-21 scheduled deleted-files 01:00+1 implication
+2026-11-22 scheduled keyboard-matrix 01:00+1 comment_prompt

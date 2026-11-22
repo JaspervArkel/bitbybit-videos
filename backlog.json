@@ -227,13 +227,16 @@
   "title": "Pressing a key doesn't send a letter",
   "pillar": "E",
   "hook": "Your keyboard sends numbers",
-  "status": "rendered",
+  "status": "scheduled",
   "script": "Pressing a key doesn't send a letter. Under your keys is a grid of wires: rows and columns. A small chip scans it hundreds of times a second, powering one row at a time and checking which columns respond. Press A, and its row and column connect. The chip sends a scan code, a number for that physical key. Your operating system turns that number into a letter using your layout. That's why switching to AZERTY moves letters without touching the keyboard.",
   "hook_type": "counterintuitive_claim",
   "ending": "comment_prompt",
   "post_time": "01:00+1",
   "spec": "videos/12-keyboard-matrix/video.json",
-  "video": "out/2026-11-22-keyboard-matrix/bitbybit-keyboard-matrix.mp4"
+  "video": "out/2026-11-22-keyboard-matrix/bitbybit-keyboard-matrix.mp4",
+  "visual": "remotion: 18-key keyboard+wire matrix+controller chip+OS layout panel",
+  "format": "remotion",
+  "length_s": 30.1
  },
  {
   "n": 13,
