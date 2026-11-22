@@ -1,0 +1,21 @@
+{
+ "title": "Pressing a key doesn't send a letter",
+ "captions": [
+  {"text": "Pressing a key doesn't send a !letter.!", "hide": true},
+  {"text": "Under your keys is a *grid of wires:*"},
+  {"text": "*rows* and *columns.*"},
+  {"text": "A small chip scans it *hundreds of times a second,*"},
+  {"text": "powering *one row* at a time"},
+  {"text": "and checking which *columns* respond."},
+  {"text": "Press *A,* and its row and column *connect.*", "say": "Press ay, and its row and column connect."},
+  {"text": "The chip sends a *scan code,*"},
+  {"text": "a *number* for that physical key."},
+  {"text": "Your operating system turns that number into a *letter*"},
+  {"text": "using your *layout.*"},
+  {"text": "That's why switching to *AZERTY* !moves letters!", "say": "That's why switching to azerty moves letters"},
+  {"text": "without touching the keyboard."},
+  {"text": "Which *keyboard layout* do you !type on?!"}
+ ],
+ "cover": 0.5,
+ "tail": 2.4
+}

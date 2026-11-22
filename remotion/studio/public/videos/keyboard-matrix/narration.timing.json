@@ -1,0 +1,72 @@
+[
+ {
+  "s": 0.15,
+  "e": 1.744,
+  "text": "Pressing a key doesn't send a letter."
+ },
+ {
+  "s": 2.064,
+  "e": 3.714,
+  "text": "Under your keys is a grid of wires:"
+ },
+ {
+  "s": 4.034,
+  "e": 5.017,
+  "text": "rows and columns."
+ },
+ {
+  "s": 5.337,
+  "e": 7.86,
+  "text": "A small chip scans it hundreds of times a second,"
+ },
+ {
+  "s": 8.18,
+  "e": 9.469,
+  "text": "powering one row at a time"
+ },
+ {
+  "s": 9.789,
+  "e": 11.491,
+  "text": "and checking which columns respond."
+ },
+ {
+  "s": 11.811,
+  "e": 13.856,
+  "text": "Press ay, and its row and column connect."
+ },
+ {
+  "s": 14.176,
+  "e": 15.516,
+  "text": "The chip sends a scan code,"
+ },
+ {
+  "s": 15.836,
+  "e": 17.276,
+  "text": "a number for that physical key."
+ },
+ {
+  "s": 17.596,
+  "e": 20.301,
+  "text": "Your operating system turns that number into a letter"
+ },
+ {
+  "s": 20.621,
+  "e": 21.584,
+  "text": "using your layout."
+ },
+ {
+  "s": 21.904,
+  "e": 23.939,
+  "text": "That's why switching to azerty moves letters"
+ },
+ {
+  "s": 24.259,
+  "e": 25.562,
+  "text": "without touching the keyboard."
+ },
+ {
+  "s": 25.882,
+  "e": 27.655,
+  "text": "Which keyboard layout do you type on?"
+ }
+]
