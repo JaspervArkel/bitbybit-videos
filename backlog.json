@@ -245,7 +245,7 @@
   "title": "Your phone finds you without GPS",
   "pillar": "F",
   "hook": "GPS off. Still found.",
-  "status": "rendered",
+  "status": "scheduled",
   "script": "Turn off GPS, and your phone can still find you. Every Wi-Fi router broadcasts a unique ID, even if you never connect. Google and Apple have built huge maps of where those IDs are. Your phone scans nearby networks, looks them up, and estimates your position, often within tens of metres in a city. Cell towers fill in the rest, more roughly. That's also why location works indoors, where satellite signals struggle.",
   "source": "https://www.sammobile.com/news/how-does-my-phone-know-my-location-without-gps-turned-on/",
   "hook_type": "counterintuitive_claim",

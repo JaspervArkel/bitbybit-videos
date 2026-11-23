@@ -222,5 +222,18 @@
   "note": "comment_prompt ending (E6, n=12): spoken + on-screen question 'Which keyboard layout do you type on?', also in the IG caption (free plan, no firstComment). 01:00+1 (E7). 30.1 s. Spoken hook 7 words. beats.py flags: beat 1 no number/name, beats 1-3 not concrete, no loop; length on target.",
   "video": "https://raw.githubusercontent.com/JaspervArkel/bitbybit-videos/main/out/2026-11-22-keyboard-matrix/bitbybit-keyboard-matrix.mp4",
   "format": "remotion"
+ },
+ {
+  "date": "2026-11-23",
+  "slug": "location-no-gps",
+  "scheduled": "2026-11-24T01:00:00+01:00",
+  "buffer": {
+   "youtube": "6b0438236b6de502825eb35c",
+   "instagram": "6b043823433e6368c8a88a8b",
+   "tiktok": "6b04382466ef504f4553400d"
+  },
+  "note": "implication ending (E6 odd n=13): ends on building + blocked satellite, takeaway chip 'indoors: Wi-Fi ✓ · satellite ✗'. 01:00+1 (E7). 26.8 s. Spoken hook 10 words; hook_type counterintuitive_claim (approved before rule 10). beats.py flags: hook 4.4 s / >4 s beat, no number/name in beat 1, beats 1-3 and 5-7 not concrete, no loop; length on target. Wi-Fi IDs on screen are example BSSIDs.",
+  "video": "https://raw.githubusercontent.com/JaspervArkel/bitbybit-videos/main/out/2026-11-23-location-no-gps/bitbybit-location-no-gps.mp4",
+  "format": "remotion"
  }
 ]
