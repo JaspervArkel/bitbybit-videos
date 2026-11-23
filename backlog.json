@@ -588,12 +588,13 @@
   "hook_score": 47.0,
   "script": "This USB-C charger out-computes the Apollo 11 computer. Inside one Anker charger sits a tiny chip with a 32-bit processor running at 48 megahertz. Apollo's guidance computer ran at about one megahertz. That's nearly 48 times the clock speed, and one analysis puts the charger at over 500 times the performance. It has twice the RAM, too. Why does a charger need a computer? It talks to your phone and agrees on how much power is safe to send. Apollo reached the Moon with less.",
   "words": 85,
-  "status": "proposed",
+  "status": "approved",
   "format": "remotion",
   "ending": "pending: E6 readout at the 29 Nov review (comment_prompt vs implication); default implication",
   "post_time": "18:00",
   "post_time_note": "E7 readout pending (19-25 Nov at 01:00+1 vs 12-18 Nov at 18:00); a later review may switch this",
-  "proposed_by": "weekly review 2026-11-22"
+  "proposed_by": "weekly review 2026-11-22",
+  "approved_on": "2026-11-23"
  },
  {
   "n": 23,
@@ -628,12 +629,13 @@
   "hook_score": 47.6,
   "script": "This AI is 99% sure this banana is a toaster. In 2017, Google researchers put a banana on a table and showed the photo to an image recognition network. Banana, it said, 97 percent sure. Then they placed a printed, swirly sticker next to it. Toaster, 99 percent sure. A computer designed that sticker by testing it against the network itself, packing in the patterns it links most with toasters. To the network, one loud patch can outvote the whole banana.",
   "words": 81,
-  "status": "proposed",
+  "status": "approved",
   "format": "remotion",
   "ending": "pending: E6 readout at the 29 Nov review (comment_prompt vs implication); default implication",
   "post_time": "18:00",
   "post_time_note": "E7 readout pending (19-25 Nov at 01:00+1 vs 12-18 Nov at 18:00); a later review may switch this",
-  "proposed_by": "weekly review 2026-11-22"
+  "proposed_by": "weekly review 2026-11-22",
+  "approved_on": "2026-11-23"
  },
  {
   "n": 24,
@@ -670,12 +672,13 @@
   "hook_score": 62.6,
   "script": "16.7 million colors, and the sky still has stripes. Most video stores red, green and blue as 8-bit numbers, so each gets just 256 levels. Together that's 16.7 million colors. Sounds like plenty, but a sunset sky fades very slowly. Across the whole frame, the blue may only change by a few steps, so each step becomes a wide band. Compression smooths away the fine noise that would hide the edges. 10-bit video has 1,024 levels per channel, so the bands get four times narrower.",
   "words": 85,
-  "status": "proposed",
+  "status": "approved",
   "format": "remotion",
   "ending": "pending: E6 readout at the 29 Nov review (comment_prompt vs implication); default implication",
   "post_time": "18:00",
   "post_time_note": "E7 readout pending (19-25 Nov at 01:00+1 vs 12-18 Nov at 18:00); a later review may switch this",
-  "proposed_by": "weekly review 2026-11-22"
+  "proposed_by": "weekly review 2026-11-22",
+  "approved_on": "2026-11-23"
  },
  {
   "n": 25,
@@ -712,12 +715,13 @@
   "hook_score": 47.6,
   "script": "Two walls in this game are fighting over one spot. When two surfaces sit at almost the same depth, the graphics card must decide, pixel by pixel, which one is in front. It stores each pixel's distance as a number with limited precision, and that precision gets worse far from the camera. So both walls round to the same value. Tiny camera moves flip the winner, and the stripes flicker. Developers call it Z-fighting. The usual fix: nudge one surface slightly forward.",
   "words": 82,
-  "status": "proposed",
+  "status": "approved",
   "format": "remotion",
   "ending": "pending: E6 readout at the 29 Nov review (comment_prompt vs implication); default implication",
   "post_time": "18:00",
   "post_time_note": "E7 readout pending (19-25 Nov at 01:00+1 vs 12-18 Nov at 18:00); a later review may switch this",
-  "proposed_by": "weekly review 2026-11-22"
+  "proposed_by": "weekly review 2026-11-22",
+  "approved_on": "2026-11-23"
  },
  {
   "n": 26,
@@ -753,12 +757,13 @@
   "hook_score": 62.6,
   "script": "After 248 days on, a 787 could lose all power. In 2015, the FAA found a software counter inside the Boeing 787's generator controllers. It counted up the whole time the plane had power. After 248 days, it overflowed. Then all four generators could shut down at once, even mid-flight. Until new software arrived, the fix was to switch the plane's power off at least every 120 days, which reset the counter to zero. Sometimes turning it off and on again really is the fix.",
   "words": 85,
-  "status": "proposed",
+  "status": "approved",
   "format": "remotion",
   "ending": "pending: E6 readout at the 29 Nov review (comment_prompt vs implication); default implication",
   "post_time": "18:00",
   "post_time_note": "E7 readout pending (19-25 Nov at 01:00+1 vs 12-18 Nov at 18:00); a later review may switch this",
-  "proposed_by": "weekly review 2026-11-22"
+  "proposed_by": "weekly review 2026-11-22",
+  "approved_on": "2026-11-23"
  },
  {
   "n": 27,
@@ -798,12 +803,13 @@
   "hook_score": 62.2,
   "script": "A sausage can text. Your gloved finger can't. Your phone's glass hides a grid of transparent electrodes holding a tiny electric field. Your finger is mostly salty water, which conducts, so touching the glass draws away a little charge at one spot. The phone measures that change and finds your finger. Wool and leather don't conduct, so nothing changes. A sausage is salty and wet too. In 2010, people in South Korea used them on iPhones in the cold. Touchscreen gloves weave in conductive thread.",
   "words": 85,
-  "status": "proposed",
+  "status": "approved",
   "format": "remotion",
   "ending": "pending: E6 readout at the 29 Nov review (comment_prompt vs implication); default implication",
   "post_time": "18:00",
   "post_time_note": "E7 readout pending (19-25 Nov at 01:00+1 vs 12-18 Nov at 18:00); a later review may switch this",
-  "proposed_by": "weekly review 2026-11-22"
+  "proposed_by": "weekly review 2026-11-22",
+  "approved_on": "2026-11-23"
  },
  {
   "n": 28,
@@ -839,11 +845,12 @@
   "hook_score": 47.6,
   "script": "Over 99% of data between continents runs under the ocean. Your video call to a friend overseas rides a cable lying on the seabed. Satellites carry only a tiny slice of that traffic. Out in the deep sea, many of these cables are about as thick as a garden hose, and inside are glass fibers as thin as a hair, carrying pulses of laser light. So every message you send abroad is light. Racing through glass, under kilometers of water.",
   "words": 80,
-  "status": "proposed",
+  "status": "approved",
   "format": "remotion",
   "ending": "pending: E6 readout at the 29 Nov review (comment_prompt vs implication); default implication",
   "post_time": "18:00",
   "post_time_note": "E7 readout pending (19-25 Nov at 01:00+1 vs 12-18 Nov at 18:00); a later review may switch this",
-  "proposed_by": "weekly review 2026-11-22"
+  "proposed_by": "weekly review 2026-11-22",
+  "approved_on": "2026-11-23"
  }
 ]
