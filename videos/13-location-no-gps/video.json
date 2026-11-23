@@ -1,0 +1,19 @@
+{
+ "title": "Your phone finds you without GPS",
+ "captions": [
+  {"text": "Turn off *GPS,* and your phone can still !find you.!", "hide": true, "say": "Turn off G P S, and your phone can still find you."},
+  {"text": "Every *Wi-Fi router* broadcasts a *unique ID,*", "say": "Every wifi router broadcasts a unique I D,"},
+  {"text": "even if you !never connect.!"},
+  {"text": "*Google* and *Apple* have built huge *maps*"},
+  {"text": "of where those *IDs* are.", "say": "of where those I Ds are."},
+  {"text": "Your phone *scans* nearby networks,"},
+  {"text": "*looks them up,*"},
+  {"text": "and *estimates* your position,"},
+  {"text": "often within *tens of metres* in a city."},
+  {"text": "*Cell towers* fill in the rest, !more roughly.!"},
+  {"text": "That's also why location works *indoors,*"},
+  {"text": "where satellite signals !struggle.!"}
+ ],
+ "cover": 0.5,
+ "tail": 2.2
+}

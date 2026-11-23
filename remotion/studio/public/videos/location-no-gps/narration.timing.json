@@ -1,0 +1,62 @@
+[
+ {
+  "s": 0.15,
+  "e": 2.954,
+  "text": "Turn off G P S, and your phone can still find you."
+ },
+ {
+  "s": 3.274,
+  "e": 5.819,
+  "text": "Every wifi router broadcasts a unique I D,"
+ },
+ {
+  "s": 6.139,
+  "e": 7.347,
+  "text": "even if you never connect."
+ },
+ {
+  "s": 7.667,
+  "e": 9.533,
+  "text": "Google and Apple have built huge maps"
+ },
+ {
+  "s": 9.853,
+  "e": 11.15,
+  "text": "of where those I Ds are."
+ },
+ {
+  "s": 11.47,
+  "e": 13.191,
+  "text": "Your phone scans nearby networks,"
+ },
+ {
+  "s": 13.511,
+  "e": 14.232,
+  "text": "looks them up,"
+ },
+ {
+  "s": 14.552,
+  "e": 15.827,
+  "text": "and estimates your position,"
+ },
+ {
+  "s": 16.147,
+  "e": 18.022,
+  "text": "often within tens of metres in a city."
+ },
+ {
+  "s": 18.342,
+  "e": 20.288,
+  "text": "Cell towers fill in the rest, more roughly."
+ },
+ {
+  "s": 20.608,
+  "e": 22.76,
+  "text": "That's also why location works indoors,"
+ },
+ {
+  "s": 23.08,
+  "e": 24.511,
+  "text": "where satellite signals struggle."
+ }
+]
