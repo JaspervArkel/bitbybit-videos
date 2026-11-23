@@ -301,11 +301,12 @@
   "post_time": "01:00+1",
   "visual_plan": "remotion: platformer character+ledge+frame counter (frame 1: character mid-air past the ledge, jump arc)",
   "script": "You just jumped off thin air. Look again. The character had already left the ledge when you pressed jump. The game let it happen on purpose. It's called coyote time. Players often press jump a split second after the edge is gone, and a strict game would drop them into the pit. So games like Celeste keep the jump open for a few extra frames after the edge. Many hard games feel fair because they quietly forgive you.",
-  "status": "proposed",
+  "status": "approved",
   "format": "remotion",
   "words": 78,
   "hook_score": 28.2,
-  "proposed_by": "weekly review 2026-11-15"
+  "proposed_by": "weekly review 2026-11-15",
+  "approved_on": "2026-11-23"
  },
  {
   "n": 16,
@@ -341,12 +342,13 @@
   "post_time": "18:00",
   "visual_plan": "remotion: two chat windows side by side+probability bars+dice",
   "script": "Ask AI twice. You get two different answers. That's on purpose. For each next chunk of text, the model scores every option it knows. \"Paris\" might get ninety percent, \"France\" five, and so on. A setting called temperature decides how it picks. Near zero, it almost always takes the top choice, and replies barely change. Chatbots usually run warmer, rolling weighted dice for every chunk. One different roll early on, and the whole answer takes another path.",
-  "status": "proposed",
+  "status": "approved",
   "format": "remotion",
   "words": 77,
   "hook_score": 58.4,
   "proposed_by": "weekly review 2026-11-15",
-  "post_time_note": "E7 readout pending (19-25 Nov at 01:00+1 vs 12-18 Nov at 18:00); a later review may switch this"
+  "post_time_note": "E7 readout pending (19-25 Nov at 01:00+1 vs 12-18 Nov at 18:00); a later review may switch this",
+  "approved_on": "2026-11-23"
  },
  {
   "n": 17,
@@ -382,12 +384,13 @@
   "post_time": "18:00",
   "visual_plan": "remotion: microwave+router+radio waves+video call freezing",
   "script": "Your microwave is jamming your Wi-Fi. Start it, and the video call freezes. A microwave oven heats food with a very powerful radio signal in the 2.4 gigahertz band. Lots of Wi-Fi uses that same band. The metal box and the mesh in the door hold almost all of it in. But almost isn't everything. A tiny leak from that much power can drown out your router nearby. Switch to 5 gigahertz Wi-Fi, and the microwave can't touch it.",
-  "status": "proposed",
+  "status": "approved",
   "format": "remotion",
   "words": 79,
   "hook_score": 28.2,
   "proposed_by": "weekly review 2026-11-15",
-  "post_time_note": "E7 readout pending (19-25 Nov at 01:00+1 vs 12-18 Nov at 18:00); a later review may switch this"
+  "post_time_note": "E7 readout pending (19-25 Nov at 01:00+1 vs 12-18 Nov at 18:00); a later review may switch this",
+  "approved_on": "2026-11-23"
  },
  {
   "n": 18,
@@ -421,12 +424,13 @@
   "post_time": "18:00",
   "visual_plan": "remotion: big counter 32,768 running+quartz fork vibrating+halving chain of 15 stages",
   "script": "32,768 vibrations make one second on your watch. Inside is a tiny sliver of quartz. Put voltage on it, and it vibrates 32,768 times a second. That number is two to the fifteenth. A chip halves the signal fifteen times in a row: 16,384, 8,192, all the way down to one. One tick, one second. It's this fast because a slower crystal would have to be bigger, and 32,768 sits just above what your ears can hear.",
-  "status": "proposed",
+  "status": "approved",
   "format": "remotion",
   "words": 77,
   "hook_score": 55.4,
   "proposed_by": "weekly review 2026-11-15",
-  "post_time_note": "E7 readout pending (19-25 Nov at 01:00+1 vs 12-18 Nov at 18:00); a later review may switch this"
+  "post_time_note": "E7 readout pending (19-25 Nov at 01:00+1 vs 12-18 Nov at 18:00); a later review may switch this",
+  "approved_on": "2026-11-23"
  },
  {
   "n": 19,
@@ -463,12 +467,13 @@
   "post_time": "18:00",
   "visual_plan": "remotion: browser window splitting into walled process boxes+task manager list+RAM bar",
   "script": "Your browser is dozens of programs pretending to be one. Open your task manager and count. Chrome runs different websites in separate processes, each walled off from the others. If one site crashes, only its own tab goes down. If a malicious page breaks in, it's stuck inside a sandbox. The price is memory. Every process carries its own engine for drawing web pages. That's a big part of why Chrome looks so hungry. You're paying for walls between your tabs.",
-  "status": "proposed",
+  "status": "approved",
   "format": "remotion",
   "words": 81,
   "hook_score": 28.2,
   "proposed_by": "weekly review 2026-11-15",
-  "post_time_note": "E7 readout pending (19-25 Nov at 01:00+1 vs 12-18 Nov at 18:00); a later review may switch this"
+  "post_time_note": "E7 readout pending (19-25 Nov at 01:00+1 vs 12-18 Nov at 18:00); a later review may switch this",
+  "approved_on": "2026-11-23"
  },
  {
   "n": 20,
@@ -506,12 +511,13 @@
   "post_time": "18:00",
   "visual_plan": "remotion: big clock face with 61 ticks+seconds counter 59->60+server rack overheating",
   "script": "This minute had 61 seconds. On June 30, 2012, official clocks went from 23:59:59 to 23:59:60. A leap second, added because Earth's spin doesn't keep perfect time. Lots of software assumed a minute can't have 61 seconds. A Linux bug left servers spinning at full power, and Reddit, LinkedIn and an airline booking system went down. Google now smears the extra second across many hours, so its clocks never show sixty. And timekeepers have voted to scrap leap seconds by 2035.",
-  "status": "proposed",
+  "status": "approved",
   "format": "remotion",
   "words": 81,
   "hook_score": 47.6,
   "proposed_by": "weekly review 2026-11-15",
-  "post_time_note": "E7 readout pending (19-25 Nov at 01:00+1 vs 12-18 Nov at 18:00); a later review may switch this"
+  "post_time_note": "E7 readout pending (19-25 Nov at 01:00+1 vs 12-18 Nov at 18:00); a later review may switch this",
+  "approved_on": "2026-11-23"
  },
  {
   "n": 21,
@@ -546,12 +552,13 @@
   "post_time": "18:00",
   "visual_plan": "remotion: QR code tearing+phone scanner+highlighted check blocks rebuilding",
   "script": "Rip off a corner. The QR code still scans. Next to your link, a QR code stores extra check data, made with math called Reed-Solomon codes. That data is spread across the whole square, so the scanner can rebuild pieces that are missing. At the highest setting, up to thirty percent of the data can be restored. That's why a logo in the middle doesn't break it. Just don't touch the big squares in the other three corners. The scanner needs them.",
-  "status": "proposed",
+  "status": "approved",
   "format": "remotion",
   "words": 82,
   "hook_score": 52.4,
   "proposed_by": "weekly review 2026-11-15",
-  "post_time_note": "E7 readout pending (19-25 Nov at 01:00+1 vs 12-18 Nov at 18:00); a later review may switch this"
+  "post_time_note": "E7 readout pending (19-25 Nov at 01:00+1 vs 12-18 Nov at 18:00); a later review may switch this",
+  "approved_on": "2026-11-23"
  },
  {
   "n": 22,
