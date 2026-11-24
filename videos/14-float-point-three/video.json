@@ -1,0 +1,54 @@
+{
+ "title": "0.1 + 0.2 isn't 0.3",
+ "captions": [
+  {
+   "text": "Ask a computer for *0.1 plus 0.2.*",
+   "hide": true,
+   "say": "Ask a computer for zero point one plus zero point two."
+  },
+  {
+   "text": "It says !0.30000000000000004.!",
+   "hide": true,
+   "say": "It says zero point three, then fifteen zeros, then a four."
+  },
+  {
+   "text": "Computers store decimals in *binary.*"
+  },
+  {
+   "text": "And in binary, *0.1* is like *one-third* in decimal:",
+   "say": "And in binary, zero point one is like one third in decimal:"
+  },
+  {
+   "text": "it !never ends.!"
+  },
+  {
+   "text": "*0.000110011…* !forever.!",
+   "say": "Zero point zero zero zero one one zero zero one one, forever."
+  },
+  {
+   "text": "The computer has to *round it off* after *52 bits,*",
+   "say": "The computer has to round it off after fifty-two bits,"
+  },
+  {
+   "text": "so it stores a number !very slightly off.!"
+  },
+  {
+   "text": "Add two *slightly-off* numbers"
+  },
+  {
+   "text": "and the !error shows.!"
+  },
+  {
+   "text": "That's why programmers don't compare decimals *with equals,*"
+  },
+  {
+   "text": "and why money is usually stored as *whole cents.*"
+  },
+  {
+   "text": "What does your *calculator* say for !0.1 + 0.2?!",
+   "say": "What does your calculator say for zero point one plus zero point two?"
+  }
+ ],
+ "cover": 0.5,
+ "tail": 2.4
+}

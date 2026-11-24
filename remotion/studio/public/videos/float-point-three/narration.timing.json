@@ -1,0 +1,67 @@
+[
+ {
+  "s": 0.15,
+  "e": 3.503,
+  "text": "Ask a computer for zero point one plus zero point two."
+ },
+ {
+  "s": 3.823,
+  "e": 7.098,
+  "text": "It says zero point three, then fifteen zeros, then a four."
+ },
+ {
+  "s": 7.418,
+  "e": 9.346,
+  "text": "Computers store decimals in binary."
+ },
+ {
+  "s": 9.666,
+  "e": 13.042,
+  "text": "And in binary, zero point one is like one third in decimal:"
+ },
+ {
+  "s": 13.362,
+  "e": 14.22,
+  "text": "it never ends."
+ },
+ {
+  "s": 14.54,
+  "e": 19.026,
+  "text": "Zero point zero zero zero one one zero zero one one, forever."
+ },
+ {
+  "s": 19.346,
+  "e": 22.211,
+  "text": "The computer has to round it off after fifty-two bits,"
+ },
+ {
+  "s": 22.531,
+  "e": 24.454,
+  "text": "so it stores a number very slightly off."
+ },
+ {
+  "s": 24.774,
+  "e": 26.124,
+  "text": "Add two slightly-off numbers"
+ },
+ {
+  "s": 26.444,
+  "e": 27.363,
+  "text": "and the error shows."
+ },
+ {
+  "s": 27.683,
+  "e": 30.622,
+  "text": "That's why programmers don't compare decimals with equals,"
+ },
+ {
+  "s": 30.942,
+  "e": 33.242,
+  "text": "and why money is usually stored as whole cents."
+ },
+ {
+  "s": 33.562,
+  "e": 37.463,
+  "text": "What does your calculator say for zero point one plus zero point two?"
+ }
+]
