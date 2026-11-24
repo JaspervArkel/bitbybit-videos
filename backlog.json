@@ -264,7 +264,7 @@
   "title": "0.1 + 0.2 isn't 0.3",
   "pillar": "A",
   "hook": "0.30000000000000004",
-  "status": "rendered",
+  "status": "scheduled",
   "experiment": "E1: hook-format test vs the earlier floating-point video",
   "script": "Ask a computer for 0.1 plus 0.2. It says 0.30000000000000004. Computers store decimals in binary. And in binary, 0.1 is like one-third in decimal: it never ends. Zero point zero zero zero one one zero zero one one, forever. The computer has to round it off after 52 bits, so it stores a number very slightly off. Add two slightly-off numbers and the error shows. That's why programmers don't compare decimals with equals, and why money is usually stored as whole cents.",
   "hook_type": "impossible_result",
