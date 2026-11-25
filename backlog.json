@@ -310,13 +310,15 @@
   "post_time": "01:00+1",
   "visual_plan": "remotion: platformer character+ledge+frame counter (frame 1: character mid-air past the ledge, jump arc)",
   "script": "You just jumped off thin air. Look again. The character had already left the ledge when you pressed jump. The game let it happen on purpose. It's called coyote time. Players often press jump a split second after the edge is gone, and a strict game would drop them into the pit. So games like Celeste keep the jump open for a few extra frames after the edge. Many hard games feel fair because they quietly forgive you.",
-  "status": "rendered",
+  "status": "scheduled",
   "format": "remotion",
   "words": 78,
   "hook_score": 28.2,
   "proposed_by": "weekly review 2026-11-15",
   "approved_on": "2026-11-23",
-  "spec": "videos/15-coyote-time/video.json"
+  "spec": "videos/15-coyote-time/video.json",
+  "length_s": 25.3,
+  "visual": "remotion: platformer level (ledge+spike pit+far platform)+hero cube+JUMP key+frame strip+green grace zone+4-platform montage"
  },
  {
   "n": 16,

@@ -79,3 +79,4 @@ Each backlog entry's `post_time` decides when it goes out: "18:00" = 18:00 Europ
 2026-11-23 scheduled location-no-gps 01:00+1 implication
 2026-11-24 scheduled float-point-three 01:00+1 comment_prompt
 - 2026-11-22: Second weekly review. E5 closed (7 videos, no evidence; follow_cta dropped). New rule 10 (cap counterintuitive_claim hooks at 2/week) from evidence 7. Rule 9 (Remotion) kept, unconfirmed (evidence 8). E6/E7 too early. Proposed 7 topics for 2–8 Dec (pillars A, B, C, D, E, E, F, no counterintuitive hooks); last week's 7 (25 Nov–1 Dec) still await approval. No retention screenshots in analytics/.
+2026-11-25 scheduled coyote-time 01:00+1 implication
