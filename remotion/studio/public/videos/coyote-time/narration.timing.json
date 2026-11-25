@@ -1,0 +1,62 @@
+[
+ {
+  "s": 0.15,
+  "e": 1.411,
+  "text": "You just jumped off thin air."
+ },
+ {
+  "s": 1.731,
+  "e": 3.838,
+  "text": "Look again. The character had already left the ledge"
+ },
+ {
+  "s": 4.158,
+  "e": 5.166,
+  "text": "when you pressed jump."
+ },
+ {
+  "s": 5.486,
+  "e": 7.003,
+  "text": "The game let it happen on purpose."
+ },
+ {
+  "s": 7.323,
+  "e": 8.556,
+  "text": "It's called coyote time."
+ },
+ {
+  "s": 8.876,
+  "e": 10.863,
+  "text": "Players often press jump a split second"
+ },
+ {
+  "s": 11.183,
+  "e": 12.315,
+  "text": "after the edge is gone,"
+ },
+ {
+  "s": 12.635,
+  "e": 14.604,
+  "text": "and a strict game would drop them into the pit."
+ },
+ {
+  "s": 14.924,
+  "e": 16.941,
+  "text": "So games like Celeste keep the jump open"
+ },
+ {
+  "s": 17.261,
+  "e": 19.197,
+  "text": "for a few extra frames after the edge."
+ },
+ {
+  "s": 19.517,
+  "e": 20.874,
+  "text": "Many hard games feel fair"
+ },
+ {
+  "s": 21.194,
+  "e": 22.649,
+  "text": "because they quietly forgive you."
+ }
+]

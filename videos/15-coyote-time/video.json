@@ -1,0 +1,19 @@
+{
+ "title": "Games let you jump on thin air",
+ "captions": [
+  {"text": "You just jumped off !thin air.!", "hide": true},
+  {"text": "Look again. The character had already *left the ledge*"},
+  {"text": "when you *pressed jump.*"},
+  {"text": "The game let it happen !on purpose.!"},
+  {"text": "It's called *coyote time.*"},
+  {"text": "Players often press jump *a split second*"},
+  {"text": "after the !edge is gone,!"},
+  {"text": "and a strict game would drop them !into the pit.!"},
+  {"text": "So games like *Celeste* keep the jump open"},
+  {"text": "for *a few extra frames* after the edge."},
+  {"text": "Many hard games *feel fair*"},
+  {"text": "because they *quietly forgive you.*"}
+ ],
+ "cover": 0.5,
+ "tail": 2.2
+}
