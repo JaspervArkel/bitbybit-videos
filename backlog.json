@@ -354,7 +354,7 @@
   "post_time": "18:00",
   "visual_plan": "remotion: two chat windows side by side+probability bars+dice",
   "script": "Ask AI twice. You get two different answers. That's on purpose. For each next chunk of text, the model scores every option it knows. \"Paris\" might get ninety percent, \"France\" five, and so on. A setting called temperature decides how it picks. Near zero, it almost always takes the top choice, and replies barely change. Chatbots usually run warmer, rolling weighted dice for every chunk. One different roll early on, and the whole answer takes another path.",
-  "status": "rendered",
+  "status": "scheduled",
   "format": "remotion",
   "words": 77,
   "hook_score": 58.4,

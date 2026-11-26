@@ -261,5 +261,18 @@
   "note": "implication ending (E6 odd n=15): ends on a 4-platform level with the hidden grace zones glowing at every edge, takeaway 'Late jump? Still counts.' 01:00+1 (E7). 25.3 s. Spoken hook 6 words; hook_type impossible_result. No number on screen (check: Celeste gives no exact window). beats.py flags: no number/name in beat 1, beats 3-5 and 10-12 not concrete, no loop; length on target (28.4 s est.). IG caption ONE ASK warn left on purpose (implication).",
   "video": "https://raw.githubusercontent.com/JaspervArkel/bitbybit-videos/main/out/2026-11-25-coyote-time/bitbybit-coyote-time.mp4",
   "format": "remotion"
+ },
+ {
+  "date": "2026-11-26",
+  "slug": "ai-temperature",
+  "scheduled": "2026-11-26T18:00:00+01:00",
+  "buffer": {
+   "youtube": "6b082b886d63cf805c5d166d",
+   "instagram": "6b082b886d63cf805c5d16b7",
+   "tiktok": "6b082b89d433bf4f4c82adb9"
+  },
+  "note": "implication ending (default; E6 readout pending 29 Nov): ends on branching answer paths, takeaway 'Different roll. New answer.' 18:00 per entry post_time. 28.6 s. hook_type counterintuitive_claim (approved before rule 10; 1st of the week). Check: probabilities labelled 'example' on screen; near-zero bars computed as softmax(ln p / 0.1). beats.py flags: beats 6-8 not concrete, no loop; length on target (28.0 s est.). IG caption ONE ASK warn left on purpose (implication).",
+  "video": "https://raw.githubusercontent.com/JaspervArkel/bitbybit-videos/main/out/2026-11-26-ai-temperature/bitbybit-ai-temperature.mp4",
+  "format": "remotion"
  }
 ]
