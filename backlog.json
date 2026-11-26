@@ -350,17 +350,20 @@
   ],
   "check": "'Paris 90%, France 5%' is an illustration; label it 'example' on screen or show real probabilities from a small open model.",
   "hook_type": "counterintuitive_claim",
-  "ending": "pending: E6 readout at the 29 Nov review (comment_prompt vs implication); default implication",
+  "ending": "implication",
   "post_time": "18:00",
   "visual_plan": "remotion: two chat windows side by side+probability bars+dice",
   "script": "Ask AI twice. You get two different answers. That's on purpose. For each next chunk of text, the model scores every option it knows. \"Paris\" might get ninety percent, \"France\" five, and so on. A setting called temperature decides how it picks. Near zero, it almost always takes the top choice, and replies barely change. Chatbots usually run warmer, rolling weighted dice for every chunk. One different roll early on, and the whole answer takes another path.",
-  "status": "approved",
+  "status": "rendered",
   "format": "remotion",
   "words": 77,
   "hook_score": 58.4,
   "proposed_by": "weekly review 2026-11-15",
   "post_time_note": "E7 readout pending (19-25 Nov at 01:00+1 vs 12-18 Nov at 18:00); a later review may switch this",
-  "approved_on": "2026-11-23"
+  "approved_on": "2026-11-23",
+  "length_s": 28.6,
+  "spec": "videos/16-ai-temperature/video.json",
+  "visual": "remotion: 2 chat windows (try 1/try 2)+chunked reply+score panel (labelled example)+temperature slider+weighted die+branching answer paths"
  },
  {
   "n": 17,

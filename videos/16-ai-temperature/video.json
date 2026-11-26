@@ -1,0 +1,19 @@
+{
+ "title": "Why AI answers differently every time",
+ "captions": [
+  {"text": "Ask AI twice. You get !two different answers.!", "hide": true},
+  {"text": "That's *on purpose.* For each *next chunk* of text,"},
+  {"text": "the model *scores every option* it knows."},
+  {"text": "*\"Paris\"* might get *ninety percent,*"},
+  {"text": "*\"France\"* five, and so on."},
+  {"text": "A setting called *temperature* decides how it picks."},
+  {"text": "Near *zero,* it almost always takes *the top choice,*"},
+  {"text": "and replies *barely change.*"},
+  {"text": "Chatbots usually run !warmer,!"},
+  {"text": "rolling !weighted dice! for every chunk."},
+  {"text": "One !different roll! early on,"},
+  {"text": "and the whole answer takes *another path.*"}
+ ],
+ "cover": 0.5,
+ "tail": 2.4
+}

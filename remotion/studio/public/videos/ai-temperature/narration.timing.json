@@ -1,0 +1,62 @@
+[
+ {
+  "s": 0.15,
+  "e": 2.709,
+  "text": "Ask AI twice. You get two different answers."
+ },
+ {
+  "s": 3.029,
+  "e": 5.404,
+  "text": "That's on purpose. For each next chunk of text,"
+ },
+ {
+  "s": 5.724,
+  "e": 7.642,
+  "text": "the model scores every option it knows."
+ },
+ {
+  "s": 7.962,
+  "e": 9.404,
+  "text": "\"Paris\" might get ninety percent,"
+ },
+ {
+  "s": 9.724,
+  "e": 11.035,
+  "text": "\"France\" five, and so on."
+ },
+ {
+  "s": 11.355,
+  "e": 13.69,
+  "text": "A setting called temperature decides how it picks."
+ },
+ {
+  "s": 14.01,
+  "e": 16.774,
+  "text": "Near zero, it almost always takes the top choice,"
+ },
+ {
+  "s": 17.094,
+  "e": 18.501,
+  "text": "and replies barely change."
+ },
+ {
+  "s": 18.821,
+  "e": 20.321,
+  "text": "Chatbots usually run warmer,"
+ },
+ {
+  "s": 20.641,
+  "e": 22.471,
+  "text": "rolling weighted dice for every chunk."
+ },
+ {
+  "s": 22.791,
+  "e": 24.089,
+  "text": "One different roll early on,"
+ },
+ {
+  "s": 24.409,
+  "e": 26.137,
+  "text": "and the whole answer takes another path."
+ }
+]

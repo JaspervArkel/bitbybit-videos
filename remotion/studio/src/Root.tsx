@@ -16,6 +16,7 @@ import { KEYBOARD_MATRIX_FRAMES, KeyboardMatrix } from "./videos/keyboard-matrix
 import { LocationNoGps, LOCATION_NO_GPS_FRAMES } from "./videos/location-no-gps/LocationNoGps";
 import { FloatPointThree, FLOAT_POINT_THREE_FRAMES } from "./videos/float-point-three/FloatPointThree";
 import { CoyoteTime, COYOTE_TIME_FRAMES } from "./videos/coyote-time/CoyoteTime";
+import { AiTemperature, AI_TEMPERATURE_FRAMES } from "./videos/ai-temperature/AiTemperature";
 import { TERABYTE_931_FRAMES, Terabyte931 } from "./videos/terabyte-931/Terabyte931";
 
 // One <Composition> per video. id = backlog slug in PascalCase.
@@ -35,6 +36,7 @@ export const RemotionRoot: React.FC = () => (
     <Composition id="LocationNoGps" component={LocationNoGps} durationInFrames={LOCATION_NO_GPS_FRAMES} fps={FPS} width={1080} height={1920} />
     <Composition id="FloatPointThree" component={FloatPointThree} durationInFrames={FLOAT_POINT_THREE_FRAMES} fps={FPS} width={1080} height={1920} />
     <Composition id="CoyoteTime" component={CoyoteTime} durationInFrames={COYOTE_TIME_FRAMES} fps={FPS} width={1080} height={1920} />
+    <Composition id="AiTemperature" component={AiTemperature} durationInFrames={AI_TEMPERATURE_FRAMES} fps={FPS} width={1080} height={1920} />
     {/* long-form (16:9) */}
     <Composition id="IntMax" component={IntMax} durationInFrames={INT_MAX_FRAMES} fps={FPS} width={1920} height={1080} />
     <Still id="IntMaxThumb" component={IntMaxThumb} width={1280} height={720} />
