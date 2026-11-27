@@ -1,0 +1,20 @@
+{
+ "title": "Your microwave jams your Wi-Fi",
+ "captions": [
+  {"text": "Your microwave is !jamming! your *Wi-Fi.*", "hide": true},
+  {"text": "Start it, and the video call !freezes.!"},
+  {"text": "A microwave oven heats food"},
+  {"text": "with a very *powerful radio signal*"},
+  {"text": "in the *2.4 gigahertz* band.", "say": "in the two point four gigahertz band."},
+  {"text": "Lots of *Wi-Fi* uses that *same band.*"},
+  {"text": "The *metal box* and the *mesh in the door*"},
+  {"text": "hold *almost all* of it in."},
+  {"text": "But !almost! isn't everything."},
+  {"text": "A !tiny leak! from that much power"},
+  {"text": "can !drown out! your router nearby."},
+  {"text": "Switch to *5 gigahertz* Wi-Fi,", "say": "Switch to five gigahertz Wi-Fi,"},
+  {"text": "and the microwave *can't touch it.*"}
+ ],
+ "cover": 0.5,
+ "tail": 2.4
+}

@@ -17,6 +17,7 @@ import { LocationNoGps, LOCATION_NO_GPS_FRAMES } from "./videos/location-no-gps/
 import { FloatPointThree, FLOAT_POINT_THREE_FRAMES } from "./videos/float-point-three/FloatPointThree";
 import { CoyoteTime, COYOTE_TIME_FRAMES } from "./videos/coyote-time/CoyoteTime";
 import { AiTemperature, AI_TEMPERATURE_FRAMES } from "./videos/ai-temperature/AiTemperature";
+import { MicrowaveWifi, MICROWAVE_WIFI_FRAMES } from "./videos/microwave-wifi/MicrowaveWifi";
 import { TERABYTE_931_FRAMES, Terabyte931 } from "./videos/terabyte-931/Terabyte931";
 
 // One <Composition> per video. id = backlog slug in PascalCase.
@@ -37,6 +38,7 @@ export const RemotionRoot: React.FC = () => (
     <Composition id="FloatPointThree" component={FloatPointThree} durationInFrames={FLOAT_POINT_THREE_FRAMES} fps={FPS} width={1080} height={1920} />
     <Composition id="CoyoteTime" component={CoyoteTime} durationInFrames={COYOTE_TIME_FRAMES} fps={FPS} width={1080} height={1920} />
     <Composition id="AiTemperature" component={AiTemperature} durationInFrames={AI_TEMPERATURE_FRAMES} fps={FPS} width={1080} height={1920} />
+    <Composition id="MicrowaveWifi" component={MicrowaveWifi} durationInFrames={MICROWAVE_WIFI_FRAMES} fps={FPS} width={1080} height={1920} />
     {/* long-form (16:9) */}
     <Composition id="IntMax" component={IntMax} durationInFrames={INT_MAX_FRAMES} fps={FPS} width={1920} height={1080} />
     <Still id="IntMaxThumb" component={IntMaxThumb} width={1280} height={720} />

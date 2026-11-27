@@ -1,0 +1,67 @@
+[
+ {
+  "s": 0.15,
+  "e": 2.154,
+  "text": "Your microwave is jamming your Wi-Fi."
+ },
+ {
+  "s": 2.474,
+  "e": 4.285,
+  "text": "Start it, and the video call freezes."
+ },
+ {
+  "s": 4.605,
+  "e": 6.302,
+  "text": "A microwave oven heats food"
+ },
+ {
+  "s": 6.622,
+  "e": 8.318,
+  "text": "with a very powerful radio signal"
+ },
+ {
+  "s": 8.638,
+  "e": 10.416,
+  "text": "in the two point four gigahertz band."
+ },
+ {
+  "s": 10.736,
+  "e": 12.759,
+  "text": "Lots of Wi-Fi uses that same band."
+ },
+ {
+  "s": 13.079,
+  "e": 14.709,
+  "text": "The metal box and the mesh in the door"
+ },
+ {
+  "s": 15.029,
+  "e": 16.223,
+  "text": "hold almost all of it in."
+ },
+ {
+  "s": 16.543,
+  "e": 17.848,
+  "text": "But almost isn't everything."
+ },
+ {
+  "s": 18.168,
+  "e": 19.72,
+  "text": "A tiny leak from that much power"
+ },
+ {
+  "s": 20.04,
+  "e": 21.558,
+  "text": "can drown out your router nearby."
+ },
+ {
+  "s": 21.878,
+  "e": 23.526,
+  "text": "Switch to five gigahertz Wi-Fi,"
+ },
+ {
+  "s": 23.846,
+  "e": 25.305,
+  "text": "and the microwave can't touch it."
+ }
+]
