@@ -274,5 +274,18 @@
   "note": "implication ending (default; E6 readout pending 29 Nov): ends on branching answer paths, takeaway 'Different roll. New answer.' 18:00 per entry post_time. 28.6 s. hook_type counterintuitive_claim (approved before rule 10; 1st of the week). Check: probabilities labelled 'example' on screen; near-zero bars computed as softmax(ln p / 0.1). beats.py flags: beats 6-8 not concrete, no loop; length on target (28.0 s est.). IG caption ONE ASK warn left on purpose (implication).",
   "video": "https://raw.githubusercontent.com/JaspervArkel/bitbybit-videos/main/out/2026-11-26-ai-temperature/bitbybit-ai-temperature.mp4",
   "format": "remotion"
+ },
+ {
+  "date": "2026-11-27",
+  "slug": "microwave-wifi",
+  "scheduled": "2026-11-27T18:00:00+01:00",
+  "buffer": {
+   "youtube": "6b097d5b062ed764a816a76f",
+   "instagram": "6b097d5be94385a8fda5d722",
+   "tiktok": "6b097d5c658222306c136613"
+  },
+  "note": "implication ending (default; E6 readout pending 29 Nov): ends on the split spectrum (oven hump at 2.4 GHz, Wi-Fi channels moved to 5 GHz) and the video call recovered, takeaway 'Oven on. 5 GHz: clear'. 18:00 per entry post_time. 27.8 s. hook_type counterintuitive_claim (approved before rule 10; 2nd of the week, at the cap). On-screen values labelled typical: ~1,000 W oven vs ~0.1 W router; 12 cm wave; channels 1/6/11. beats.py flags: no number/name in beat 1, beats 1-3 not concrete; loop ok; length on target (29.5 s est.). IG caption ONE ASK warn left on purpose (implication).",
+  "video": "https://raw.githubusercontent.com/JaspervArkel/bitbybit-videos/main/out/2026-11-27-microwave-wifi/bitbybit-microwave-wifi.mp4",
+  "format": "remotion"
  }
 ]

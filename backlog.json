@@ -395,17 +395,19 @@
    "https://www.scienceabc.com/innovation/do-microwaves-interfere-with-wifi-signals.html (2.45 GHz oven; some leakage; 5 GHz 'not affected by microwave-oven interference')"
   ],
   "hook_type": "counterintuitive_claim",
-  "ending": "pending: E6 readout at the 29 Nov review (comment_prompt vs implication); default implication",
+  "ending": "implication",
   "post_time": "18:00",
   "visual_plan": "remotion: microwave+router+radio waves+video call freezing",
   "script": "Your microwave is jamming your Wi-Fi. Start it, and the video call freezes. A microwave oven heats food with a very powerful radio signal in the 2.4 gigahertz band. Lots of Wi-Fi uses that same band. The metal box and the mesh in the door hold almost all of it in. But almost isn't everything. A tiny leak from that much power can drown out your router nearby. Switch to 5 gigahertz Wi-Fi, and the microwave can't touch it.",
-  "status": "rendered",
+  "status": "scheduled",
   "format": "remotion",
   "words": 79,
   "hook_score": 28.2,
   "proposed_by": "weekly review 2026-11-15",
   "post_time_note": "E7 readout pending (19-25 Nov at 01:00+1 vs 12-18 Nov at 18:00); a later review may switch this",
-  "approved_on": "2026-11-23"
+  "approved_on": "2026-11-23",
+  "visual": "remotion: microwave+router+video call+oven cut-away+radio spectrum (2.4/5 GHz)",
+  "length_s": 27.8
  },
  {
   "n": 18,
