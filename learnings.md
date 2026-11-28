@@ -82,3 +82,4 @@ Each backlog entry's `post_time` decides when it goes out: "18:00" = 18:00 Europ
 2026-11-25 scheduled coyote-time 01:00+1 implication
 2026-11-26 scheduled ai-temperature 18:00 implication
 2026-11-27 scheduled microwave-wifi 18:00 implication
+2026-11-28 scheduled quartz-32768 18:00 implication

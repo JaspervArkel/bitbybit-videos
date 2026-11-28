@@ -437,17 +437,19 @@
    "https://en.wikipedia.org/wiki/Quartz_clock ('In nearly all quartz clocks and watches, the frequency is 32768 Hz'; 2^15; '15-bit binary digital counter ... will overflow once per second'; 'just high enough to exceed the human hearing range'; low-frequency crystals are physically large)"
   ],
   "hook_type": "scale_analogy",
-  "ending": "pending: E6 readout at the 29 Nov review (comment_prompt vs implication); default implication",
+  "ending": "implication",
   "post_time": "18:00",
   "visual_plan": "remotion: big counter 32,768 running+quartz fork vibrating+halving chain of 15 stages",
   "script": "32,768 vibrations make one second on your watch. Inside is a tiny sliver of quartz. Put voltage on it, and it vibrates 32,768 times a second. That number is two to the fifteenth. A chip halves the signal fifteen times in a row: 16,384, 8,192, all the way down to one. One tick, one second. It's this fast because a slower crystal would have to be bigger, and 32,768 sits just above what your ears can hear.",
-  "status": "rendered",
+  "status": "scheduled",
   "format": "remotion",
   "words": 77,
   "hook_score": 55.4,
   "proposed_by": "weekly review 2026-11-15",
   "post_time_note": "E7 readout pending (19-25 Nov at 01:00+1 vs 12-18 Nov at 18:00); a later review may switch this",
-  "approved_on": "2026-11-23"
+  "approved_on": "2026-11-23",
+  "length_s": 36.4,
+  "visual": "remotion: watch face+true-speed 32,768 counter+quartz tuning fork+battery+scope+15-stage divider chip+slower/bigger fork+hearing axis"
  },
  {
   "n": 19,
