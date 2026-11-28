@@ -1,0 +1,62 @@
+[
+ {
+  "s": 0.15,
+  "e": 5.087,
+  "text": "Thirty-two thousand, seven hundred sixty-eight vibrations make one second on your watch."
+ },
+ {
+  "s": 5.407,
+  "e": 7.206,
+  "text": "Inside is a tiny sliver of quartz."
+ },
+ {
+  "s": 7.526,
+  "e": 9.216,
+  "text": "Put voltage on it, and it vibrates"
+ },
+ {
+  "s": 9.536,
+  "e": 12.786,
+  "text": "thirty-two thousand, seven hundred sixty-eight times a second."
+ },
+ {
+  "s": 13.106,
+  "e": 14.624,
+  "text": "That number is two to the fifteenth."
+ },
+ {
+  "s": 14.944,
+  "e": 17.344,
+  "text": "A chip halves the signal fifteen times in a row:"
+ },
+ {
+  "s": 17.664,
+  "e": 23.796,
+  "text": "sixteen thousand, three hundred eighty-four, eight thousand, one hundred ninety-two, all the way down to one."
+ },
+ {
+  "s": 24.116,
+  "e": 25.271,
+  "text": "One tick, one second."
+ },
+ {
+  "s": 25.591,
+  "e": 27.409,
+  "text": "It's this fast because a slower crystal"
+ },
+ {
+  "s": 27.729,
+  "e": 28.754,
+  "text": "would have to be bigger,"
+ },
+ {
+  "s": 29.074,
+  "e": 32.565,
+  "text": "and thirty-two thousand, seven hundred sixty-eight sits just above"
+ },
+ {
+  "s": 32.885,
+  "e": 33.875,
+  "text": "what your ears can hear."
+ }
+]

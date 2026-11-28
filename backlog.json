@@ -441,7 +441,7 @@
   "post_time": "18:00",
   "visual_plan": "remotion: big counter 32,768 running+quartz fork vibrating+halving chain of 15 stages",
   "script": "32,768 vibrations make one second on your watch. Inside is a tiny sliver of quartz. Put voltage on it, and it vibrates 32,768 times a second. That number is two to the fifteenth. A chip halves the signal fifteen times in a row: 16,384, 8,192, all the way down to one. One tick, one second. It's this fast because a slower crystal would have to be bigger, and 32,768 sits just above what your ears can hear.",
-  "status": "approved",
+  "status": "rendered",
   "format": "remotion",
   "words": 77,
   "hook_score": 55.4,

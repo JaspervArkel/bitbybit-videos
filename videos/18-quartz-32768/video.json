@@ -1,0 +1,19 @@
+{
+ "title": "Your watch counts to 32,768 every second",
+ "captions": [
+  {"text": "!32,768 vibrations! make *one second* on your watch.", "say": "Thirty-two thousand, seven hundred sixty-eight vibrations make one second on your watch.", "hide": true},
+  {"text": "Inside is a tiny sliver of *quartz.*"},
+  {"text": "Put *voltage* on it, and it vibrates"},
+  {"text": "*32,768 times* a second.", "say": "thirty-two thousand, seven hundred sixty-eight times a second."},
+  {"text": "That number is *two to the fifteenth.*"},
+  {"text": "A chip *halves* the signal *fifteen times* in a row:"},
+  {"text": "*16,384,* *8,192,* all the way down to *one.*", "say": "sixteen thousand, three hundred eighty-four, eight thousand, one hundred ninety-two, all the way down to one."},
+  {"text": "*One tick,* *one second.*"},
+  {"text": "It's this fast because a slower crystal"},
+  {"text": "would have to be !bigger,!"},
+  {"text": "and *32,768* sits just above", "say": "and thirty-two thousand, seven hundred sixty-eight sits just above"},
+  {"text": "what *your ears* can hear."}
+ ],
+ "cover": 0.5,
+ "tail": 2.4
+}
